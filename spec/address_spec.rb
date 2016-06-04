@@ -8,7 +8,7 @@ describe MiamiDadeGeo::Address, :vcr do
   let(:panther_zip){ 33127 }
   let(:panther_munic_code){ 1 }
 
-  let(:panther_latlong){ { lat: -80.199245566240819, long: 25.7999410593211 } }
+  let(:panther_latlong){ { long: -80.199245566240819, lat: 25.7999410593211 } }
 
   subject{ described_class.new panther_address }
 
