@@ -1,5 +1,6 @@
 require 'miami_dade_geo/addr_xy_client'
 require 'miami_dade_geo/latlong_client'
+require 'miami_dade_geo/municipality'
 
 module MiamiDadeGeo
   class Address
@@ -31,6 +32,10 @@ module MiamiDadeGeo
 
     def long
       @long ||= latlong[:long]
+    end
+
+    def municipality
+      @municipality ||= Municipality.new_with_code(munic_code)
     end
 
     private
