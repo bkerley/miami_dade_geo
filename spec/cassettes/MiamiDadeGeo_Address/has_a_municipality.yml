@@ -38,7 +38,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Sat, 04 Jun 2016 17:14:43 GMT
+      - Sat, 04 Jun 2016 19:38:28 GMT
       Cteonnt-Length:
       - '502'
       Content-Length:
@@ -49,5 +49,1424 @@ http_interactions:
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><XYAddressResponse
         xmlns="http://intra.miamidade.gov/GISAddress"><XYAddressResult><Count>1</Count><XY><ArrXY><X>919623.87509118</X><Y>533780.31245147</Y><Zip_Code>33127</Zip_Code><Munic_Code>1</Munic_Code></ArrXY></XY></XYAddressResult></XYAddressResponse></soap:Body></soap:Envelope>
     http_version: 
-  recorded_at: Sat, 04 Jun 2016 17:15:16 GMT
+  recorded_at: Sat, 04 Jun 2016 19:39:00 GMT
+- request:
+    method: get
+    uri: http://gisws.miamidade.gov/gisdata/GeoAttribute.asmx?wsdl
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Sat, 04 Jun 2016 19:38:28 GMT
+      Cteonnt-Length:
+      - '111577'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<wsdl:definitions xmlns:tm=\"http://microsoft.com/wsdl/mime/textMatching/\"
+        xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\"
+        xmlns:tns=\"http://intra.miamidade.gov/GeoAttribute\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\"
+        xmlns:s=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\"
+        xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\" targetNamespace=\"http://intra.miamidade.gov/GeoAttribute\"
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">\r\n  <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service returns
+        the attributes of the feature(s) or records in the specified Feature Class
+        or Table, given a field to search on, and the field's value.</wsdl:documentation>\r\n
+        \ <wsdl:types>\r\n    <s:schema elementFormDefault=\"qualified\" targetNamespace=\"http://intra.miamidade.gov/GeoAttribute\">\r\n
+        \     <s:element name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_LocalData\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"strNameOfFileGeoDatabase\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"strFeatureClassOrTableName\"
+        type=\"s:string\" />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"strValueOfFieldToSearchOn\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"strCommaSeparatedFieldsNamesToReturn\"
+        type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_LocalDataResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_LocalDataResult\">\r\n
+        \             <s:complexType>\r\n                <s:sequence>\r\n                  <s:any
+        minOccurs=\"0\" maxOccurs=\"unbounded\" namespace=\"http://www.w3.org/2001/XMLSchema\"
+        processContents=\"lax\" />\r\n                  <s:any minOccurs=\"1\" namespace=\"urn:schemas-microsoft-com:xml-diffgram-v1\"
+        processContents=\"lax\" />\r\n                </s:sequence>\r\n              </s:complexType>\r\n
+        \           </s:element>\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_LocalData\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"strNameOfFileGeoDatabase\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"strFeatureClassOrTableName\"
+        type=\"s:string\" />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"strValueOfFieldToSearchOn\" type=\"s:string\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_LocalDataResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_LocalDataResult\">\r\n
+        \             <s:complexType>\r\n                <s:sequence>\r\n                  <s:any
+        minOccurs=\"0\" maxOccurs=\"unbounded\" namespace=\"http://www.w3.org/2001/XMLSchema\"
+        processContents=\"lax\" />\r\n                  <s:any minOccurs=\"1\" namespace=\"urn:schemas-microsoft-com:xml-diffgram-v1\"
+        processContents=\"lax\" />\r\n                </s:sequence>\r\n              </s:complexType>\r\n
+        \           </s:element>\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS_LocalData\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"strNameOfFileGeoDatabase\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"strFeatureClassOrTableName\"
+        type=\"s:string\" />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"strValueOfFieldToSearchOn\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"strCommaSeparatedFieldsNamesToReturn\"
+        type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataResult\">\r\n
+        \             <s:complexType>\r\n                <s:sequence>\r\n                  <s:element
+        ref=\"s:schema\" />\r\n                  <s:any />\r\n                </s:sequence>\r\n
+        \             </s:complexType>\r\n            </s:element>\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML_LocalData\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"strNameOfFileGeoDatabase\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"strFeatureClassOrTableName\"
+        type=\"s:string\" />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"strValueOfFieldToSearchOn\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"strCommaSeparatedFieldsNamesToReturn\"
+        type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataResult\">\r\n
+        \             <s:complexType mixed=\"true\">\r\n                <s:sequence>\r\n
+        \                 <s:any />\r\n                </s:sequence>\r\n              </s:complexType>\r\n
+        \           </s:element>\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DS_LocalData\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"strNameOfFileGeoDatabase\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"strFeatureClassOrTableName\"
+        type=\"s:string\" />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"strValueOfFieldToSearchOn\" type=\"s:string\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataResult\">\r\n
+        \             <s:complexType>\r\n                <s:sequence>\r\n                  <s:element
+        ref=\"s:schema\" />\r\n                  <s:any />\r\n                </s:sequence>\r\n
+        \             </s:complexType>\r\n            </s:element>\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XML_LocalData\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"strNameOfFileGeoDatabase\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"strFeatureClassOrTableName\"
+        type=\"s:string\" />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"strValueOfFieldToSearchOn\" type=\"s:string\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataResult\">\r\n
+        \             <s:complexType mixed=\"true\">\r\n                <s:sequence>\r\n
+        \                 <s:any />\r\n                </s:sequence>\r\n              </s:complexType>\r\n
+        \           </s:element>\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"strFeatureClassOrTableName\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"strFieldNameToSearchOn\"
+        type=\"s:string\" />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"strCommaSeparatedFieldsNamesToReturn\"
+        type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValueResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValueResult\">\r\n
+        \             <s:complexType>\r\n                <s:sequence>\r\n                  <s:any
+        minOccurs=\"0\" maxOccurs=\"unbounded\" namespace=\"http://www.w3.org/2001/XMLSchema\"
+        processContents=\"lax\" />\r\n                  <s:any minOccurs=\"1\" namespace=\"urn:schemas-microsoft-com:xml-diffgram-v1\"
+        processContents=\"lax\" />\r\n                </s:sequence>\r\n              </s:complexType>\r\n
+        \           </s:element>\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetAllFieldsRecordsGivenAFieldNameAndValue\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"strFeatureClassOrTableName\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"strFieldNameToSearchOn\"
+        type=\"s:string\" />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"GetAllFieldsRecordsGivenAFieldNameAndValueResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetAllFieldsRecordsGivenAFieldNameAndValueResult\">\r\n
+        \             <s:complexType>\r\n                <s:sequence>\r\n                  <s:any
+        minOccurs=\"0\" maxOccurs=\"unbounded\" namespace=\"http://www.w3.org/2001/XMLSchema\"
+        processContents=\"lax\" />\r\n                  <s:any minOccurs=\"1\" namespace=\"urn:schemas-microsoft-com:xml-diffgram-v1\"
+        processContents=\"lax\" />\r\n                </s:sequence>\r\n              </s:complexType>\r\n
+        \           </s:element>\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"strFeatureClassOrTableName\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"strFieldNameToSearchOn\"
+        type=\"s:string\" />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"strCommaSeparatedFieldsNamesToReturn\"
+        type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DSResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DSResult\">\r\n
+        \             <s:complexType>\r\n                <s:sequence>\r\n                  <s:element
+        ref=\"s:schema\" />\r\n                  <s:any />\r\n                </s:sequence>\r\n
+        \             </s:complexType>\r\n            </s:element>\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"strFeatureClassOrTableName\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"strFieldNameToSearchOn\"
+        type=\"s:string\" />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"strCommaSeparatedFieldsNamesToReturn\"
+        type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XMLResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XMLResult\">\r\n
+        \             <s:complexType mixed=\"true\">\r\n                <s:sequence>\r\n
+        \                 <s:any />\r\n                </s:sequence>\r\n              </s:complexType>\r\n
+        \           </s:element>\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DS\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"strFeatureClassOrTableName\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"strFieldNameToSearchOn\"
+        type=\"s:string\" />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DSResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DSResult\">\r\n
+        \             <s:complexType>\r\n                <s:sequence>\r\n                  <s:element
+        ref=\"s:schema\" />\r\n                  <s:any />\r\n                </s:sequence>\r\n
+        \             </s:complexType>\r\n            </s:element>\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XML\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"strFeatureClassOrTableName\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"strFieldNameToSearchOn\"
+        type=\"s:string\" />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XMLResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XMLResult\">\r\n
+        \             <s:complexType mixed=\"true\">\r\n                <s:sequence>\r\n
+        \                 <s:any />\r\n                </s:sequence>\r\n              </s:complexType>\r\n
+        \           </s:element>\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"DataTable\" nillable=\"true\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:any minOccurs=\"0\"
+        maxOccurs=\"unbounded\" namespace=\"http://www.w3.org/2001/XMLSchema\" processContents=\"lax\"
+        />\r\n            <s:any minOccurs=\"1\" namespace=\"urn:schemas-microsoft-com:xml-diffgram-v1\"
+        processContents=\"lax\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"DataSet\" nillable=\"true\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        ref=\"s:schema\" />\r\n            <s:any />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n    </s:schema>\r\n  </wsdl:types>\r\n
+        \ <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_LocalDataSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_LocalData\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_LocalDataSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_LocalDataResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_LocalDataSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_LocalData\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_LocalDataSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_LocalDataResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS_LocalData\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML_LocalData\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_DS_LocalData\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_XML_LocalData\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValueSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValueSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValueResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValueSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValueSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValueResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DSSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DSSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DSResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XMLSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XMLSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XMLResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DSSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_DS\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DSSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_DSResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XMLSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_XML\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XMLSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_XMLResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_LocalDataHttpGetIn\">\r\n
+        \   <wsdl:part name=\"strNameOfFileGeoDatabase\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFeatureClassOrTableName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strCommaSeparatedFieldsNamesToReturn\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_LocalDataHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:DataTable\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_LocalDataHttpGetIn\">\r\n
+        \   <wsdl:part name=\"strNameOfFileGeoDatabase\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFeatureClassOrTableName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_LocalDataHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:DataTable\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataHttpGetIn\">\r\n
+        \   <wsdl:part name=\"strNameOfFileGeoDatabase\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFeatureClassOrTableName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strCommaSeparatedFieldsNamesToReturn\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:DataSet\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataHttpGetIn\">\r\n
+        \   <wsdl:part name=\"strNameOfFileGeoDatabase\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFeatureClassOrTableName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strCommaSeparatedFieldsNamesToReturn\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataHttpGetIn\">\r\n
+        \   <wsdl:part name=\"strNameOfFileGeoDatabase\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFeatureClassOrTableName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:DataSet\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataHttpGetIn\">\r\n
+        \   <wsdl:part name=\"strNameOfFileGeoDatabase\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFeatureClassOrTableName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValueHttpGetIn\">\r\n
+        \   <wsdl:part name=\"strFeatureClassOrTableName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strCommaSeparatedFieldsNamesToReturn\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValueHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:DataTable\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValueHttpGetIn\">\r\n
+        \   <wsdl:part name=\"strFeatureClassOrTableName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValueHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:DataTable\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DSHttpGetIn\">\r\n
+        \   <wsdl:part name=\"strFeatureClassOrTableName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strCommaSeparatedFieldsNamesToReturn\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DSHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:DataSet\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XMLHttpGetIn\">\r\n
+        \   <wsdl:part name=\"strFeatureClassOrTableName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strCommaSeparatedFieldsNamesToReturn\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XMLHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DSHttpGetIn\">\r\n
+        \   <wsdl:part name=\"strFeatureClassOrTableName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DSHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:DataSet\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XMLHttpGetIn\">\r\n
+        \   <wsdl:part name=\"strFeatureClassOrTableName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XMLHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_LocalDataHttpPostIn\">\r\n
+        \   <wsdl:part name=\"strNameOfFileGeoDatabase\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFeatureClassOrTableName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strCommaSeparatedFieldsNamesToReturn\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_LocalDataHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:DataTable\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_LocalDataHttpPostIn\">\r\n
+        \   <wsdl:part name=\"strNameOfFileGeoDatabase\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFeatureClassOrTableName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_LocalDataHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:DataTable\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataHttpPostIn\">\r\n
+        \   <wsdl:part name=\"strNameOfFileGeoDatabase\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFeatureClassOrTableName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strCommaSeparatedFieldsNamesToReturn\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:DataSet\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataHttpPostIn\">\r\n
+        \   <wsdl:part name=\"strNameOfFileGeoDatabase\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFeatureClassOrTableName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strCommaSeparatedFieldsNamesToReturn\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataHttpPostIn\">\r\n
+        \   <wsdl:part name=\"strNameOfFileGeoDatabase\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFeatureClassOrTableName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:DataSet\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataHttpPostIn\">\r\n
+        \   <wsdl:part name=\"strNameOfFileGeoDatabase\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFeatureClassOrTableName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValueHttpPostIn\">\r\n
+        \   <wsdl:part name=\"strFeatureClassOrTableName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strCommaSeparatedFieldsNamesToReturn\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValueHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:DataTable\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValueHttpPostIn\">\r\n
+        \   <wsdl:part name=\"strFeatureClassOrTableName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValueHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:DataTable\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DSHttpPostIn\">\r\n
+        \   <wsdl:part name=\"strFeatureClassOrTableName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strCommaSeparatedFieldsNamesToReturn\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DSHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:DataSet\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XMLHttpPostIn\">\r\n
+        \   <wsdl:part name=\"strFeatureClassOrTableName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strCommaSeparatedFieldsNamesToReturn\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XMLHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DSHttpPostIn\">\r\n
+        \   <wsdl:part name=\"strFeatureClassOrTableName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DSHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:DataSet\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XMLHttpPostIn\">\r\n
+        \   <wsdl:part name=\"strFeatureClassOrTableName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"strFieldNameToSearchOn\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"strValueOfFieldToSearchOn\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XMLHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" />\r\n  </wsdl:message>\r\n  <wsdl:portType name=\"GeoAttributeSoap\">\r\n
+        \   <wsdl:operation name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_LocalData\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a DataTable, with the values of the specified
+        fields for the feature(s) or record(s) selected on the specified Feature Class
+        or Table, given the name of the field to search on, the field's value (IS
+        NOT NULL is a possible value), and a string of fields names to be returned
+        separated by commas. Valid field types to search on are: Numeric, String or
+        Date. If value type 'Date' is used the value string must be in the following
+        format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br /&gt;If
+        your request returns to many records you may need in your appliction to increase
+        the time the XML Web Service client waits for synchronous XML Web Service
+        request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out.&lt;br /&gt;Also, you may need to increase your httpRuntime
+        executionTimeout. One way to do it is adding the line &amp;lthttpRuntime executionTimeout=(Here
+        goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt tabs
+        in your Web.Config. &lt;br /&gt;NOTE: This method searches a database stored
+        locally in the same server as this WebService; Not all the data currently
+        in SDE is available locally.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_LocalDataSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_LocalDataSoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_LocalData\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a DataTable, with the values of all fields
+        for the feature(s) or record(s) selected on the specified Feature class or
+        Table, given the name of the field to search on, and the field's value (IS
+        NOT NULL is a possible value). Valid field types to search on are: Numeric,
+        String or Date. If value type 'Date' is used the value string must be in the
+        following format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br
+        /&gt;If your request returns to many records you may need in your appliction
+        to increase the time the XML Web Service client waits for synchronous XML
+        Web Service request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out. &lt;br /&gt;Also, you may need to increase your
+        httpRuntime executionTimeout. One way to do it is adding the line &amp;lthttpRuntime
+        executionTimeout=(Here goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt
+        tabs in your Web.Config. &lt;br /&gt;NOTE: This method searches a database
+        stored locally in the same server as this WebService; Not all the data currently
+        in SDE is available locally.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_LocalDataSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_LocalDataSoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS_LocalData\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a DataSet with a DataTable, with the values
+        of the specified fields for the feature(s) or record(s) selected on the specified
+        Feature Class or Table, given the name of the field to search on, the field's
+        value (IS NOT NULL is a possible value), and a string of fields names to be
+        returned separated by commas. Valid field types to search on are: Numeric,
+        String or Date. If value type 'Date' is used the value string must be in the
+        following format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br
+        /&gt;If your request returns to many records you may need in your appliction
+        to increase the time the XML Web Service client waits for synchronous XML
+        Web Service request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out.&lt;br /&gt;Also, you may need to increase your httpRuntime
+        executionTimeout. One way to do it is adding the line &amp;lthttpRuntime executionTimeout=(Here
+        goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt tabs
+        in your Web.Config. &lt;br /&gt;NOTE: This method searches a database stored
+        locally in the same server as this WebService; Not all the data currently
+        in SDE is available locally.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataSoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML_LocalData\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns an XMLDataDocument with the values of the specified
+        fields for the feature(s) or record(s) selected on the specified Feature Class
+        or Table, given the name of the field to search on, the field's value (IS
+        NOT NULL is a possible value), and a string of fields names to be returned
+        separated by commas. Valid field types to search on are: Numeric, String or
+        Date. If value type 'Date' is used the value string must be in the following
+        format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br /&gt;If
+        your request returns to many records you may need in your appliction to increase
+        the time the XML Web Service client waits for synchronous XML Web Service
+        request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out.&lt;br /&gt;Also, you may need to increase your httpRuntime
+        executionTimeout. One way to do it is adding the line &amp;lthttpRuntime executionTimeout=(Here
+        goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt tabs
+        in your Web.Config. &lt;br /&gt;NOTE: This method searches a database stored
+        locally in the same server as this WebService; Not all the data currently
+        in SDE is available locally.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataSoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DS_LocalData\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a DataSet with a DataTable, with the values
+        of all fields for the feature(s) or record(s) selected on the specified Feature
+        class or Table, given the name of the field to search on, and the field's
+        value (IS NOT NULL is a possible value). Valid field types to search on are:
+        Numeric, String or Date. If value type 'Date' is used the value string must
+        be in the following format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br
+        /&gt;If your request returns to many records you may need in your appliction
+        to increase the time the XML Web Service client waits for synchronous XML
+        Web Service request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out. &lt;br /&gt;Also, you may need to increase your
+        httpRuntime executionTimeout. One way to do it is adding the line &amp;lthttpRuntime
+        executionTimeout=(Here goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt
+        tabs in your Web.Config. &lt;br /&gt;NOTE: This method searches a database
+        stored locally in the same server as this WebService; Not all the data currently
+        in SDE is available locally.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataSoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XML_LocalData\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns an XMLDataDocument with the values of all fields
+        for the feature(s) or record(s) selected on the specified Feature class or
+        Table, given the name of the field to search on, and the field's value (IS
+        NOT NULL is a possible value). Valid field types to search on are: Numeric,
+        String or Date. If value type 'Date' is used the value string must be in the
+        following format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br
+        /&gt;If your request returns to many records you may need in your appliction
+        to increase the time the XML Web Service client waits for synchronous XML
+        Web Service request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out. &lt;br /&gt;Also, you may need to increase your
+        httpRuntime executionTimeout. One way to do it is adding the line &amp;lthttpRuntime
+        executionTimeout=(Here goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt
+        tabs in your Web.Config. &lt;br /&gt;NOTE: This method searches a database
+        stored locally in the same server as this WebService; Not all the data currently
+        in SDE is available locally.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataSoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a DataTable, with the values of the specified
+        fields for the feature(s) or record(s) selected on the specified Feature Class
+        or Table, given the name of the field to search on, the field's value (IS
+        NOT NULL is a possible value), and a string of fields names to be returned
+        separated by commas. Valid field types to search on are: Numeric, String or
+        Date. If value type 'Date' is used the value string must be in the following
+        format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br /&gt;If
+        your request returns to many records you may need in your appliction to increase
+        the time the XML Web Service client waits for synchronous XML Web Service
+        request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out.&lt;br /&gt;Also, you may need to increase your httpRuntime
+        executionTimeout. One way to do it is adding the line &amp;lthttpRuntime executionTimeout=(Here
+        goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt tabs
+        in your Web.Config.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValueSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValueSoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetAllFieldsRecordsGivenAFieldNameAndValue\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a DataTable, with the values of all fields
+        for the feature(s) or record(s) selected on the specified Feature class or
+        Table, given the name of the field to search on, and the field's value (IS
+        NOT NULL is a possible value). Valid field types to search on are: Numeric,
+        String or Date. If value type 'Date' is used the value string must be in the
+        following format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br
+        /&gt;If your request returns to many records you may need in your appliction
+        to increase the time the XML Web Service client waits for synchronous XML
+        Web Service request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out. &lt;br /&gt;Also, you may need to increase your
+        httpRuntime executionTimeout. One way to do it is adding the line &amp;lthttpRuntime
+        executionTimeout=(Here goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt
+        tabs in your Web.Config.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValueSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValueSoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a DataSet with a DataTable, with the values
+        of the specified fields for the feature(s) or record(s) selected on the specified
+        Feature Class or Table, given the name of the field to search on, the field's
+        value (IS NOT NULL is a possible value), and a string of fields names to be
+        returned separated by commas. Valid field types to search on are: Numeric,
+        String or Date. If value type 'Date' is used the value string must be in the
+        following format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br
+        /&gt;If your request returns to many records you may need in your appliction
+        to increase the time the XML Web Service client waits for synchronous XML
+        Web Service request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out.&lt;br /&gt;Also, you may need to increase your httpRuntime
+        executionTimeout. One way to do it is adding the line &amp;lthttpRuntime executionTimeout=(Here
+        goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt tabs
+        in your Web.Config.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DSSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DSSoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns an XMLDataDocument with the values of the specified
+        fields for the feature(s) or record(s) selected on the specified Feature Class
+        or Table, given the name of the field to search on, the field's value (IS
+        NOT NULL is a possible value), and a string of fields names to be returned
+        separated by commas. Valid field types to search on are: Numeric, String or
+        Date. If value type 'Date' is used the value string must be in the following
+        format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br /&gt;If
+        your request returns to many records you may need in your appliction to increase
+        the time the XML Web Service client waits for synchronous XML Web Service
+        request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out.&lt;br /&gt;Also, you may need to increase your httpRuntime
+        executionTimeout. One way to do it is adding the line &amp;lthttpRuntime executionTimeout=(Here
+        goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt tabs
+        in your Web.Config.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XMLSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XMLSoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DS\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a DataSet with a DataTable, with the values
+        of all fields for the feature(s) or record(s) selected on the specified Feature
+        class or Table, given the name of the field to search on, and the field's
+        value (IS NOT NULL is a possible value). Valid field types to search on are:
+        Numeric, String or Date. If value type 'Date' is used the value string must
+        be in the following format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br
+        /&gt;If your request returns to many records you may need in your appliction
+        to increase the time the XML Web Service client waits for synchronous XML
+        Web Service request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out. &lt;br /&gt;Also, you may need to increase your
+        httpRuntime executionTimeout. One way to do it is adding the line &amp;lthttpRuntime
+        executionTimeout=(Here goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt
+        tabs in your Web.Config.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_DSSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_DSSoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XML\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns an XMLDataDocument with the values of all fields
+        for the feature(s) or record(s) selected on the specified Feature class or
+        Table, given the name of the field to search on, and the field's value (IS
+        NOT NULL is a possible value). Valid field types to search on are: Numeric,
+        String or Date. If value type 'Date' is used the value string must be in the
+        following format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br
+        /&gt;If your request returns to many records you may need in your appliction
+        to increase the time the XML Web Service client waits for synchronous XML
+        Web Service request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out. &lt;br /&gt;Also, you may need to increase your
+        httpRuntime executionTimeout. One way to do it is adding the line &amp;lthttpRuntime
+        executionTimeout=(Here goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt
+        tabs in your Web.Config.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_XMLSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_XMLSoapOut\"
+        />\r\n    </wsdl:operation>\r\n  </wsdl:portType>\r\n  <wsdl:portType name=\"GeoAttributeHttpGet\">\r\n
+        \   <wsdl:operation name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_LocalData\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a DataTable, with the values of the specified
+        fields for the feature(s) or record(s) selected on the specified Feature Class
+        or Table, given the name of the field to search on, the field's value (IS
+        NOT NULL is a possible value), and a string of fields names to be returned
+        separated by commas. Valid field types to search on are: Numeric, String or
+        Date. If value type 'Date' is used the value string must be in the following
+        format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br /&gt;If
+        your request returns to many records you may need in your appliction to increase
+        the time the XML Web Service client waits for synchronous XML Web Service
+        request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out.&lt;br /&gt;Also, you may need to increase your httpRuntime
+        executionTimeout. One way to do it is adding the line &amp;lthttpRuntime executionTimeout=(Here
+        goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt tabs
+        in your Web.Config. &lt;br /&gt;NOTE: This method searches a database stored
+        locally in the same server as this WebService; Not all the data currently
+        in SDE is available locally.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_LocalDataHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_LocalDataHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_LocalData\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a DataTable, with the values of all fields
+        for the feature(s) or record(s) selected on the specified Feature class or
+        Table, given the name of the field to search on, and the field's value (IS
+        NOT NULL is a possible value). Valid field types to search on are: Numeric,
+        String or Date. If value type 'Date' is used the value string must be in the
+        following format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br
+        /&gt;If your request returns to many records you may need in your appliction
+        to increase the time the XML Web Service client waits for synchronous XML
+        Web Service request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out. &lt;br /&gt;Also, you may need to increase your
+        httpRuntime executionTimeout. One way to do it is adding the line &amp;lthttpRuntime
+        executionTimeout=(Here goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt
+        tabs in your Web.Config. &lt;br /&gt;NOTE: This method searches a database
+        stored locally in the same server as this WebService; Not all the data currently
+        in SDE is available locally.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_LocalDataHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_LocalDataHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS_LocalData\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a DataSet with a DataTable, with the values
+        of the specified fields for the feature(s) or record(s) selected on the specified
+        Feature Class or Table, given the name of the field to search on, the field's
+        value (IS NOT NULL is a possible value), and a string of fields names to be
+        returned separated by commas. Valid field types to search on are: Numeric,
+        String or Date. If value type 'Date' is used the value string must be in the
+        following format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br
+        /&gt;If your request returns to many records you may need in your appliction
+        to increase the time the XML Web Service client waits for synchronous XML
+        Web Service request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out.&lt;br /&gt;Also, you may need to increase your httpRuntime
+        executionTimeout. One way to do it is adding the line &amp;lthttpRuntime executionTimeout=(Here
+        goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt tabs
+        in your Web.Config. &lt;br /&gt;NOTE: This method searches a database stored
+        locally in the same server as this WebService; Not all the data currently
+        in SDE is available locally.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML_LocalData\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns an XMLDataDocument with the values of the specified
+        fields for the feature(s) or record(s) selected on the specified Feature Class
+        or Table, given the name of the field to search on, the field's value (IS
+        NOT NULL is a possible value), and a string of fields names to be returned
+        separated by commas. Valid field types to search on are: Numeric, String or
+        Date. If value type 'Date' is used the value string must be in the following
+        format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br /&gt;If
+        your request returns to many records you may need in your appliction to increase
+        the time the XML Web Service client waits for synchronous XML Web Service
+        request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out.&lt;br /&gt;Also, you may need to increase your httpRuntime
+        executionTimeout. One way to do it is adding the line &amp;lthttpRuntime executionTimeout=(Here
+        goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt tabs
+        in your Web.Config. &lt;br /&gt;NOTE: This method searches a database stored
+        locally in the same server as this WebService; Not all the data currently
+        in SDE is available locally.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DS_LocalData\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a DataSet with a DataTable, with the values
+        of all fields for the feature(s) or record(s) selected on the specified Feature
+        class or Table, given the name of the field to search on, and the field's
+        value (IS NOT NULL is a possible value). Valid field types to search on are:
+        Numeric, String or Date. If value type 'Date' is used the value string must
+        be in the following format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br
+        /&gt;If your request returns to many records you may need in your appliction
+        to increase the time the XML Web Service client waits for synchronous XML
+        Web Service request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out. &lt;br /&gt;Also, you may need to increase your
+        httpRuntime executionTimeout. One way to do it is adding the line &amp;lthttpRuntime
+        executionTimeout=(Here goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt
+        tabs in your Web.Config. &lt;br /&gt;NOTE: This method searches a database
+        stored locally in the same server as this WebService; Not all the data currently
+        in SDE is available locally.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XML_LocalData\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns an XMLDataDocument with the values of all fields
+        for the feature(s) or record(s) selected on the specified Feature class or
+        Table, given the name of the field to search on, and the field's value (IS
+        NOT NULL is a possible value). Valid field types to search on are: Numeric,
+        String or Date. If value type 'Date' is used the value string must be in the
+        following format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br
+        /&gt;If your request returns to many records you may need in your appliction
+        to increase the time the XML Web Service client waits for synchronous XML
+        Web Service request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out. &lt;br /&gt;Also, you may need to increase your
+        httpRuntime executionTimeout. One way to do it is adding the line &amp;lthttpRuntime
+        executionTimeout=(Here goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt
+        tabs in your Web.Config. &lt;br /&gt;NOTE: This method searches a database
+        stored locally in the same server as this WebService; Not all the data currently
+        in SDE is available locally.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a DataTable, with the values of the specified
+        fields for the feature(s) or record(s) selected on the specified Feature Class
+        or Table, given the name of the field to search on, the field's value (IS
+        NOT NULL is a possible value), and a string of fields names to be returned
+        separated by commas. Valid field types to search on are: Numeric, String or
+        Date. If value type 'Date' is used the value string must be in the following
+        format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br /&gt;If
+        your request returns to many records you may need in your appliction to increase
+        the time the XML Web Service client waits for synchronous XML Web Service
+        request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out.&lt;br /&gt;Also, you may need to increase your httpRuntime
+        executionTimeout. One way to do it is adding the line &amp;lthttpRuntime executionTimeout=(Here
+        goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt tabs
+        in your Web.Config.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValueHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValueHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetAllFieldsRecordsGivenAFieldNameAndValue\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a DataTable, with the values of all fields
+        for the feature(s) or record(s) selected on the specified Feature class or
+        Table, given the name of the field to search on, and the field's value (IS
+        NOT NULL is a possible value). Valid field types to search on are: Numeric,
+        String or Date. If value type 'Date' is used the value string must be in the
+        following format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br
+        /&gt;If your request returns to many records you may need in your appliction
+        to increase the time the XML Web Service client waits for synchronous XML
+        Web Service request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out. &lt;br /&gt;Also, you may need to increase your
+        httpRuntime executionTimeout. One way to do it is adding the line &amp;lthttpRuntime
+        executionTimeout=(Here goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt
+        tabs in your Web.Config.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValueHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValueHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a DataSet with a DataTable, with the values
+        of the specified fields for the feature(s) or record(s) selected on the specified
+        Feature Class or Table, given the name of the field to search on, the field's
+        value (IS NOT NULL is a possible value), and a string of fields names to be
+        returned separated by commas. Valid field types to search on are: Numeric,
+        String or Date. If value type 'Date' is used the value string must be in the
+        following format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br
+        /&gt;If your request returns to many records you may need in your appliction
+        to increase the time the XML Web Service client waits for synchronous XML
+        Web Service request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out.&lt;br /&gt;Also, you may need to increase your httpRuntime
+        executionTimeout. One way to do it is adding the line &amp;lthttpRuntime executionTimeout=(Here
+        goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt tabs
+        in your Web.Config.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DSHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DSHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns an XMLDataDocument with the values of the specified
+        fields for the feature(s) or record(s) selected on the specified Feature Class
+        or Table, given the name of the field to search on, the field's value (IS
+        NOT NULL is a possible value), and a string of fields names to be returned
+        separated by commas. Valid field types to search on are: Numeric, String or
+        Date. If value type 'Date' is used the value string must be in the following
+        format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br /&gt;If
+        your request returns to many records you may need in your appliction to increase
+        the time the XML Web Service client waits for synchronous XML Web Service
+        request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out.&lt;br /&gt;Also, you may need to increase your httpRuntime
+        executionTimeout. One way to do it is adding the line &amp;lthttpRuntime executionTimeout=(Here
+        goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt tabs
+        in your Web.Config.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XMLHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XMLHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DS\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a DataSet with a DataTable, with the values
+        of all fields for the feature(s) or record(s) selected on the specified Feature
+        class or Table, given the name of the field to search on, and the field's
+        value (IS NOT NULL is a possible value). Valid field types to search on are:
+        Numeric, String or Date. If value type 'Date' is used the value string must
+        be in the following format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br
+        /&gt;If your request returns to many records you may need in your appliction
+        to increase the time the XML Web Service client waits for synchronous XML
+        Web Service request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out. &lt;br /&gt;Also, you may need to increase your
+        httpRuntime executionTimeout. One way to do it is adding the line &amp;lthttpRuntime
+        executionTimeout=(Here goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt
+        tabs in your Web.Config.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_DSHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_DSHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XML\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns an XMLDataDocument with the values of all fields
+        for the feature(s) or record(s) selected on the specified Feature class or
+        Table, given the name of the field to search on, and the field's value (IS
+        NOT NULL is a possible value). Valid field types to search on are: Numeric,
+        String or Date. If value type 'Date' is used the value string must be in the
+        following format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br
+        /&gt;If your request returns to many records you may need in your appliction
+        to increase the time the XML Web Service client waits for synchronous XML
+        Web Service request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out. &lt;br /&gt;Also, you may need to increase your
+        httpRuntime executionTimeout. One way to do it is adding the line &amp;lthttpRuntime
+        executionTimeout=(Here goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt
+        tabs in your Web.Config.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_XMLHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_XMLHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n  </wsdl:portType>\r\n  <wsdl:portType name=\"GeoAttributeHttpPost\">\r\n
+        \   <wsdl:operation name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_LocalData\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a DataTable, with the values of the specified
+        fields for the feature(s) or record(s) selected on the specified Feature Class
+        or Table, given the name of the field to search on, the field's value (IS
+        NOT NULL is a possible value), and a string of fields names to be returned
+        separated by commas. Valid field types to search on are: Numeric, String or
+        Date. If value type 'Date' is used the value string must be in the following
+        format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br /&gt;If
+        your request returns to many records you may need in your appliction to increase
+        the time the XML Web Service client waits for synchronous XML Web Service
+        request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out.&lt;br /&gt;Also, you may need to increase your httpRuntime
+        executionTimeout. One way to do it is adding the line &amp;lthttpRuntime executionTimeout=(Here
+        goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt tabs
+        in your Web.Config. &lt;br /&gt;NOTE: This method searches a database stored
+        locally in the same server as this WebService; Not all the data currently
+        in SDE is available locally.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_LocalDataHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_LocalDataHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_LocalData\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a DataTable, with the values of all fields
+        for the feature(s) or record(s) selected on the specified Feature class or
+        Table, given the name of the field to search on, and the field's value (IS
+        NOT NULL is a possible value). Valid field types to search on are: Numeric,
+        String or Date. If value type 'Date' is used the value string must be in the
+        following format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br
+        /&gt;If your request returns to many records you may need in your appliction
+        to increase the time the XML Web Service client waits for synchronous XML
+        Web Service request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out. &lt;br /&gt;Also, you may need to increase your
+        httpRuntime executionTimeout. One way to do it is adding the line &amp;lthttpRuntime
+        executionTimeout=(Here goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt
+        tabs in your Web.Config. &lt;br /&gt;NOTE: This method searches a database
+        stored locally in the same server as this WebService; Not all the data currently
+        in SDE is available locally.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_LocalDataHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_LocalDataHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS_LocalData\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a DataSet with a DataTable, with the values
+        of the specified fields for the feature(s) or record(s) selected on the specified
+        Feature Class or Table, given the name of the field to search on, the field's
+        value (IS NOT NULL is a possible value), and a string of fields names to be
+        returned separated by commas. Valid field types to search on are: Numeric,
+        String or Date. If value type 'Date' is used the value string must be in the
+        following format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br
+        /&gt;If your request returns to many records you may need in your appliction
+        to increase the time the XML Web Service client waits for synchronous XML
+        Web Service request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out.&lt;br /&gt;Also, you may need to increase your httpRuntime
+        executionTimeout. One way to do it is adding the line &amp;lthttpRuntime executionTimeout=(Here
+        goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt tabs
+        in your Web.Config. &lt;br /&gt;NOTE: This method searches a database stored
+        locally in the same server as this WebService; Not all the data currently
+        in SDE is available locally.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML_LocalData\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns an XMLDataDocument with the values of the specified
+        fields for the feature(s) or record(s) selected on the specified Feature Class
+        or Table, given the name of the field to search on, the field's value (IS
+        NOT NULL is a possible value), and a string of fields names to be returned
+        separated by commas. Valid field types to search on are: Numeric, String or
+        Date. If value type 'Date' is used the value string must be in the following
+        format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br /&gt;If
+        your request returns to many records you may need in your appliction to increase
+        the time the XML Web Service client waits for synchronous XML Web Service
+        request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out.&lt;br /&gt;Also, you may need to increase your httpRuntime
+        executionTimeout. One way to do it is adding the line &amp;lthttpRuntime executionTimeout=(Here
+        goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt tabs
+        in your Web.Config. &lt;br /&gt;NOTE: This method searches a database stored
+        locally in the same server as this WebService; Not all the data currently
+        in SDE is available locally.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DS_LocalData\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a DataSet with a DataTable, with the values
+        of all fields for the feature(s) or record(s) selected on the specified Feature
+        class or Table, given the name of the field to search on, and the field's
+        value (IS NOT NULL is a possible value). Valid field types to search on are:
+        Numeric, String or Date. If value type 'Date' is used the value string must
+        be in the following format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br
+        /&gt;If your request returns to many records you may need in your appliction
+        to increase the time the XML Web Service client waits for synchronous XML
+        Web Service request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out. &lt;br /&gt;Also, you may need to increase your
+        httpRuntime executionTimeout. One way to do it is adding the line &amp;lthttpRuntime
+        executionTimeout=(Here goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt
+        tabs in your Web.Config. &lt;br /&gt;NOTE: This method searches a database
+        stored locally in the same server as this WebService; Not all the data currently
+        in SDE is available locally.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_DS_LocalDataHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XML_LocalData\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns an XMLDataDocument with the values of all fields
+        for the feature(s) or record(s) selected on the specified Feature class or
+        Table, given the name of the field to search on, and the field's value (IS
+        NOT NULL is a possible value). Valid field types to search on are: Numeric,
+        String or Date. If value type 'Date' is used the value string must be in the
+        following format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br
+        /&gt;If your request returns to many records you may need in your appliction
+        to increase the time the XML Web Service client waits for synchronous XML
+        Web Service request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out. &lt;br /&gt;Also, you may need to increase your
+        httpRuntime executionTimeout. One way to do it is adding the line &amp;lthttpRuntime
+        executionTimeout=(Here goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt
+        tabs in your Web.Config. &lt;br /&gt;NOTE: This method searches a database
+        stored locally in the same server as this WebService; Not all the data currently
+        in SDE is available locally.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_XML_LocalDataHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a DataTable, with the values of the specified
+        fields for the feature(s) or record(s) selected on the specified Feature Class
+        or Table, given the name of the field to search on, the field's value (IS
+        NOT NULL is a possible value), and a string of fields names to be returned
+        separated by commas. Valid field types to search on are: Numeric, String or
+        Date. If value type 'Date' is used the value string must be in the following
+        format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br /&gt;If
+        your request returns to many records you may need in your appliction to increase
+        the time the XML Web Service client waits for synchronous XML Web Service
+        request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out.&lt;br /&gt;Also, you may need to increase your httpRuntime
+        executionTimeout. One way to do it is adding the line &amp;lthttpRuntime executionTimeout=(Here
+        goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt tabs
+        in your Web.Config.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValueHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValueHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetAllFieldsRecordsGivenAFieldNameAndValue\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a DataTable, with the values of all fields
+        for the feature(s) or record(s) selected on the specified Feature class or
+        Table, given the name of the field to search on, and the field's value (IS
+        NOT NULL is a possible value). Valid field types to search on are: Numeric,
+        String or Date. If value type 'Date' is used the value string must be in the
+        following format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br
+        /&gt;If your request returns to many records you may need in your appliction
+        to increase the time the XML Web Service client waits for synchronous XML
+        Web Service request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out. &lt;br /&gt;Also, you may need to increase your
+        httpRuntime executionTimeout. One way to do it is adding the line &amp;lthttpRuntime
+        executionTimeout=(Here goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt
+        tabs in your Web.Config.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValueHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValueHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a DataSet with a DataTable, with the values
+        of the specified fields for the feature(s) or record(s) selected on the specified
+        Feature Class or Table, given the name of the field to search on, the field's
+        value (IS NOT NULL is a possible value), and a string of fields names to be
+        returned separated by commas. Valid field types to search on are: Numeric,
+        String or Date. If value type 'Date' is used the value string must be in the
+        following format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br
+        /&gt;If your request returns to many records you may need in your appliction
+        to increase the time the XML Web Service client waits for synchronous XML
+        Web Service request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out.&lt;br /&gt;Also, you may need to increase your httpRuntime
+        executionTimeout. One way to do it is adding the line &amp;lthttpRuntime executionTimeout=(Here
+        goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt tabs
+        in your Web.Config.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DSHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DSHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns an XMLDataDocument with the values of the specified
+        fields for the feature(s) or record(s) selected on the specified Feature Class
+        or Table, given the name of the field to search on, the field's value (IS
+        NOT NULL is a possible value), and a string of fields names to be returned
+        separated by commas. Valid field types to search on are: Numeric, String or
+        Date. If value type 'Date' is used the value string must be in the following
+        format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br /&gt;If
+        your request returns to many records you may need in your appliction to increase
+        the time the XML Web Service client waits for synchronous XML Web Service
+        request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out.&lt;br /&gt;Also, you may need to increase your httpRuntime
+        executionTimeout. One way to do it is adding the line &amp;lthttpRuntime executionTimeout=(Here
+        goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt tabs
+        in your Web.Config.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XMLHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XMLHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DS\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a DataSet with a DataTable, with the values
+        of all fields for the feature(s) or record(s) selected on the specified Feature
+        class or Table, given the name of the field to search on, and the field's
+        value (IS NOT NULL is a possible value). Valid field types to search on are:
+        Numeric, String or Date. If value type 'Date' is used the value string must
+        be in the following format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br
+        /&gt;If your request returns to many records you may need in your appliction
+        to increase the time the XML Web Service client waits for synchronous XML
+        Web Service request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out. &lt;br /&gt;Also, you may need to increase your
+        httpRuntime executionTimeout. One way to do it is adding the line &amp;lthttpRuntime
+        executionTimeout=(Here goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt
+        tabs in your Web.Config.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_DSHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_DSHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XML\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns an XMLDataDocument with the values of all fields
+        for the feature(s) or record(s) selected on the specified Feature class or
+        Table, given the name of the field to search on, and the field's value (IS
+        NOT NULL is a possible value). Valid field types to search on are: Numeric,
+        String or Date. If value type 'Date' is used the value string must be in the
+        following format 'YYYY-MM-DD HH24:MI:SS' Example: '2008-07-08 10:25:03'.&lt;br
+        /&gt;If your request returns to many records you may need in your appliction
+        to increase the time the XML Web Service client waits for synchronous XML
+        Web Service request to complete (in milliseconds) by using &lt;br /&gt;'Service.Timeout
+        = -1' where Service is the object pointing to this Web Service. Use -1 to
+        set an Infinite time out. &lt;br /&gt;Also, you may need to increase your
+        httpRuntime executionTimeout. One way to do it is adding the line &amp;lthttpRuntime
+        executionTimeout=(Here goes the number of seconds)/&amp;gt between the &amp;ltsystem.web&amp;gt
+        tabs in your Web.Config.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_XMLHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:GetAllFieldsRecordsGivenAFieldNameAndValue_XMLHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n  </wsdl:portType>\r\n  <wsdl:binding name=\"GeoAttributeSoap\"
+        type=\"tns:GeoAttributeSoap\">\r\n    <soap:binding transport=\"http://schemas.xmlsoap.org/soap/http\"
+        />\r\n    <wsdl:operation name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_LocalData\">\r\n
+        \     <soap:operation soapAction=\"http://intra.miamidade.gov/GeoAttribute/GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_LocalData\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_LocalData\">\r\n      <soap:operation
+        soapAction=\"http://intra.miamidade.gov/GeoAttribute/GetAllFieldsRecordsGivenAFieldNameAndValue_LocalData\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS_LocalData\">\r\n
+        \     <soap:operation soapAction=\"http://intra.miamidade.gov/GeoAttribute/GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS_LocalData\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML_LocalData\">\r\n
+        \     <soap:operation soapAction=\"http://intra.miamidade.gov/GeoAttribute/GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML_LocalData\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DS_LocalData\">\r\n      <soap:operation
+        soapAction=\"http://intra.miamidade.gov/GeoAttribute/GetAllFieldsRecordsGivenAFieldNameAndValue_DS_LocalData\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XML_LocalData\">\r\n      <soap:operation
+        soapAction=\"http://intra.miamidade.gov/GeoAttribute/GetAllFieldsRecordsGivenAFieldNameAndValue_XML_LocalData\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue\">\r\n      <soap:operation
+        soapAction=\"http://intra.miamidade.gov/GeoAttribute/GetSpecifiedFieldsRecordsGivenAFieldNameAndValue\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetAllFieldsRecordsGivenAFieldNameAndValue\">\r\n      <soap:operation
+        soapAction=\"http://intra.miamidade.gov/GeoAttribute/GetAllFieldsRecordsGivenAFieldNameAndValue\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS\">\r\n      <soap:operation
+        soapAction=\"http://intra.miamidade.gov/GeoAttribute/GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML\">\r\n      <soap:operation
+        soapAction=\"http://intra.miamidade.gov/GeoAttribute/GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DS\">\r\n      <soap:operation
+        soapAction=\"http://intra.miamidade.gov/GeoAttribute/GetAllFieldsRecordsGivenAFieldNameAndValue_DS\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XML\">\r\n      <soap:operation
+        soapAction=\"http://intra.miamidade.gov/GeoAttribute/GetAllFieldsRecordsGivenAFieldNameAndValue_XML\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n  </wsdl:binding>\r\n
+        \ <wsdl:binding name=\"GeoAttributeSoap12\" type=\"tns:GeoAttributeSoap\">\r\n
+        \   <soap12:binding transport=\"http://schemas.xmlsoap.org/soap/http\" />\r\n
+        \   <wsdl:operation name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_LocalData\">\r\n
+        \     <soap12:operation soapAction=\"http://intra.miamidade.gov/GeoAttribute/GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_LocalData\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_LocalData\">\r\n      <soap12:operation
+        soapAction=\"http://intra.miamidade.gov/GeoAttribute/GetAllFieldsRecordsGivenAFieldNameAndValue_LocalData\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS_LocalData\">\r\n
+        \     <soap12:operation soapAction=\"http://intra.miamidade.gov/GeoAttribute/GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS_LocalData\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML_LocalData\">\r\n
+        \     <soap12:operation soapAction=\"http://intra.miamidade.gov/GeoAttribute/GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML_LocalData\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DS_LocalData\">\r\n      <soap12:operation
+        soapAction=\"http://intra.miamidade.gov/GeoAttribute/GetAllFieldsRecordsGivenAFieldNameAndValue_DS_LocalData\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XML_LocalData\">\r\n      <soap12:operation
+        soapAction=\"http://intra.miamidade.gov/GeoAttribute/GetAllFieldsRecordsGivenAFieldNameAndValue_XML_LocalData\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue\">\r\n      <soap12:operation
+        soapAction=\"http://intra.miamidade.gov/GeoAttribute/GetSpecifiedFieldsRecordsGivenAFieldNameAndValue\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetAllFieldsRecordsGivenAFieldNameAndValue\">\r\n      <soap12:operation
+        soapAction=\"http://intra.miamidade.gov/GeoAttribute/GetAllFieldsRecordsGivenAFieldNameAndValue\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS\">\r\n      <soap12:operation
+        soapAction=\"http://intra.miamidade.gov/GeoAttribute/GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML\">\r\n      <soap12:operation
+        soapAction=\"http://intra.miamidade.gov/GeoAttribute/GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DS\">\r\n      <soap12:operation
+        soapAction=\"http://intra.miamidade.gov/GeoAttribute/GetAllFieldsRecordsGivenAFieldNameAndValue_DS\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XML\">\r\n      <soap12:operation
+        soapAction=\"http://intra.miamidade.gov/GeoAttribute/GetAllFieldsRecordsGivenAFieldNameAndValue_XML\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n  </wsdl:binding>\r\n
+        \ <wsdl:binding name=\"GeoAttributeHttpGet\" type=\"tns:GeoAttributeHttpGet\">\r\n
+        \   <http:binding verb=\"GET\" />\r\n    <wsdl:operation name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_LocalData\">\r\n
+        \     <http:operation location=\"/GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_LocalData\"
+        />\r\n      <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_LocalData\">\r\n
+        \     <http:operation location=\"/GetAllFieldsRecordsGivenAFieldNameAndValue_LocalData\"
+        />\r\n      <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS_LocalData\">\r\n
+        \     <http:operation location=\"/GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS_LocalData\"
+        />\r\n      <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML_LocalData\">\r\n
+        \     <http:operation location=\"/GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML_LocalData\"
+        />\r\n      <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:content part=\"Body\" type=\"text/xml\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DS_LocalData\">\r\n      <http:operation
+        location=\"/GetAllFieldsRecordsGivenAFieldNameAndValue_DS_LocalData\" />\r\n
+        \     <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XML_LocalData\">\r\n
+        \     <http:operation location=\"/GetAllFieldsRecordsGivenAFieldNameAndValue_XML_LocalData\"
+        />\r\n      <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:content part=\"Body\" type=\"text/xml\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue\">\r\n      <http:operation
+        location=\"/GetSpecifiedFieldsRecordsGivenAFieldNameAndValue\" />\r\n      <wsdl:input>\r\n
+        \       <http:urlEncoded />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n
+        \       <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"GetAllFieldsRecordsGivenAFieldNameAndValue\">\r\n
+        \     <http:operation location=\"/GetAllFieldsRecordsGivenAFieldNameAndValue\"
+        />\r\n      <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS\">\r\n
+        \     <http:operation location=\"/GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS\"
+        />\r\n      <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML\">\r\n
+        \     <http:operation location=\"/GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML\"
+        />\r\n      <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:content part=\"Body\" type=\"text/xml\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DS\">\r\n      <http:operation
+        location=\"/GetAllFieldsRecordsGivenAFieldNameAndValue_DS\" />\r\n      <wsdl:input>\r\n
+        \       <http:urlEncoded />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n
+        \       <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XML\">\r\n
+        \     <http:operation location=\"/GetAllFieldsRecordsGivenAFieldNameAndValue_XML\"
+        />\r\n      <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:content part=\"Body\" type=\"text/xml\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n  </wsdl:binding>\r\n
+        \ <wsdl:binding name=\"GeoAttributeHttpPost\" type=\"tns:GeoAttributeHttpPost\">\r\n
+        \   <http:binding verb=\"POST\" />\r\n    <wsdl:operation name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_LocalData\">\r\n
+        \     <http:operation location=\"/GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_LocalData\"
+        />\r\n      <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_LocalData\">\r\n      <http:operation
+        location=\"/GetAllFieldsRecordsGivenAFieldNameAndValue_LocalData\" />\r\n
+        \     <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS_LocalData\">\r\n
+        \     <http:operation location=\"/GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS_LocalData\"
+        />\r\n      <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML_LocalData\">\r\n
+        \     <http:operation location=\"/GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML_LocalData\"
+        />\r\n      <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:content
+        part=\"Body\" type=\"text/xml\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DS_LocalData\">\r\n
+        \     <http:operation location=\"/GetAllFieldsRecordsGivenAFieldNameAndValue_DS_LocalData\"
+        />\r\n      <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XML_LocalData\">\r\n      <http:operation
+        location=\"/GetAllFieldsRecordsGivenAFieldNameAndValue_XML_LocalData\" />\r\n
+        \     <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:content
+        part=\"Body\" type=\"text/xml\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue\">\r\n
+        \     <http:operation location=\"/GetSpecifiedFieldsRecordsGivenAFieldNameAndValue\"
+        />\r\n      <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetAllFieldsRecordsGivenAFieldNameAndValue\">\r\n      <http:operation
+        location=\"/GetAllFieldsRecordsGivenAFieldNameAndValue\" />\r\n      <wsdl:input>\r\n
+        \       <mime:content type=\"application/x-www-form-urlencoded\" />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS\">\r\n
+        \     <http:operation location=\"/GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_DS\"
+        />\r\n      <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML\">\r\n      <http:operation
+        location=\"/GetSpecifiedFieldsRecordsGivenAFieldNameAndValue_XML\" />\r\n
+        \     <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:content
+        part=\"Body\" type=\"text/xml\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_DS\">\r\n
+        \     <http:operation location=\"/GetAllFieldsRecordsGivenAFieldNameAndValue_DS\"
+        />\r\n      <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetAllFieldsRecordsGivenAFieldNameAndValue_XML\">\r\n      <http:operation
+        location=\"/GetAllFieldsRecordsGivenAFieldNameAndValue_XML\" />\r\n      <wsdl:input>\r\n
+        \       <mime:content type=\"application/x-www-form-urlencoded\" />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:content part=\"Body\" type=\"text/xml\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n  </wsdl:binding>\r\n
+        \ <wsdl:service name=\"GeoAttribute\">\r\n    <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service returns the attributes of the feature(s) or records in the
+        specified Feature Class or Table, given a field to search on, and the field's
+        value.</wsdl:documentation>\r\n    <wsdl:port name=\"GeoAttributeSoap\" binding=\"tns:GeoAttributeSoap\">\r\n
+        \     <soap:address location=\"http://gisws.miamidade.gov/gisdata/GeoAttribute.asmx\"
+        />\r\n    </wsdl:port>\r\n    <wsdl:port name=\"GeoAttributeSoap12\" binding=\"tns:GeoAttributeSoap12\">\r\n
+        \     <soap12:address location=\"http://gisws.miamidade.gov/gisdata/GeoAttribute.asmx\"
+        />\r\n    </wsdl:port>\r\n    <wsdl:port name=\"GeoAttributeHttpGet\" binding=\"tns:GeoAttributeHttpGet\">\r\n
+        \     <http:address location=\"http://gisws.miamidade.gov/gisdata/GeoAttribute.asmx\"
+        />\r\n    </wsdl:port>\r\n    <wsdl:port name=\"GeoAttributeHttpPost\" binding=\"tns:GeoAttributeHttpPost\">\r\n
+        \     <http:address location=\"http://gisws.miamidade.gov/gisdata/GeoAttribute.asmx\"
+        />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
+    http_version: 
+  recorded_at: Sat, 04 Jun 2016 19:39:00 GMT
+- request:
+    method: post
+    uri: http://gisws.miamidade.gov/gisdata/GeoAttribute.asmx
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://intra.miamidade.gov/GeoAttribute"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><tns:GetAllFieldsRecordsGivenAFieldNameAndValue><tns:strFeatureClassOrTableName>municipality_poly</tns:strFeatureClassOrTableName><tns:strFieldNameToSearchOn>municid</tns:strFieldNameToSearchOn><tns:strValueOfFieldToSearchOn>01</tns:strValueOfFieldToSearchOn></tns:GetAllFieldsRecordsGivenAFieldNameAndValue></env:Body></env:Envelope>
+    headers:
+      Soapaction:
+      - '"http://intra.miamidade.gov/GeoAttribute/GetAllFieldsRecordsGivenAFieldNameAndValue"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '601'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Sat, 04 Jun 2016 19:38:28 GMT
+      Cteonnt-Length:
+      - '1941'
+      Content-Length:
+      - '680'
+    body:
+      encoding: ASCII-8BIT
+      string: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><GetAllFieldsRecordsGivenAFieldNameAndValueResponse
+        xmlns="http://intra.miamidade.gov/GeoAttribute"><GetAllFieldsRecordsGivenAFieldNameAndValueResult><xs:schema
+        id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"><xs:element
+        name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="municipality_poly"
+        msdata:UseCurrentLocale="true"><xs:complexType><xs:choice minOccurs="0" maxOccurs="unbounded"><xs:element
+        name="municipality_poly"><xs:complexType><xs:sequence><xs:element name="OBJECTID"
+        type="xs:long" /><xs:element name="MUNICUID" type="xs:int" minOccurs="0" /><xs:element
+        name="MUNICID" type="xs:string" minOccurs="0" /><xs:element name="NAME" type="xs:string"
+        minOccurs="0" /><xs:element name="FIPSCODE" type="xs:int" minOccurs="0" /><xs:element
+        name="CREATEDBY" type="xs:string" minOccurs="0" /><xs:element name="CREATEDDATE"
+        type="xs:dateTime" minOccurs="0" /><xs:element name="MODIFIEDBY" type="xs:string"
+        minOccurs="0" /><xs:element name="MODIFIEDDATE" type="xs:dateTime" minOccurs="0"
+        /></xs:sequence></xs:complexType></xs:element></xs:choice></xs:complexType></xs:element></xs:schema><diffgr:diffgram
+        xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1"><DocumentElement
+        xmlns=""><municipality_poly diffgr:id="municipality_poly1" msdata:rowOrder="0"
+        diffgr:hasChanges="inserted"><OBJECTID>76</OBJECTID><MUNICUID>34</MUNICUID><MUNICID>01</MUNICID><NAME>MIAMI</NAME><FIPSCODE>1245000</FIPSCODE></municipality_poly></DocumentElement></diffgr:diffgram></GetAllFieldsRecordsGivenAFieldNameAndValueResult></GetAllFieldsRecordsGivenAFieldNameAndValueResponse></soap:Body></soap:Envelope>
+    http_version: 
+  recorded_at: Sat, 04 Jun 2016 19:39:00 GMT
 recorded_with: VCR 3.0.3

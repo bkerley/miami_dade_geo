@@ -38,7 +38,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Sat, 04 Jun 2016 17:14:43 GMT
+      - Sat, 04 Jun 2016 19:38:26 GMT
       Cteonnt-Length:
       - '502'
       Content-Length:
@@ -49,5 +49,5 @@ http_interactions:
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><XYAddressResponse
         xmlns="http://intra.miamidade.gov/GISAddress"><XYAddressResult><Count>1</Count><XY><ArrXY><X>919623.87509118</X><Y>533780.31245147</Y><Zip_Code>33127</Zip_Code><Munic_Code>1</Munic_Code></ArrXY></XY></XYAddressResult></XYAddressResponse></soap:Body></soap:Envelope>
     http_version: 
-  recorded_at: Sat, 04 Jun 2016 17:15:16 GMT
+  recorded_at: Sat, 04 Jun 2016 19:39:00 GMT
 recorded_with: VCR 3.0.3
