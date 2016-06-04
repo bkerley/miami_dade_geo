@@ -43,6 +43,18 @@ muni = MiamiDadeGeo::Municipality.new_with_latlong(
 muni.name #=> "MIAMI"
 ```
 
+## Links
+
+* <https://rubygems.org/gems/miami_dade_geo>
+
+* <https://github.com/jdiago/miami_dade_geo_api>
+
+* <https://github.com/bkerley/what_municipality>
+
+* <https://radiant-taiga-73968.herokuapp.com/address-meta?address=2390%20NW%202nd%20Ave>
+
+* <https://what-mdc-muni.herokuapp.com>
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
