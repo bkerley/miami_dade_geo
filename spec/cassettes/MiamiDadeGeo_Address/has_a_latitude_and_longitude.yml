@@ -1,0 +1,1445 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://gisws.miamidade.gov/gisaddress/addrxy.asmx
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://intra.miamidade.gov/GISAddress"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><tns:XYAddress><tns:myAddress>2390
+        NW 2nd Ave</tns:myAddress></tns:XYAddress></env:Body></env:Envelope>
+    headers:
+      Soapaction:
+      - '"http://intra.miamidade.gov/GISAddress/XYAddress"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '368'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Sat, 04 Jun 2016 17:14:44 GMT
+      Cteonnt-Length:
+      - '502'
+      Content-Length:
+      - '299'
+    body:
+      encoding: ASCII-8BIT
+      string: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><XYAddressResponse
+        xmlns="http://intra.miamidade.gov/GISAddress"><XYAddressResult><Count>1</Count><XY><ArrXY><X>919623.87509118</X><Y>533780.31245147</Y><Zip_Code>33127</Zip_Code><Munic_Code>1</Munic_Code></ArrXY></XY></XYAddressResult></XYAddressResponse></soap:Body></soap:Envelope>
+    http_version: 
+  recorded_at: Sat, 04 Jun 2016 17:15:16 GMT
+- request:
+    method: get
+    uri: http://gisws.miamidade.gov/gisxyservices/XYLatLongConversions.asmx?wsdl
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Sat, 04 Jun 2016 17:14:44 GMT
+      Cteonnt-Length:
+      - '106909'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<wsdl:definitions xmlns:tm=\"http://microsoft.com/wsdl/mime/textMatching/\"
+        xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\"
+        xmlns:tns=\"http://intra.miamidade.gov/GISwebSRVCS\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\"
+        xmlns:s1=\"http://intra.miamidade.gov/GISwebSRVCS/AbstractTypes\" xmlns:s=\"http://www.w3.org/2001/XMLSchema\"
+        xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\" xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\"
+        targetNamespace=\"http://intra.miamidade.gov/GISwebSRVCS\" xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">\r\n
+        \ <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service is a projection service between X/Y coordinates and Longitude
+        and latitude.</wsdl:documentation>\r\n  <wsdl:types>\r\n    <s:schema elementFormDefault=\"qualified\"
+        targetNamespace=\"http://intra.miamidade.gov/GISwebSRVCS\">\r\n      <s:element
+        name=\"getLatLongDecFromXY\">\r\n        <s:complexType>\r\n          <s:sequence>\r\n
+        \           <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"X\" type=\"s:double\"
+        />\r\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"Y\" type=\"s:double\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"getLatLongDecFromXYResponse\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"getLatLongDecFromXYResult\" type=\"tns:ArrayOfDouble\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:complexType name=\"ArrayOfDouble\">\r\n
+        \       <s:sequence>\r\n          <s:element minOccurs=\"0\" maxOccurs=\"unbounded\"
+        name=\"double\" type=\"s:double\" />\r\n        </s:sequence>\r\n      </s:complexType>\r\n
+        \     <s:element name=\"getLatLongDegreeFromXY\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"1\" maxOccurs=\"1\"
+        name=\"X\" type=\"s:double\" />\r\n            <s:element minOccurs=\"1\"
+        maxOccurs=\"1\" name=\"Y\" type=\"s:double\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"getLatLongDegreeFromXYResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"getLatLongDegreeFromXYResult\" type=\"tns:ArrayOfString\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:complexType name=\"ArrayOfString\">\r\n        <s:sequence>\r\n          <s:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"string\" nillable=\"true\"
+        type=\"s:string\" />\r\n        </s:sequence>\r\n      </s:complexType>\r\n
+        \     <s:element name=\"getLatLongInDegMinSecFromXY\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"1\" maxOccurs=\"1\"
+        name=\"X\" type=\"s:double\" />\r\n            <s:element minOccurs=\"1\"
+        maxOccurs=\"1\" name=\"Y\" type=\"s:double\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"getLatLongInDegMinSecFromXYResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"getLatLongInDegMinSecFromXYResult\"
+        type=\"tns:ArrayOfString\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"getLatLongDecFromXY_WKIDs\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"X\" type=\"s:double\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"Y\" type=\"s:double\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"pWKID\" type=\"s:int\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"gWKID\" type=\"s:int\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"getLatLongDecFromXY_WKIDsResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"getLatLongDecFromXY_WKIDsResult\" type=\"tns:ArrayOfDouble\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"getLatLongDegreeFromXY_WKIDs\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"1\" maxOccurs=\"1\"
+        name=\"X\" type=\"s:double\" />\r\n            <s:element minOccurs=\"1\"
+        maxOccurs=\"1\" name=\"Y\" type=\"s:double\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"pWKID\" type=\"s:int\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"gWKID\" type=\"s:int\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"getLatLongDegreeFromXY_WKIDsResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"getLatLongDegreeFromXY_WKIDsResult\"
+        type=\"tns:ArrayOfString\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"getLatLongInDegMinSecFromXY_WKIDs\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"X\" type=\"s:double\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"Y\" type=\"s:double\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"pWKID\" type=\"s:int\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"gWKID\" type=\"s:int\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"getLatLongInDegMinSecFromXY_WKIDsResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"getLatLongInDegMinSecFromXY_WKIDsResult\"
+        type=\"tns:ArrayOfString\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"getLatLongDecFromXY_Array\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"X\" type=\"tns:ArrayOfDouble\" />\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Y\" type=\"tns:ArrayOfDouble\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"getLatLongDecFromXY_ArrayResponse\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"getLatLongDecFromXY_ArrayResult\" type=\"tns:ArrayOfDouble\" />\r\n
+        \         </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"getLatLongDegreeFromXY_Array\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"X\" type=\"tns:ArrayOfDouble\" />\r\n            <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"Y\" type=\"tns:ArrayOfDouble\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"getLatLongDegreeFromXY_ArrayResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"getLatLongDegreeFromXY_ArrayResult\"
+        type=\"tns:ArrayOfString\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"getLatLongInDegMinSecFromXY_Array\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"X\" type=\"tns:ArrayOfDouble\" />\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Y\" type=\"tns:ArrayOfDouble\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"getLatLongInDegMinSecFromXY_ArrayResponse\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"getLatLongInDegMinSecFromXY_ArrayResult\" type=\"tns:ArrayOfString\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"getLatLongDecFromXY_Array_WKIDs\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"X\" type=\"tns:ArrayOfDouble\" />\r\n            <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"Y\" type=\"tns:ArrayOfDouble\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"pWKID\" type=\"s:int\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"gWKID\" type=\"s:int\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"getLatLongDecFromXY_Array_WKIDsResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"getLatLongDecFromXY_Array_WKIDsResult\"
+        type=\"tns:ArrayOfDouble\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"getLatLongDegreeFromXY_Array_WKIDs\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"X\" type=\"tns:ArrayOfDouble\" />\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Y\" type=\"tns:ArrayOfDouble\"
+        />\r\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"pWKID\"
+        type=\"s:int\" />\r\n            <s:element minOccurs=\"1\" maxOccurs=\"1\"
+        name=\"gWKID\" type=\"s:int\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"getLatLongDegreeFromXY_Array_WKIDsResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"getLatLongDegreeFromXY_Array_WKIDsResult\"
+        type=\"tns:ArrayOfString\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"getLatLongInDegMinSecFromXY_Array_WKIDs\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"X\" type=\"tns:ArrayOfDouble\" />\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Y\" type=\"tns:ArrayOfDouble\"
+        />\r\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"pWKID\"
+        type=\"s:int\" />\r\n            <s:element minOccurs=\"1\" maxOccurs=\"1\"
+        name=\"gWKID\" type=\"s:int\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"getLatLongInDegMinSecFromXY_Array_WKIDsResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"getLatLongInDegMinSecFromXY_Array_WKIDsResult\"
+        type=\"tns:ArrayOfString\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"getXYfromLatLongDec\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"1\" maxOccurs=\"1\"
+        name=\"LNG\" type=\"s:double\" />\r\n            <s:element minOccurs=\"1\"
+        maxOccurs=\"1\" name=\"LAT\" type=\"s:double\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"getXYfromLatLongDecResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"getXYfromLatLongDecResult\" type=\"tns:ArrayOfDouble\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"getXYfromLatLongDegree\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"LNG\" type=\"s:string\" />\r\n            <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"LAT\" type=\"s:string\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"getXYfromLatLongDegreeResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"getXYfromLatLongDegreeResult\" type=\"tns:ArrayOfDouble\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"getXYfromLatLongInDegMinSec\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"LNG\" type=\"s:string\" />\r\n            <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"LAT\" type=\"s:string\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"getXYfromLatLongInDegMinSecResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"getXYfromLatLongInDegMinSecResult\"
+        type=\"tns:ArrayOfDouble\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"getXYfromLatLongDec_WKIDs\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"LNG\" type=\"s:double\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"LAT\" type=\"s:double\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"pWKID\" type=\"s:int\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"gWKID\" type=\"s:int\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"getXYfromLatLongDec_WKIDsResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"getXYfromLatLongDec_WKIDsResult\" type=\"tns:ArrayOfDouble\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"getXYfromLatLongDegree_WKIDs\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"LNG\" type=\"s:string\" />\r\n            <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"LAT\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"pWKID\" type=\"s:int\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"gWKID\" type=\"s:int\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"getXYfromLatLongDegree_WKIDsResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"getXYfromLatLongDegree_WKIDsResult\"
+        type=\"tns:ArrayOfDouble\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"getXYfromLatLongInDegMinSec_WKIDs\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"LNG\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"LAT\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"pWKID\" type=\"s:int\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"gWKID\" type=\"s:int\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"getXYfromLatLongInDegMinSec_WKIDsResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"getXYfromLatLongInDegMinSec_WKIDsResult\"
+        type=\"tns:ArrayOfDouble\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"getXYfromLatLongDec_WKIDs_Array\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"LNG\" type=\"tns:ArrayOfDouble\" />\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"LAT\" type=\"tns:ArrayOfDouble\"
+        />\r\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"pWKID\"
+        type=\"s:int\" />\r\n            <s:element minOccurs=\"1\" maxOccurs=\"1\"
+        name=\"gWKID\" type=\"s:int\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"getXYfromLatLongDec_WKIDs_ArrayResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"getXYfromLatLongDec_WKIDs_ArrayResult\"
+        type=\"tns:ArrayOfDouble\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"getXYfromLatLongDegree_WKIDs_Array\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"LNG\" type=\"tns:ArrayOfString\" />\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"LAT\" type=\"tns:ArrayOfString\"
+        />\r\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"pWKID\"
+        type=\"s:int\" />\r\n            <s:element minOccurs=\"1\" maxOccurs=\"1\"
+        name=\"gWKID\" type=\"s:int\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"getXYfromLatLongDegree_WKIDs_ArrayResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"getXYfromLatLongDegree_WKIDs_ArrayResult\"
+        type=\"tns:ArrayOfDouble\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"getXYfromLatLongInDegMinSec_WKIDs_Array\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"LNG\" type=\"tns:ArrayOfString\" />\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"LAT\" type=\"tns:ArrayOfString\"
+        />\r\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"pWKID\"
+        type=\"s:int\" />\r\n            <s:element minOccurs=\"1\" maxOccurs=\"1\"
+        name=\"gWKID\" type=\"s:int\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"getXYfromLatLongInDegMinSec_WKIDs_ArrayResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"getXYfromLatLongInDegMinSec_WKIDs_ArrayResult\"
+        type=\"tns:ArrayOfDouble\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"ArrayOfDouble\" nillable=\"true\"
+        type=\"tns:ArrayOfDouble\" />\r\n      <s:element name=\"ArrayOfString\" nillable=\"true\"
+        type=\"tns:ArrayOfString\" />\r\n    </s:schema>\r\n    <s:schema targetNamespace=\"http://intra.miamidade.gov/GISwebSRVCS/AbstractTypes\">\r\n
+        \     <s:import namespace=\"http://schemas.xmlsoap.org/soap/encoding/\" />\r\n
+        \     <s:complexType name=\"StringArray\">\r\n        <s:complexContent mixed=\"false\">\r\n
+        \         <s:restriction base=\"soapenc:Array\">\r\n            <s:sequence>\r\n
+        \             <s:element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"String\"
+        type=\"s:string\" />\r\n            </s:sequence>\r\n          </s:restriction>\r\n
+        \       </s:complexContent>\r\n      </s:complexType>\r\n    </s:schema>\r\n
+        \ </wsdl:types>\r\n  <wsdl:message name=\"getLatLongDecFromXYSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getLatLongDecFromXY\" />\r\n
+        \ </wsdl:message>\r\n  <wsdl:message name=\"getLatLongDecFromXYSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getLatLongDecFromXYResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongDegreeFromXYSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getLatLongDegreeFromXY\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongDegreeFromXYSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getLatLongDegreeFromXYResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongInDegMinSecFromXYSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getLatLongInDegMinSecFromXY\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongInDegMinSecFromXYSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getLatLongInDegMinSecFromXYResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongDecFromXY_WKIDsSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getLatLongDecFromXY_WKIDs\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongDecFromXY_WKIDsSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getLatLongDecFromXY_WKIDsResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongDegreeFromXY_WKIDsSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getLatLongDegreeFromXY_WKIDs\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongDegreeFromXY_WKIDsSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getLatLongDegreeFromXY_WKIDsResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongInDegMinSecFromXY_WKIDsSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getLatLongInDegMinSecFromXY_WKIDs\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongInDegMinSecFromXY_WKIDsSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getLatLongInDegMinSecFromXY_WKIDsResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongDecFromXY_ArraySoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getLatLongDecFromXY_Array\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongDecFromXY_ArraySoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getLatLongDecFromXY_ArrayResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongDegreeFromXY_ArraySoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getLatLongDegreeFromXY_Array\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongDegreeFromXY_ArraySoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getLatLongDegreeFromXY_ArrayResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongInDegMinSecFromXY_ArraySoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getLatLongInDegMinSecFromXY_Array\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongInDegMinSecFromXY_ArraySoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getLatLongInDegMinSecFromXY_ArrayResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongDecFromXY_Array_WKIDsSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getLatLongDecFromXY_Array_WKIDs\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongDecFromXY_Array_WKIDsSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getLatLongDecFromXY_Array_WKIDsResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongDegreeFromXY_Array_WKIDsSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getLatLongDegreeFromXY_Array_WKIDs\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongDegreeFromXY_Array_WKIDsSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getLatLongDegreeFromXY_Array_WKIDsResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongInDegMinSecFromXY_Array_WKIDsSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getLatLongInDegMinSecFromXY_Array_WKIDs\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongInDegMinSecFromXY_Array_WKIDsSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getLatLongInDegMinSecFromXY_Array_WKIDsResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongDecSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getXYfromLatLongDec\" />\r\n
+        \ </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongDecSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getXYfromLatLongDecResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongDegreeSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getXYfromLatLongDegree\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongDegreeSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getXYfromLatLongDegreeResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongInDegMinSecSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getXYfromLatLongInDegMinSec\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongInDegMinSecSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getXYfromLatLongInDegMinSecResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongDec_WKIDsSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getXYfromLatLongDec_WKIDs\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongDec_WKIDsSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getXYfromLatLongDec_WKIDsResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongDegree_WKIDsSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getXYfromLatLongDegree_WKIDs\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongDegree_WKIDsSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getXYfromLatLongDegree_WKIDsResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongInDegMinSec_WKIDsSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getXYfromLatLongInDegMinSec_WKIDs\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongInDegMinSec_WKIDsSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getXYfromLatLongInDegMinSec_WKIDsResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongDec_WKIDs_ArraySoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getXYfromLatLongDec_WKIDs_Array\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongDec_WKIDs_ArraySoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getXYfromLatLongDec_WKIDs_ArrayResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongDegree_WKIDs_ArraySoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getXYfromLatLongDegree_WKIDs_Array\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongDegree_WKIDs_ArraySoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getXYfromLatLongDegree_WKIDs_ArrayResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongInDegMinSec_WKIDs_ArraySoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getXYfromLatLongInDegMinSec_WKIDs_Array\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongInDegMinSec_WKIDs_ArraySoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getXYfromLatLongInDegMinSec_WKIDs_ArrayResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongDecFromXYHttpGetIn\">\r\n
+        \   <wsdl:part name=\"X\" type=\"s:string\" />\r\n    <wsdl:part name=\"Y\"
+        type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongDecFromXYHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfDouble\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getLatLongDegreeFromXYHttpGetIn\">\r\n    <wsdl:part
+        name=\"X\" type=\"s:string\" />\r\n    <wsdl:part name=\"Y\" type=\"s:string\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongDegreeFromXYHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfString\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getLatLongInDegMinSecFromXYHttpGetIn\">\r\n    <wsdl:part
+        name=\"X\" type=\"s:string\" />\r\n    <wsdl:part name=\"Y\" type=\"s:string\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongInDegMinSecFromXYHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfString\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getLatLongDecFromXY_WKIDsHttpGetIn\">\r\n    <wsdl:part
+        name=\"X\" type=\"s:string\" />\r\n    <wsdl:part name=\"Y\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"pWKID\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"gWKID\" type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"getLatLongDecFromXY_WKIDsHttpGetOut\">\r\n    <wsdl:part name=\"Body\"
+        element=\"tns:ArrayOfDouble\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongDegreeFromXY_WKIDsHttpGetIn\">\r\n
+        \   <wsdl:part name=\"X\" type=\"s:string\" />\r\n    <wsdl:part name=\"Y\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"pWKID\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"gWKID\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getLatLongDegreeFromXY_WKIDsHttpGetOut\">\r\n    <wsdl:part
+        name=\"Body\" element=\"tns:ArrayOfString\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"getLatLongInDegMinSecFromXY_WKIDsHttpGetIn\">\r\n    <wsdl:part name=\"X\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"Y\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"pWKID\" type=\"s:string\" />\r\n    <wsdl:part name=\"gWKID\"
+        type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongInDegMinSecFromXY_WKIDsHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfString\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getLatLongDecFromXY_ArrayHttpGetIn\">\r\n    <wsdl:part
+        name=\"X\" type=\"s1:StringArray\" />\r\n    <wsdl:part name=\"Y\" type=\"s1:StringArray\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongDecFromXY_ArrayHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfDouble\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getLatLongDegreeFromXY_ArrayHttpGetIn\">\r\n    <wsdl:part
+        name=\"X\" type=\"s1:StringArray\" />\r\n    <wsdl:part name=\"Y\" type=\"s1:StringArray\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongDegreeFromXY_ArrayHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfString\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getLatLongInDegMinSecFromXY_ArrayHttpGetIn\">\r\n    <wsdl:part
+        name=\"X\" type=\"s1:StringArray\" />\r\n    <wsdl:part name=\"Y\" type=\"s1:StringArray\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongInDegMinSecFromXY_ArrayHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfString\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getLatLongDecFromXY_Array_WKIDsHttpGetIn\">\r\n    <wsdl:part
+        name=\"X\" type=\"s1:StringArray\" />\r\n    <wsdl:part name=\"Y\" type=\"s1:StringArray\"
+        />\r\n    <wsdl:part name=\"pWKID\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"gWKID\" type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"getLatLongDecFromXY_Array_WKIDsHttpGetOut\">\r\n    <wsdl:part name=\"Body\"
+        element=\"tns:ArrayOfDouble\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongDegreeFromXY_Array_WKIDsHttpGetIn\">\r\n
+        \   <wsdl:part name=\"X\" type=\"s1:StringArray\" />\r\n    <wsdl:part name=\"Y\"
+        type=\"s1:StringArray\" />\r\n    <wsdl:part name=\"pWKID\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"gWKID\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getLatLongDegreeFromXY_Array_WKIDsHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfString\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getLatLongInDegMinSecFromXY_Array_WKIDsHttpGetIn\">\r\n
+        \   <wsdl:part name=\"X\" type=\"s1:StringArray\" />\r\n    <wsdl:part name=\"Y\"
+        type=\"s1:StringArray\" />\r\n    <wsdl:part name=\"pWKID\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"gWKID\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getLatLongInDegMinSecFromXY_Array_WKIDsHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfString\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getXYfromLatLongDecHttpGetIn\">\r\n    <wsdl:part name=\"LNG\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"LAT\" type=\"s:string\" />\r\n
+        \ </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongDecHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfDouble\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getXYfromLatLongDegreeHttpGetIn\">\r\n    <wsdl:part
+        name=\"LNG\" type=\"s:string\" />\r\n    <wsdl:part name=\"LAT\" type=\"s:string\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongDegreeHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfDouble\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getXYfromLatLongInDegMinSecHttpGetIn\">\r\n    <wsdl:part
+        name=\"LNG\" type=\"s:string\" />\r\n    <wsdl:part name=\"LAT\" type=\"s:string\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongInDegMinSecHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfDouble\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getXYfromLatLongDec_WKIDsHttpGetIn\">\r\n    <wsdl:part
+        name=\"LNG\" type=\"s:string\" />\r\n    <wsdl:part name=\"LAT\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"pWKID\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"gWKID\" type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"getXYfromLatLongDec_WKIDsHttpGetOut\">\r\n    <wsdl:part name=\"Body\"
+        element=\"tns:ArrayOfDouble\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongDegree_WKIDsHttpGetIn\">\r\n
+        \   <wsdl:part name=\"LNG\" type=\"s:string\" />\r\n    <wsdl:part name=\"LAT\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"pWKID\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"gWKID\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getXYfromLatLongDegree_WKIDsHttpGetOut\">\r\n    <wsdl:part
+        name=\"Body\" element=\"tns:ArrayOfDouble\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"getXYfromLatLongInDegMinSec_WKIDsHttpGetIn\">\r\n    <wsdl:part name=\"LNG\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"LAT\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"pWKID\" type=\"s:string\" />\r\n    <wsdl:part name=\"gWKID\"
+        type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongInDegMinSec_WKIDsHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfDouble\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getXYfromLatLongDec_WKIDs_ArrayHttpGetIn\">\r\n    <wsdl:part
+        name=\"LNG\" type=\"s1:StringArray\" />\r\n    <wsdl:part name=\"LAT\" type=\"s1:StringArray\"
+        />\r\n    <wsdl:part name=\"pWKID\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"gWKID\" type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"getXYfromLatLongDec_WKIDs_ArrayHttpGetOut\">\r\n    <wsdl:part name=\"Body\"
+        element=\"tns:ArrayOfDouble\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongDegree_WKIDs_ArrayHttpGetIn\">\r\n
+        \   <wsdl:part name=\"LNG\" type=\"s1:StringArray\" />\r\n    <wsdl:part name=\"LAT\"
+        type=\"s1:StringArray\" />\r\n    <wsdl:part name=\"pWKID\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"gWKID\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getXYfromLatLongDegree_WKIDs_ArrayHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfDouble\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getXYfromLatLongInDegMinSec_WKIDs_ArrayHttpGetIn\">\r\n
+        \   <wsdl:part name=\"LNG\" type=\"s1:StringArray\" />\r\n    <wsdl:part name=\"LAT\"
+        type=\"s1:StringArray\" />\r\n    <wsdl:part name=\"pWKID\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"gWKID\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getXYfromLatLongInDegMinSec_WKIDs_ArrayHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfDouble\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getLatLongDecFromXYHttpPostIn\">\r\n    <wsdl:part
+        name=\"X\" type=\"s:string\" />\r\n    <wsdl:part name=\"Y\" type=\"s:string\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongDecFromXYHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfDouble\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getLatLongDegreeFromXYHttpPostIn\">\r\n    <wsdl:part
+        name=\"X\" type=\"s:string\" />\r\n    <wsdl:part name=\"Y\" type=\"s:string\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongDegreeFromXYHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfString\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getLatLongInDegMinSecFromXYHttpPostIn\">\r\n    <wsdl:part
+        name=\"X\" type=\"s:string\" />\r\n    <wsdl:part name=\"Y\" type=\"s:string\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongInDegMinSecFromXYHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfString\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getLatLongDecFromXY_WKIDsHttpPostIn\">\r\n    <wsdl:part
+        name=\"X\" type=\"s:string\" />\r\n    <wsdl:part name=\"Y\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"pWKID\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"gWKID\" type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"getLatLongDecFromXY_WKIDsHttpPostOut\">\r\n    <wsdl:part name=\"Body\"
+        element=\"tns:ArrayOfDouble\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongDegreeFromXY_WKIDsHttpPostIn\">\r\n
+        \   <wsdl:part name=\"X\" type=\"s:string\" />\r\n    <wsdl:part name=\"Y\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"pWKID\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"gWKID\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getLatLongDegreeFromXY_WKIDsHttpPostOut\">\r\n    <wsdl:part
+        name=\"Body\" element=\"tns:ArrayOfString\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"getLatLongInDegMinSecFromXY_WKIDsHttpPostIn\">\r\n    <wsdl:part name=\"X\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"Y\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"pWKID\" type=\"s:string\" />\r\n    <wsdl:part name=\"gWKID\"
+        type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongInDegMinSecFromXY_WKIDsHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfString\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getLatLongDecFromXY_ArrayHttpPostIn\">\r\n    <wsdl:part
+        name=\"X\" type=\"s1:StringArray\" />\r\n    <wsdl:part name=\"Y\" type=\"s1:StringArray\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongDecFromXY_ArrayHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfDouble\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getLatLongDegreeFromXY_ArrayHttpPostIn\">\r\n    <wsdl:part
+        name=\"X\" type=\"s1:StringArray\" />\r\n    <wsdl:part name=\"Y\" type=\"s1:StringArray\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongDegreeFromXY_ArrayHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfString\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getLatLongInDegMinSecFromXY_ArrayHttpPostIn\">\r\n
+        \   <wsdl:part name=\"X\" type=\"s1:StringArray\" />\r\n    <wsdl:part name=\"Y\"
+        type=\"s1:StringArray\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongInDegMinSecFromXY_ArrayHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfString\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getLatLongDecFromXY_Array_WKIDsHttpPostIn\">\r\n    <wsdl:part
+        name=\"X\" type=\"s1:StringArray\" />\r\n    <wsdl:part name=\"Y\" type=\"s1:StringArray\"
+        />\r\n    <wsdl:part name=\"pWKID\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"gWKID\" type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"getLatLongDecFromXY_Array_WKIDsHttpPostOut\">\r\n    <wsdl:part name=\"Body\"
+        element=\"tns:ArrayOfDouble\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getLatLongDegreeFromXY_Array_WKIDsHttpPostIn\">\r\n
+        \   <wsdl:part name=\"X\" type=\"s1:StringArray\" />\r\n    <wsdl:part name=\"Y\"
+        type=\"s1:StringArray\" />\r\n    <wsdl:part name=\"pWKID\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"gWKID\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getLatLongDegreeFromXY_Array_WKIDsHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfString\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getLatLongInDegMinSecFromXY_Array_WKIDsHttpPostIn\">\r\n
+        \   <wsdl:part name=\"X\" type=\"s1:StringArray\" />\r\n    <wsdl:part name=\"Y\"
+        type=\"s1:StringArray\" />\r\n    <wsdl:part name=\"pWKID\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"gWKID\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getLatLongInDegMinSecFromXY_Array_WKIDsHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfString\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getXYfromLatLongDecHttpPostIn\">\r\n    <wsdl:part
+        name=\"LNG\" type=\"s:string\" />\r\n    <wsdl:part name=\"LAT\" type=\"s:string\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongDecHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfDouble\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getXYfromLatLongDegreeHttpPostIn\">\r\n    <wsdl:part
+        name=\"LNG\" type=\"s:string\" />\r\n    <wsdl:part name=\"LAT\" type=\"s:string\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongDegreeHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfDouble\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getXYfromLatLongInDegMinSecHttpPostIn\">\r\n    <wsdl:part
+        name=\"LNG\" type=\"s:string\" />\r\n    <wsdl:part name=\"LAT\" type=\"s:string\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongInDegMinSecHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfDouble\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getXYfromLatLongDec_WKIDsHttpPostIn\">\r\n    <wsdl:part
+        name=\"LNG\" type=\"s:string\" />\r\n    <wsdl:part name=\"LAT\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"pWKID\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"gWKID\" type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"getXYfromLatLongDec_WKIDsHttpPostOut\">\r\n    <wsdl:part name=\"Body\"
+        element=\"tns:ArrayOfDouble\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongDegree_WKIDsHttpPostIn\">\r\n
+        \   <wsdl:part name=\"LNG\" type=\"s:string\" />\r\n    <wsdl:part name=\"LAT\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"pWKID\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"gWKID\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getXYfromLatLongDegree_WKIDsHttpPostOut\">\r\n    <wsdl:part
+        name=\"Body\" element=\"tns:ArrayOfDouble\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"getXYfromLatLongInDegMinSec_WKIDsHttpPostIn\">\r\n    <wsdl:part name=\"LNG\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"LAT\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"pWKID\" type=\"s:string\" />\r\n    <wsdl:part name=\"gWKID\"
+        type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongInDegMinSec_WKIDsHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfDouble\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getXYfromLatLongDec_WKIDs_ArrayHttpPostIn\">\r\n    <wsdl:part
+        name=\"LNG\" type=\"s1:StringArray\" />\r\n    <wsdl:part name=\"LAT\" type=\"s1:StringArray\"
+        />\r\n    <wsdl:part name=\"pWKID\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"gWKID\" type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"getXYfromLatLongDec_WKIDs_ArrayHttpPostOut\">\r\n    <wsdl:part name=\"Body\"
+        element=\"tns:ArrayOfDouble\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getXYfromLatLongDegree_WKIDs_ArrayHttpPostIn\">\r\n
+        \   <wsdl:part name=\"LNG\" type=\"s1:StringArray\" />\r\n    <wsdl:part name=\"LAT\"
+        type=\"s1:StringArray\" />\r\n    <wsdl:part name=\"pWKID\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"gWKID\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getXYfromLatLongDegree_WKIDs_ArrayHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfDouble\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getXYfromLatLongInDegMinSec_WKIDs_ArrayHttpPostIn\">\r\n
+        \   <wsdl:part name=\"LNG\" type=\"s1:StringArray\" />\r\n    <wsdl:part name=\"LAT\"
+        type=\"s1:StringArray\" />\r\n    <wsdl:part name=\"pWKID\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"gWKID\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getXYfromLatLongInDegMinSec_WKIDs_ArrayHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfDouble\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:portType name=\"XYLatLongConversionsClassSoap\">\r\n    <wsdl:operation
+        name=\"getLatLongDecFromXY\">\r\n      <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns the longitude and latitude in decimal for the
+        given X/Y coordinate as a double array. geographic WKID = 4152 (esriSRGeoCS_NAD1983HARN)
+        and projected WKID = 2236 (esriSRProjCS_NAD1983SPCS_FLEastFT)</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getLatLongDecFromXYSoapIn\" />\r\n      <wsdl:output
+        message=\"tns:getLatLongDecFromXYSoapOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getLatLongDegreeFromXY\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns, as a String Array, the longitude and latitude in Degrees Minutes
+        format, for the given X/Y coordinates. geographic WKID = 4152 (esriSRGeoCS_NAD1983HARN)
+        and projected WKID = 2236 (esriSRProjCS_NAD1983SPCS_FLEastFT)</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getLatLongDegreeFromXYSoapIn\" />\r\n      <wsdl:output
+        message=\"tns:getLatLongDegreeFromXYSoapOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getLatLongInDegMinSecFromXY\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns, as a String Array, the longitude and latitude in Degrees Minutes
+        Seconds format, for the given X/Y coordinates. geographic WKID = 4152 (esriSRGeoCS_NAD1983HARN)
+        and projected WKID = 2236 (esriSRProjCS_NAD1983SPCS_FLEastFT)</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getLatLongInDegMinSecFromXYSoapIn\" />\r\n
+        \     <wsdl:output message=\"tns:getLatLongInDegMinSecFromXYSoapOut\" />\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongDecFromXY_WKIDs\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns, as a double array, longitude/latitude (in
+        decimal) for the given X/Y coordinate, projected WKID and geographic WKID.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getLatLongDecFromXY_WKIDsSoapIn\" />\r\n      <wsdl:output
+        message=\"tns:getLatLongDecFromXY_WKIDsSoapOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getLatLongDegreeFromXY_WKIDs\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns, as a String Array, longitude/latitude (in Degrees Minutes format),
+        for the given X/Y coordinates, projected WKID and geographic WKID.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getLatLongDegreeFromXY_WKIDsSoapIn\" />\r\n
+        \     <wsdl:output message=\"tns:getLatLongDegreeFromXY_WKIDsSoapOut\" />\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongInDegMinSecFromXY_WKIDs\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns, as a String Array, longitude/latitude (in
+        Degrees Minutes Seconds format), for the given X/Y coordinates, projected
+        WKID and geographic WKID.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:getLatLongInDegMinSecFromXY_WKIDsSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:getLatLongInDegMinSecFromXY_WKIDsSoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongDecFromXY_Array\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a 1-dimensional array of longitude and latitude
+        (in decimal) for the input arrays X and Y. It returns lon,lat pairs (ie lon1,lat1,lon2,lat2,lon3,lat3...,lonN,latN).
+        geographic WKID = 4152 (esriSRGeoCS_NAD1983HARN) and projected WKID = 2236
+        (esriSRProjCS_NAD1983SPCS_FLEastFT)</wsdl:documentation>\r\n      <wsdl:input
+        message=\"tns:getLatLongDecFromXY_ArraySoapIn\" />\r\n      <wsdl:output message=\"tns:getLatLongDecFromXY_ArraySoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongDegreeFromXY_Array\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a 1-dimensional array of longitude and latitude
+        in Degrees Minutes format (as string), for the input arrays X and Y. It returns
+        lon,lat pairs (ie lon1,lat1,lon2,lat2,lon3,lat3...,lonN,latN). geographic
+        WKID = 4152 (esriSRGeoCS_NAD1983HARN) and projected WKID = 2236 (esriSRProjCS_NAD1983SPCS_FLEastFT)</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getLatLongDegreeFromXY_ArraySoapIn\" />\r\n
+        \     <wsdl:output message=\"tns:getLatLongDegreeFromXY_ArraySoapOut\" />\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongInDegMinSecFromXY_Array\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a 1-dimensional array of longitude and latitude
+        in Degrees Minutes Seconds format (as string), for the input arrays X and
+        Y. It returns lon,lat pairs (ie lon1,lat1,lon2,lat2,lon3,lat3...,lonN,latN).
+        geographic WKID = 4152 (esriSRGeoCS_NAD1983HARN) and projected WKID = 2236
+        (esriSRProjCS_NAD1983SPCS_FLEastFT)</wsdl:documentation>\r\n      <wsdl:input
+        message=\"tns:getLatLongInDegMinSecFromXY_ArraySoapIn\" />\r\n      <wsdl:output
+        message=\"tns:getLatLongInDegMinSecFromXY_ArraySoapOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getLatLongDecFromXY_Array_WKIDs\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns a 1-dimensional array of longitude and latitude (in decimal) for the
+        input arrays X &amp; Y, projected WKID and geographic WKID. It returns lon,lat
+        pairs (ie lon1,lat1,lon2,lat2,lon3,lat3...,lonN,latN). </wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getLatLongDecFromXY_Array_WKIDsSoapIn\" />\r\n
+        \     <wsdl:output message=\"tns:getLatLongDecFromXY_Array_WKIDsSoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongDegreeFromXY_Array_WKIDs\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a 1-dimensional array of longitude and latitude
+        in Degrees Minutes format (as string), for the input arrays X &amp; Y, projected
+        WKID and geographic WKID. It returns lon,lat pairs (ie lon1,lat1,lon2,lat2,lon3,lat3...,lonN,latN).
+        </wsdl:documentation>\r\n      <wsdl:input message=\"tns:getLatLongDegreeFromXY_Array_WKIDsSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:getLatLongDegreeFromXY_Array_WKIDsSoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongInDegMinSecFromXY_Array_WKIDs\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a 1-dimensional array of longitude and latitude
+        in Degrees Minutes Seconds format (as string), for the input arrays X &amp;
+        Y, projected WKID and geographic WKID. It returns lon,lat pairs (ie lon1,lat1,lon2,lat2,lon3,lat3...,lonN,latN).
+        </wsdl:documentation>\r\n      <wsdl:input message=\"tns:getLatLongInDegMinSecFromXY_Array_WKIDsSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:getLatLongInDegMinSecFromXY_Array_WKIDsSoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongDec\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns, as a double array, the X/Y coordinate for
+        the given longitude/latitude (in decimal).geographic WKID = 4152 (esriSRGeoCS_NAD1983HARN)
+        and projected WKID = 2236 (esriSRProjCS_NAD1983SPCS_FLEastFT)</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getXYfromLatLongDecSoapIn\" />\r\n      <wsdl:output
+        message=\"tns:getXYfromLatLongDecSoapOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getXYfromLatLongDegree\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns, as a double array, the X/Y coordinates for the given longitude/latitude
+        (in Degrees Minutes format). geographic WKID = 4152 (esriSRGeoCS_NAD1983HARN)
+        and projected WKID = 2236 (esriSRProjCS_NAD1983SPCS_FLEastFT)</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getXYfromLatLongDegreeSoapIn\" />\r\n      <wsdl:output
+        message=\"tns:getXYfromLatLongDegreeSoapOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getXYfromLatLongInDegMinSec\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns, as a Double array, the X/Y coordinates for the given longitude/latitude
+        (in Degrees Minutes Seconds format). geographic WKID = 4152 (esriSRGeoCS_NAD1983HARN)
+        and projected WKID = 2236 (esriSRProjCS_NAD1983SPCS_FLEastFT)</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getXYfromLatLongInDegMinSecSoapIn\" />\r\n
+        \     <wsdl:output message=\"tns:getXYfromLatLongInDegMinSecSoapOut\" />\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongDec_WKIDs\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns, as a double array, the X/Y coordinate for
+        the given longitude/latitude (in decimal), projected WKID and geographic WKID.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getXYfromLatLongDec_WKIDsSoapIn\" />\r\n      <wsdl:output
+        message=\"tns:getXYfromLatLongDec_WKIDsSoapOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getXYfromLatLongDegree_WKIDs\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns, as a double array, the X/Y coordinates for the given longitude/latitude
+        (in Degrees Minutes format), projected WKID and geographic WKID.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getXYfromLatLongDegree_WKIDsSoapIn\" />\r\n
+        \     <wsdl:output message=\"tns:getXYfromLatLongDegree_WKIDsSoapOut\" />\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongInDegMinSec_WKIDs\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns, as a Double array, the X/Y coordinates for
+        the given longitude/latitude (in Degrees Minutes Seconds format), projected
+        WKID and geographic WKID.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:getXYfromLatLongInDegMinSec_WKIDsSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:getXYfromLatLongInDegMinSec_WKIDsSoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongDec_WKIDs_Array\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a 1-dimensional array of X and Y (in decimal)
+        for the input arrays Longitud and latitude (in decimal), projected WKID and
+        geographic WKID. It returns x,y pairs (ie x1,y1,x2,y2,x3,y3...,xn,yn).</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getXYfromLatLongDec_WKIDs_ArraySoapIn\" />\r\n
+        \     <wsdl:output message=\"tns:getXYfromLatLongDec_WKIDs_ArraySoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongDegree_WKIDs_Array\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a 1-dimensional array of X and Y (in decimal)
+        for the input arrays Longitud and latitude (in Degrees Minutes format), projected
+        WKID and geographic WKID. It returns x,y pairs (ie x1,y1,x2,y2,x3,y3...,xn,yn).</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getXYfromLatLongDegree_WKIDs_ArraySoapIn\"
+        />\r\n      <wsdl:output message=\"tns:getXYfromLatLongDegree_WKIDs_ArraySoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongInDegMinSec_WKIDs_Array\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a 1-dimensional array of X and Y (in decimal)
+        for the input arrays Longitud and latitude (in Degrees Minutes Seconds format),
+        projected WKID and geographic WKID. It returns x,y pairs (ie x1,y1,x2,y2,x3,y3...,xn,yn).</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getXYfromLatLongInDegMinSec_WKIDs_ArraySoapIn\"
+        />\r\n      <wsdl:output message=\"tns:getXYfromLatLongInDegMinSec_WKIDs_ArraySoapOut\"
+        />\r\n    </wsdl:operation>\r\n  </wsdl:portType>\r\n  <wsdl:portType name=\"XYLatLongConversionsClassHttpGet\">\r\n
+        \   <wsdl:operation name=\"getLatLongDecFromXY\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns the longitude and latitude in decimal for the given X/Y coordinate
+        as a double array. geographic WKID = 4152 (esriSRGeoCS_NAD1983HARN) and projected
+        WKID = 2236 (esriSRProjCS_NAD1983SPCS_FLEastFT)</wsdl:documentation>\r\n      <wsdl:input
+        message=\"tns:getLatLongDecFromXYHttpGetIn\" />\r\n      <wsdl:output message=\"tns:getLatLongDecFromXYHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongDegreeFromXY\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns, as a String Array, the longitude and latitude
+        in Degrees Minutes format, for the given X/Y coordinates. geographic WKID
+        = 4152 (esriSRGeoCS_NAD1983HARN) and projected WKID = 2236 (esriSRProjCS_NAD1983SPCS_FLEastFT)</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getLatLongDegreeFromXYHttpGetIn\" />\r\n      <wsdl:output
+        message=\"tns:getLatLongDegreeFromXYHttpGetOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getLatLongInDegMinSecFromXY\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns, as a String Array, the longitude and latitude in Degrees Minutes
+        Seconds format, for the given X/Y coordinates. geographic WKID = 4152 (esriSRGeoCS_NAD1983HARN)
+        and projected WKID = 2236 (esriSRProjCS_NAD1983SPCS_FLEastFT)</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getLatLongInDegMinSecFromXYHttpGetIn\" />\r\n
+        \     <wsdl:output message=\"tns:getLatLongInDegMinSecFromXYHttpGetOut\" />\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongDecFromXY_WKIDs\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns, as a double array, longitude/latitude (in
+        decimal) for the given X/Y coordinate, projected WKID and geographic WKID.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getLatLongDecFromXY_WKIDsHttpGetIn\" />\r\n
+        \     <wsdl:output message=\"tns:getLatLongDecFromXY_WKIDsHttpGetOut\" />\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongDegreeFromXY_WKIDs\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns, as a String Array, longitude/latitude (in
+        Degrees Minutes format), for the given X/Y coordinates, projected WKID and
+        geographic WKID.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:getLatLongDegreeFromXY_WKIDsHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:getLatLongDegreeFromXY_WKIDsHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongInDegMinSecFromXY_WKIDs\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns, as a String Array, longitude/latitude (in
+        Degrees Minutes Seconds format), for the given X/Y coordinates, projected
+        WKID and geographic WKID.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:getLatLongInDegMinSecFromXY_WKIDsHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:getLatLongInDegMinSecFromXY_WKIDsHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongDecFromXY_Array\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a 1-dimensional array of longitude and latitude
+        (in decimal) for the input arrays X and Y. It returns lon,lat pairs (ie lon1,lat1,lon2,lat2,lon3,lat3...,lonN,latN).
+        geographic WKID = 4152 (esriSRGeoCS_NAD1983HARN) and projected WKID = 2236
+        (esriSRProjCS_NAD1983SPCS_FLEastFT)</wsdl:documentation>\r\n      <wsdl:input
+        message=\"tns:getLatLongDecFromXY_ArrayHttpGetIn\" />\r\n      <wsdl:output
+        message=\"tns:getLatLongDecFromXY_ArrayHttpGetOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getLatLongDegreeFromXY_Array\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns a 1-dimensional array of longitude and latitude in Degrees Minutes
+        format (as string), for the input arrays X and Y. It returns lon,lat pairs
+        (ie lon1,lat1,lon2,lat2,lon3,lat3...,lonN,latN). geographic WKID = 4152 (esriSRGeoCS_NAD1983HARN)
+        and projected WKID = 2236 (esriSRProjCS_NAD1983SPCS_FLEastFT)</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getLatLongDegreeFromXY_ArrayHttpGetIn\" />\r\n
+        \     <wsdl:output message=\"tns:getLatLongDegreeFromXY_ArrayHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongInDegMinSecFromXY_Array\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a 1-dimensional array of longitude and latitude
+        in Degrees Minutes Seconds format (as string), for the input arrays X and
+        Y. It returns lon,lat pairs (ie lon1,lat1,lon2,lat2,lon3,lat3...,lonN,latN).
+        geographic WKID = 4152 (esriSRGeoCS_NAD1983HARN) and projected WKID = 2236
+        (esriSRProjCS_NAD1983SPCS_FLEastFT)</wsdl:documentation>\r\n      <wsdl:input
+        message=\"tns:getLatLongInDegMinSecFromXY_ArrayHttpGetIn\" />\r\n      <wsdl:output
+        message=\"tns:getLatLongInDegMinSecFromXY_ArrayHttpGetOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getLatLongDecFromXY_Array_WKIDs\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns a 1-dimensional array of longitude and latitude (in decimal) for the
+        input arrays X &amp; Y, projected WKID and geographic WKID. It returns lon,lat
+        pairs (ie lon1,lat1,lon2,lat2,lon3,lat3...,lonN,latN). </wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getLatLongDecFromXY_Array_WKIDsHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:getLatLongDecFromXY_Array_WKIDsHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongDegreeFromXY_Array_WKIDs\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a 1-dimensional array of longitude and latitude
+        in Degrees Minutes format (as string), for the input arrays X &amp; Y, projected
+        WKID and geographic WKID. It returns lon,lat pairs (ie lon1,lat1,lon2,lat2,lon3,lat3...,lonN,latN).
+        </wsdl:documentation>\r\n      <wsdl:input message=\"tns:getLatLongDegreeFromXY_Array_WKIDsHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:getLatLongDegreeFromXY_Array_WKIDsHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongInDegMinSecFromXY_Array_WKIDs\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a 1-dimensional array of longitude and latitude
+        in Degrees Minutes Seconds format (as string), for the input arrays X &amp;
+        Y, projected WKID and geographic WKID. It returns lon,lat pairs (ie lon1,lat1,lon2,lat2,lon3,lat3...,lonN,latN).
+        </wsdl:documentation>\r\n      <wsdl:input message=\"tns:getLatLongInDegMinSecFromXY_Array_WKIDsHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:getLatLongInDegMinSecFromXY_Array_WKIDsHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongDec\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns, as a double array, the X/Y coordinate for
+        the given longitude/latitude (in decimal).geographic WKID = 4152 (esriSRGeoCS_NAD1983HARN)
+        and projected WKID = 2236 (esriSRProjCS_NAD1983SPCS_FLEastFT)</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getXYfromLatLongDecHttpGetIn\" />\r\n      <wsdl:output
+        message=\"tns:getXYfromLatLongDecHttpGetOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getXYfromLatLongDegree\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns, as a double array, the X/Y coordinates for the given longitude/latitude
+        (in Degrees Minutes format). geographic WKID = 4152 (esriSRGeoCS_NAD1983HARN)
+        and projected WKID = 2236 (esriSRProjCS_NAD1983SPCS_FLEastFT)</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getXYfromLatLongDegreeHttpGetIn\" />\r\n      <wsdl:output
+        message=\"tns:getXYfromLatLongDegreeHttpGetOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getXYfromLatLongInDegMinSec\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns, as a Double array, the X/Y coordinates for the given longitude/latitude
+        (in Degrees Minutes Seconds format). geographic WKID = 4152 (esriSRGeoCS_NAD1983HARN)
+        and projected WKID = 2236 (esriSRProjCS_NAD1983SPCS_FLEastFT)</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getXYfromLatLongInDegMinSecHttpGetIn\" />\r\n
+        \     <wsdl:output message=\"tns:getXYfromLatLongInDegMinSecHttpGetOut\" />\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongDec_WKIDs\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns, as a double array, the X/Y coordinate for
+        the given longitude/latitude (in decimal), projected WKID and geographic WKID.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getXYfromLatLongDec_WKIDsHttpGetIn\" />\r\n
+        \     <wsdl:output message=\"tns:getXYfromLatLongDec_WKIDsHttpGetOut\" />\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongDegree_WKIDs\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns, as a double array, the X/Y coordinates for
+        the given longitude/latitude (in Degrees Minutes format), projected WKID and
+        geographic WKID.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:getXYfromLatLongDegree_WKIDsHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:getXYfromLatLongDegree_WKIDsHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongInDegMinSec_WKIDs\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns, as a Double array, the X/Y coordinates for
+        the given longitude/latitude (in Degrees Minutes Seconds format), projected
+        WKID and geographic WKID.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:getXYfromLatLongInDegMinSec_WKIDsHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:getXYfromLatLongInDegMinSec_WKIDsHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongDec_WKIDs_Array\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a 1-dimensional array of X and Y (in decimal)
+        for the input arrays Longitud and latitude (in decimal), projected WKID and
+        geographic WKID. It returns x,y pairs (ie x1,y1,x2,y2,x3,y3...,xn,yn).</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getXYfromLatLongDec_WKIDs_ArrayHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:getXYfromLatLongDec_WKIDs_ArrayHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongDegree_WKIDs_Array\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a 1-dimensional array of X and Y (in decimal)
+        for the input arrays Longitud and latitude (in Degrees Minutes format), projected
+        WKID and geographic WKID. It returns x,y pairs (ie x1,y1,x2,y2,x3,y3...,xn,yn).</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getXYfromLatLongDegree_WKIDs_ArrayHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:getXYfromLatLongDegree_WKIDs_ArrayHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongInDegMinSec_WKIDs_Array\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a 1-dimensional array of X and Y (in decimal)
+        for the input arrays Longitud and latitude (in Degrees Minutes Seconds format),
+        projected WKID and geographic WKID. It returns x,y pairs (ie x1,y1,x2,y2,x3,y3...,xn,yn).</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getXYfromLatLongInDegMinSec_WKIDs_ArrayHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:getXYfromLatLongInDegMinSec_WKIDs_ArrayHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n  </wsdl:portType>\r\n  <wsdl:portType name=\"XYLatLongConversionsClassHttpPost\">\r\n
+        \   <wsdl:operation name=\"getLatLongDecFromXY\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns the longitude and latitude in decimal for the given X/Y coordinate
+        as a double array. geographic WKID = 4152 (esriSRGeoCS_NAD1983HARN) and projected
+        WKID = 2236 (esriSRProjCS_NAD1983SPCS_FLEastFT)</wsdl:documentation>\r\n      <wsdl:input
+        message=\"tns:getLatLongDecFromXYHttpPostIn\" />\r\n      <wsdl:output message=\"tns:getLatLongDecFromXYHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongDegreeFromXY\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns, as a String Array, the longitude and latitude
+        in Degrees Minutes format, for the given X/Y coordinates. geographic WKID
+        = 4152 (esriSRGeoCS_NAD1983HARN) and projected WKID = 2236 (esriSRProjCS_NAD1983SPCS_FLEastFT)</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getLatLongDegreeFromXYHttpPostIn\" />\r\n
+        \     <wsdl:output message=\"tns:getLatLongDegreeFromXYHttpPostOut\" />\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongInDegMinSecFromXY\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns, as a String Array, the longitude and latitude
+        in Degrees Minutes Seconds format, for the given X/Y coordinates. geographic
+        WKID = 4152 (esriSRGeoCS_NAD1983HARN) and projected WKID = 2236 (esriSRProjCS_NAD1983SPCS_FLEastFT)</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getLatLongInDegMinSecFromXYHttpPostIn\" />\r\n
+        \     <wsdl:output message=\"tns:getLatLongInDegMinSecFromXYHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongDecFromXY_WKIDs\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns, as a double array, longitude/latitude (in
+        decimal) for the given X/Y coordinate, projected WKID and geographic WKID.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getLatLongDecFromXY_WKIDsHttpPostIn\" />\r\n
+        \     <wsdl:output message=\"tns:getLatLongDecFromXY_WKIDsHttpPostOut\" />\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongDegreeFromXY_WKIDs\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns, as a String Array, longitude/latitude (in
+        Degrees Minutes format), for the given X/Y coordinates, projected WKID and
+        geographic WKID.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:getLatLongDegreeFromXY_WKIDsHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:getLatLongDegreeFromXY_WKIDsHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongInDegMinSecFromXY_WKIDs\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns, as a String Array, longitude/latitude (in
+        Degrees Minutes Seconds format), for the given X/Y coordinates, projected
+        WKID and geographic WKID.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:getLatLongInDegMinSecFromXY_WKIDsHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:getLatLongInDegMinSecFromXY_WKIDsHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongDecFromXY_Array\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a 1-dimensional array of longitude and latitude
+        (in decimal) for the input arrays X and Y. It returns lon,lat pairs (ie lon1,lat1,lon2,lat2,lon3,lat3...,lonN,latN).
+        geographic WKID = 4152 (esriSRGeoCS_NAD1983HARN) and projected WKID = 2236
+        (esriSRProjCS_NAD1983SPCS_FLEastFT)</wsdl:documentation>\r\n      <wsdl:input
+        message=\"tns:getLatLongDecFromXY_ArrayHttpPostIn\" />\r\n      <wsdl:output
+        message=\"tns:getLatLongDecFromXY_ArrayHttpPostOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getLatLongDegreeFromXY_Array\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns a 1-dimensional array of longitude and latitude in Degrees Minutes
+        format (as string), for the input arrays X and Y. It returns lon,lat pairs
+        (ie lon1,lat1,lon2,lat2,lon3,lat3...,lonN,latN). geographic WKID = 4152 (esriSRGeoCS_NAD1983HARN)
+        and projected WKID = 2236 (esriSRProjCS_NAD1983SPCS_FLEastFT)</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getLatLongDegreeFromXY_ArrayHttpPostIn\" />\r\n
+        \     <wsdl:output message=\"tns:getLatLongDegreeFromXY_ArrayHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongInDegMinSecFromXY_Array\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a 1-dimensional array of longitude and latitude
+        in Degrees Minutes Seconds format (as string), for the input arrays X and
+        Y. It returns lon,lat pairs (ie lon1,lat1,lon2,lat2,lon3,lat3...,lonN,latN).
+        geographic WKID = 4152 (esriSRGeoCS_NAD1983HARN) and projected WKID = 2236
+        (esriSRProjCS_NAD1983SPCS_FLEastFT)</wsdl:documentation>\r\n      <wsdl:input
+        message=\"tns:getLatLongInDegMinSecFromXY_ArrayHttpPostIn\" />\r\n      <wsdl:output
+        message=\"tns:getLatLongInDegMinSecFromXY_ArrayHttpPostOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getLatLongDecFromXY_Array_WKIDs\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns a 1-dimensional array of longitude and latitude (in decimal) for the
+        input arrays X &amp; Y, projected WKID and geographic WKID. It returns lon,lat
+        pairs (ie lon1,lat1,lon2,lat2,lon3,lat3...,lonN,latN). </wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getLatLongDecFromXY_Array_WKIDsHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:getLatLongDecFromXY_Array_WKIDsHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongDegreeFromXY_Array_WKIDs\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a 1-dimensional array of longitude and latitude
+        in Degrees Minutes format (as string), for the input arrays X &amp; Y, projected
+        WKID and geographic WKID. It returns lon,lat pairs (ie lon1,lat1,lon2,lat2,lon3,lat3...,lonN,latN).
+        </wsdl:documentation>\r\n      <wsdl:input message=\"tns:getLatLongDegreeFromXY_Array_WKIDsHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:getLatLongDegreeFromXY_Array_WKIDsHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongInDegMinSecFromXY_Array_WKIDs\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a 1-dimensional array of longitude and latitude
+        in Degrees Minutes Seconds format (as string), for the input arrays X &amp;
+        Y, projected WKID and geographic WKID. It returns lon,lat pairs (ie lon1,lat1,lon2,lat2,lon3,lat3...,lonN,latN).
+        </wsdl:documentation>\r\n      <wsdl:input message=\"tns:getLatLongInDegMinSecFromXY_Array_WKIDsHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:getLatLongInDegMinSecFromXY_Array_WKIDsHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongDec\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns, as a double array, the X/Y coordinate for
+        the given longitude/latitude (in decimal).geographic WKID = 4152 (esriSRGeoCS_NAD1983HARN)
+        and projected WKID = 2236 (esriSRProjCS_NAD1983SPCS_FLEastFT)</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getXYfromLatLongDecHttpPostIn\" />\r\n      <wsdl:output
+        message=\"tns:getXYfromLatLongDecHttpPostOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getXYfromLatLongDegree\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns, as a double array, the X/Y coordinates for the given longitude/latitude
+        (in Degrees Minutes format). geographic WKID = 4152 (esriSRGeoCS_NAD1983HARN)
+        and projected WKID = 2236 (esriSRProjCS_NAD1983SPCS_FLEastFT)</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getXYfromLatLongDegreeHttpPostIn\" />\r\n
+        \     <wsdl:output message=\"tns:getXYfromLatLongDegreeHttpPostOut\" />\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongInDegMinSec\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns, as a Double array, the X/Y coordinates for
+        the given longitude/latitude (in Degrees Minutes Seconds format). geographic
+        WKID = 4152 (esriSRGeoCS_NAD1983HARN) and projected WKID = 2236 (esriSRProjCS_NAD1983SPCS_FLEastFT)</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getXYfromLatLongInDegMinSecHttpPostIn\" />\r\n
+        \     <wsdl:output message=\"tns:getXYfromLatLongInDegMinSecHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongDec_WKIDs\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns, as a double array, the X/Y coordinate for
+        the given longitude/latitude (in decimal), projected WKID and geographic WKID.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getXYfromLatLongDec_WKIDsHttpPostIn\" />\r\n
+        \     <wsdl:output message=\"tns:getXYfromLatLongDec_WKIDsHttpPostOut\" />\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongDegree_WKIDs\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns, as a double array, the X/Y coordinates for
+        the given longitude/latitude (in Degrees Minutes format), projected WKID and
+        geographic WKID.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:getXYfromLatLongDegree_WKIDsHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:getXYfromLatLongDegree_WKIDsHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongInDegMinSec_WKIDs\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns, as a Double array, the X/Y coordinates for
+        the given longitude/latitude (in Degrees Minutes Seconds format), projected
+        WKID and geographic WKID.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:getXYfromLatLongInDegMinSec_WKIDsHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:getXYfromLatLongInDegMinSec_WKIDsHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongDec_WKIDs_Array\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a 1-dimensional array of X and Y (in decimal)
+        for the input arrays Longitud and latitude (in decimal), projected WKID and
+        geographic WKID. It returns x,y pairs (ie x1,y1,x2,y2,x3,y3...,xn,yn).</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getXYfromLatLongDec_WKIDs_ArrayHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:getXYfromLatLongDec_WKIDs_ArrayHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongDegree_WKIDs_Array\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a 1-dimensional array of X and Y (in decimal)
+        for the input arrays Longitud and latitude (in Degrees Minutes format), projected
+        WKID and geographic WKID. It returns x,y pairs (ie x1,y1,x2,y2,x3,y3...,xn,yn).</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getXYfromLatLongDegree_WKIDs_ArrayHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:getXYfromLatLongDegree_WKIDs_ArrayHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongInDegMinSec_WKIDs_Array\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a 1-dimensional array of X and Y (in decimal)
+        for the input arrays Longitud and latitude (in Degrees Minutes Seconds format),
+        projected WKID and geographic WKID. It returns x,y pairs (ie x1,y1,x2,y2,x3,y3...,xn,yn).</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getXYfromLatLongInDegMinSec_WKIDs_ArrayHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:getXYfromLatLongInDegMinSec_WKIDs_ArrayHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n  </wsdl:portType>\r\n  <wsdl:binding name=\"XYLatLongConversionsClassSoap\"
+        type=\"tns:XYLatLongConversionsClassSoap\">\r\n    <soap:binding transport=\"http://schemas.xmlsoap.org/soap/http\"
+        />\r\n    <wsdl:operation name=\"getLatLongDecFromXY\">\r\n      <soap:operation
+        soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getLatLongDecFromXY\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getLatLongDegreeFromXY\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getLatLongDegreeFromXY\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getLatLongInDegMinSecFromXY\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getLatLongInDegMinSecFromXY\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getLatLongDecFromXY_WKIDs\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getLatLongDecFromXY_WKIDs\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getLatLongDegreeFromXY_WKIDs\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getLatLongDegreeFromXY_WKIDs\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getLatLongInDegMinSecFromXY_WKIDs\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getLatLongInDegMinSecFromXY_WKIDs\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getLatLongDecFromXY_Array\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getLatLongDecFromXY_Array\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getLatLongDegreeFromXY_Array\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getLatLongDegreeFromXY_Array\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getLatLongInDegMinSecFromXY_Array\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getLatLongInDegMinSecFromXY_Array\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getLatLongDecFromXY_Array_WKIDs\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getLatLongDecFromXY_Array_WKIDs\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getLatLongDegreeFromXY_Array_WKIDs\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getLatLongDegreeFromXY_Array_WKIDs\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getLatLongInDegMinSecFromXY_Array_WKIDs\">\r\n      <soap:operation
+        soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getLatLongInDegMinSecFromXY_Array_WKIDs\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getXYfromLatLongDec\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getXYfromLatLongDec\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getXYfromLatLongDegree\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getXYfromLatLongDegree\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getXYfromLatLongInDegMinSec\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getXYfromLatLongInDegMinSec\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getXYfromLatLongDec_WKIDs\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getXYfromLatLongDec_WKIDs\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getXYfromLatLongDegree_WKIDs\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getXYfromLatLongDegree_WKIDs\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getXYfromLatLongInDegMinSec_WKIDs\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getXYfromLatLongInDegMinSec_WKIDs\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getXYfromLatLongDec_WKIDs_Array\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getXYfromLatLongDec_WKIDs_Array\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getXYfromLatLongDegree_WKIDs_Array\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getXYfromLatLongDegree_WKIDs_Array\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getXYfromLatLongInDegMinSec_WKIDs_Array\">\r\n      <soap:operation
+        soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getXYfromLatLongInDegMinSec_WKIDs_Array\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n  </wsdl:binding>\r\n
+        \ <wsdl:binding name=\"XYLatLongConversionsClassSoap12\" type=\"tns:XYLatLongConversionsClassSoap\">\r\n
+        \   <soap12:binding transport=\"http://schemas.xmlsoap.org/soap/http\" />\r\n
+        \   <wsdl:operation name=\"getLatLongDecFromXY\">\r\n      <soap12:operation
+        soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getLatLongDecFromXY\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getLatLongDegreeFromXY\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getLatLongDegreeFromXY\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getLatLongInDegMinSecFromXY\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getLatLongInDegMinSecFromXY\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getLatLongDecFromXY_WKIDs\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getLatLongDecFromXY_WKIDs\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getLatLongDegreeFromXY_WKIDs\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getLatLongDegreeFromXY_WKIDs\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getLatLongInDegMinSecFromXY_WKIDs\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getLatLongInDegMinSecFromXY_WKIDs\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getLatLongDecFromXY_Array\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getLatLongDecFromXY_Array\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getLatLongDegreeFromXY_Array\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getLatLongDegreeFromXY_Array\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getLatLongInDegMinSecFromXY_Array\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getLatLongInDegMinSecFromXY_Array\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getLatLongDecFromXY_Array_WKIDs\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getLatLongDecFromXY_Array_WKIDs\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getLatLongDegreeFromXY_Array_WKIDs\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getLatLongDegreeFromXY_Array_WKIDs\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getLatLongInDegMinSecFromXY_Array_WKIDs\">\r\n      <soap12:operation
+        soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getLatLongInDegMinSecFromXY_Array_WKIDs\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getXYfromLatLongDec\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getXYfromLatLongDec\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getXYfromLatLongDegree\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getXYfromLatLongDegree\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getXYfromLatLongInDegMinSec\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getXYfromLatLongInDegMinSec\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getXYfromLatLongDec_WKIDs\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getXYfromLatLongDec_WKIDs\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getXYfromLatLongDegree_WKIDs\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getXYfromLatLongDegree_WKIDs\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getXYfromLatLongInDegMinSec_WKIDs\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getXYfromLatLongInDegMinSec_WKIDs\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getXYfromLatLongDec_WKIDs_Array\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getXYfromLatLongDec_WKIDs_Array\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getXYfromLatLongDegree_WKIDs_Array\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getXYfromLatLongDegree_WKIDs_Array\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getXYfromLatLongInDegMinSec_WKIDs_Array\">\r\n      <soap12:operation
+        soapAction=\"http://intra.miamidade.gov/GISwebSRVCS/getXYfromLatLongInDegMinSec_WKIDs_Array\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n  </wsdl:binding>\r\n
+        \ <wsdl:binding name=\"XYLatLongConversionsClassHttpGet\" type=\"tns:XYLatLongConversionsClassHttpGet\">\r\n
+        \   <http:binding verb=\"GET\" />\r\n    <wsdl:operation name=\"getLatLongDecFromXY\">\r\n
+        \     <http:operation location=\"/getLatLongDecFromXY\" />\r\n      <wsdl:input>\r\n
+        \       <http:urlEncoded />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n
+        \       <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getLatLongDegreeFromXY\">\r\n      <http:operation
+        location=\"/getLatLongDegreeFromXY\" />\r\n      <wsdl:input>\r\n        <http:urlEncoded
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getLatLongInDegMinSecFromXY\">\r\n      <http:operation location=\"/getLatLongInDegMinSecFromXY\"
+        />\r\n      <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongDecFromXY_WKIDs\">\r\n
+        \     <http:operation location=\"/getLatLongDecFromXY_WKIDs\" />\r\n      <wsdl:input>\r\n
+        \       <http:urlEncoded />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n
+        \       <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getLatLongDegreeFromXY_WKIDs\">\r\n      <http:operation
+        location=\"/getLatLongDegreeFromXY_WKIDs\" />\r\n      <wsdl:input>\r\n        <http:urlEncoded
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getLatLongInDegMinSecFromXY_WKIDs\">\r\n      <http:operation location=\"/getLatLongInDegMinSecFromXY_WKIDs\"
+        />\r\n      <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongDecFromXY_Array\">\r\n
+        \     <http:operation location=\"/getLatLongDecFromXY_Array\" />\r\n      <wsdl:input>\r\n
+        \       <http:urlEncoded />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n
+        \       <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getLatLongDegreeFromXY_Array\">\r\n      <http:operation
+        location=\"/getLatLongDegreeFromXY_Array\" />\r\n      <wsdl:input>\r\n        <http:urlEncoded
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getLatLongInDegMinSecFromXY_Array\">\r\n      <http:operation location=\"/getLatLongInDegMinSecFromXY_Array\"
+        />\r\n      <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongDecFromXY_Array_WKIDs\">\r\n
+        \     <http:operation location=\"/getLatLongDecFromXY_Array_WKIDs\" />\r\n
+        \     <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongDegreeFromXY_Array_WKIDs\">\r\n
+        \     <http:operation location=\"/getLatLongDegreeFromXY_Array_WKIDs\" />\r\n
+        \     <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongInDegMinSecFromXY_Array_WKIDs\">\r\n
+        \     <http:operation location=\"/getLatLongInDegMinSecFromXY_Array_WKIDs\"
+        />\r\n      <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongDec\">\r\n
+        \     <http:operation location=\"/getXYfromLatLongDec\" />\r\n      <wsdl:input>\r\n
+        \       <http:urlEncoded />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n
+        \       <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getXYfromLatLongDegree\">\r\n      <http:operation
+        location=\"/getXYfromLatLongDegree\" />\r\n      <wsdl:input>\r\n        <http:urlEncoded
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getXYfromLatLongInDegMinSec\">\r\n      <http:operation location=\"/getXYfromLatLongInDegMinSec\"
+        />\r\n      <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongDec_WKIDs\">\r\n
+        \     <http:operation location=\"/getXYfromLatLongDec_WKIDs\" />\r\n      <wsdl:input>\r\n
+        \       <http:urlEncoded />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n
+        \       <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getXYfromLatLongDegree_WKIDs\">\r\n      <http:operation
+        location=\"/getXYfromLatLongDegree_WKIDs\" />\r\n      <wsdl:input>\r\n        <http:urlEncoded
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getXYfromLatLongInDegMinSec_WKIDs\">\r\n      <http:operation location=\"/getXYfromLatLongInDegMinSec_WKIDs\"
+        />\r\n      <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongDec_WKIDs_Array\">\r\n
+        \     <http:operation location=\"/getXYfromLatLongDec_WKIDs_Array\" />\r\n
+        \     <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongDegree_WKIDs_Array\">\r\n
+        \     <http:operation location=\"/getXYfromLatLongDegree_WKIDs_Array\" />\r\n
+        \     <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongInDegMinSec_WKIDs_Array\">\r\n
+        \     <http:operation location=\"/getXYfromLatLongInDegMinSec_WKIDs_Array\"
+        />\r\n      <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n  </wsdl:binding>\r\n  <wsdl:binding name=\"XYLatLongConversionsClassHttpPost\"
+        type=\"tns:XYLatLongConversionsClassHttpPost\">\r\n    <http:binding verb=\"POST\"
+        />\r\n    <wsdl:operation name=\"getLatLongDecFromXY\">\r\n      <http:operation
+        location=\"/getLatLongDecFromXY\" />\r\n      <wsdl:input>\r\n        <mime:content
+        type=\"application/x-www-form-urlencoded\" />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n
+        \       <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getLatLongDegreeFromXY\">\r\n      <http:operation
+        location=\"/getLatLongDegreeFromXY\" />\r\n      <wsdl:input>\r\n        <mime:content
+        type=\"application/x-www-form-urlencoded\" />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n
+        \       <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getLatLongInDegMinSecFromXY\">\r\n      <http:operation
+        location=\"/getLatLongInDegMinSecFromXY\" />\r\n      <wsdl:input>\r\n        <mime:content
+        type=\"application/x-www-form-urlencoded\" />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n
+        \       <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getLatLongDecFromXY_WKIDs\">\r\n      <http:operation
+        location=\"/getLatLongDecFromXY_WKIDs\" />\r\n      <wsdl:input>\r\n        <mime:content
+        type=\"application/x-www-form-urlencoded\" />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n
+        \       <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getLatLongDegreeFromXY_WKIDs\">\r\n      <http:operation
+        location=\"/getLatLongDegreeFromXY_WKIDs\" />\r\n      <wsdl:input>\r\n        <mime:content
+        type=\"application/x-www-form-urlencoded\" />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n
+        \       <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getLatLongInDegMinSecFromXY_WKIDs\">\r\n      <http:operation
+        location=\"/getLatLongInDegMinSecFromXY_WKIDs\" />\r\n      <wsdl:input>\r\n
+        \       <mime:content type=\"application/x-www-form-urlencoded\" />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongDecFromXY_Array\">\r\n
+        \     <http:operation location=\"/getLatLongDecFromXY_Array\" />\r\n      <wsdl:input>\r\n
+        \       <mime:content type=\"application/x-www-form-urlencoded\" />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongDegreeFromXY_Array\">\r\n
+        \     <http:operation location=\"/getLatLongDegreeFromXY_Array\" />\r\n      <wsdl:input>\r\n
+        \       <mime:content type=\"application/x-www-form-urlencoded\" />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getLatLongInDegMinSecFromXY_Array\">\r\n
+        \     <http:operation location=\"/getLatLongInDegMinSecFromXY_Array\" />\r\n
+        \     <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getLatLongDecFromXY_Array_WKIDs\">\r\n      <http:operation location=\"/getLatLongDecFromXY_Array_WKIDs\"
+        />\r\n      <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getLatLongDegreeFromXY_Array_WKIDs\">\r\n      <http:operation location=\"/getLatLongDegreeFromXY_Array_WKIDs\"
+        />\r\n      <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getLatLongInDegMinSecFromXY_Array_WKIDs\">\r\n      <http:operation
+        location=\"/getLatLongInDegMinSecFromXY_Array_WKIDs\" />\r\n      <wsdl:input>\r\n
+        \       <mime:content type=\"application/x-www-form-urlencoded\" />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongDec\">\r\n
+        \     <http:operation location=\"/getXYfromLatLongDec\" />\r\n      <wsdl:input>\r\n
+        \       <mime:content type=\"application/x-www-form-urlencoded\" />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongDegree\">\r\n
+        \     <http:operation location=\"/getXYfromLatLongDegree\" />\r\n      <wsdl:input>\r\n
+        \       <mime:content type=\"application/x-www-form-urlencoded\" />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongInDegMinSec\">\r\n
+        \     <http:operation location=\"/getXYfromLatLongInDegMinSec\" />\r\n      <wsdl:input>\r\n
+        \       <mime:content type=\"application/x-www-form-urlencoded\" />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongDec_WKIDs\">\r\n
+        \     <http:operation location=\"/getXYfromLatLongDec_WKIDs\" />\r\n      <wsdl:input>\r\n
+        \       <mime:content type=\"application/x-www-form-urlencoded\" />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongDegree_WKIDs\">\r\n
+        \     <http:operation location=\"/getXYfromLatLongDegree_WKIDs\" />\r\n      <wsdl:input>\r\n
+        \       <mime:content type=\"application/x-www-form-urlencoded\" />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getXYfromLatLongInDegMinSec_WKIDs\">\r\n
+        \     <http:operation location=\"/getXYfromLatLongInDegMinSec_WKIDs\" />\r\n
+        \     <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getXYfromLatLongDec_WKIDs_Array\">\r\n      <http:operation location=\"/getXYfromLatLongDec_WKIDs_Array\"
+        />\r\n      <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getXYfromLatLongDegree_WKIDs_Array\">\r\n      <http:operation location=\"/getXYfromLatLongDegree_WKIDs_Array\"
+        />\r\n      <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getXYfromLatLongInDegMinSec_WKIDs_Array\">\r\n      <http:operation
+        location=\"/getXYfromLatLongInDegMinSec_WKIDs_Array\" />\r\n      <wsdl:input>\r\n
+        \       <mime:content type=\"application/x-www-form-urlencoded\" />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n  </wsdl:binding>\r\n  <wsdl:service name=\"XYLatLongConversionsClass\">\r\n
+        \   <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service is a projection service between X/Y coordinates and Longitude
+        and latitude.</wsdl:documentation>\r\n    <wsdl:port name=\"XYLatLongConversionsClassSoap\"
+        binding=\"tns:XYLatLongConversionsClassSoap\">\r\n      <soap:address location=\"http://gisws.miamidade.gov/gisxyservices/XYLatLongConversions.asmx\"
+        />\r\n    </wsdl:port>\r\n    <wsdl:port name=\"XYLatLongConversionsClassSoap12\"
+        binding=\"tns:XYLatLongConversionsClassSoap12\">\r\n      <soap12:address
+        location=\"http://gisws.miamidade.gov/gisxyservices/XYLatLongConversions.asmx\"
+        />\r\n    </wsdl:port>\r\n    <wsdl:port name=\"XYLatLongConversionsClassHttpGet\"
+        binding=\"tns:XYLatLongConversionsClassHttpGet\">\r\n      <http:address location=\"http://gisws.miamidade.gov/gisxyservices/XYLatLongConversions.asmx\"
+        />\r\n    </wsdl:port>\r\n    <wsdl:port name=\"XYLatLongConversionsClassHttpPost\"
+        binding=\"tns:XYLatLongConversionsClassHttpPost\">\r\n      <http:address
+        location=\"http://gisws.miamidade.gov/gisxyservices/XYLatLongConversions.asmx\"
+        />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
+    http_version: 
+  recorded_at: Sat, 04 Jun 2016 17:15:16 GMT
+- request:
+    method: post
+    uri: http://gisws.miamidade.gov/gisxyservices/XYLatLongConversions.asmx
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://intra.miamidade.gov/GISwebSRVCS"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ins0="http://intra.miamidade.gov/GISwebSRVCS/AbstractTypes"><env:Body><tns:getLatLongDecFromXY><tns:X>919623.87509118</tns:X><tns:Y>533780.31245147</tns:Y></tns:getLatLongDecFromXY></env:Body></env:Envelope>
+    headers:
+      Soapaction:
+      - '"http://intra.miamidade.gov/GISwebSRVCS/getLatLongDecFromXY"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '469'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Sat, 04 Jun 2016 17:14:44 GMT
+      Cteonnt-Length:
+      - '476'
+      Content-Length:
+      - '275'
+    body:
+      encoding: ASCII-8BIT
+      string: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><getLatLongDecFromXYResponse
+        xmlns="http://intra.miamidade.gov/GISwebSRVCS"><getLatLongDecFromXYResult><double>-80.199245566240819</double><double>25.7999410593211</double></getLatLongDecFromXYResult></getLatLongDecFromXYResponse></soap:Body></soap:Envelope>
+    http_version: 
+  recorded_at: Sat, 04 Jun 2016 17:15:16 GMT
+recorded_with: VCR 3.0.3

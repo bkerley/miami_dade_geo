@@ -1,0 +1,810 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://gisws.miamidade.gov/gisaddress/addrxy.asmx?wsdl
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Sat, 04 Jun 2016 17:14:42 GMT
+      Cteonnt-Length:
+      - '57173'
+      Content-Length:
+      - '3336'
+    body:
+      encoding: ASCII-8BIT
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<wsdl:definitions xmlns:tm=\"http://microsoft.com/wsdl/mime/textMatching/\"
+        xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\"
+        xmlns:tns=\"http://intra.miamidade.gov/GISAddress\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\"
+        xmlns:s=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\"
+        xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\" targetNamespace=\"http://intra.miamidade.gov/GISAddress\"
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">\r\n  <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service returns
+        NAD 83 State Plane X and Y coordinate for Miami-Dade County address.</wsdl:documentation>\r\n
+        \ <wsdl:types>\r\n    <s:schema elementFormDefault=\"qualified\" targetNamespace=\"http://intra.miamidade.gov/GISAddress\">\r\n
+        \     <s:element name=\"XYAddress\">\r\n        <s:complexType>\r\n          <s:sequence>\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"myAddress\"
+        type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"XYAddressResponse\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"1\" maxOccurs=\"1\"
+        name=\"XYAddressResult\" type=\"tns:ArrXYD\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:complexType name=\"ArrXYD\">\r\n
+        \       <s:sequence>\r\n          <s:element minOccurs=\"1\" maxOccurs=\"1\"
+        name=\"Count\" type=\"s:int\" />\r\n          <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"StdIntersection\" type=\"s:string\" />\r\n          <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"XY\" type=\"tns:ArrayOfArrXY\" />\r\n        </s:sequence>\r\n
+        \     </s:complexType>\r\n      <s:complexType name=\"ArrayOfArrXY\">\r\n
+        \       <s:sequence>\r\n          <s:element minOccurs=\"0\" maxOccurs=\"unbounded\"
+        name=\"ArrXY\" type=\"tns:ArrXY\" />\r\n        </s:sequence>\r\n      </s:complexType>\r\n
+        \     <s:complexType name=\"ArrXY\">\r\n        <s:sequence>\r\n          <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"X\" type=\"s:double\" />\r\n          <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"Y\" type=\"s:double\" />\r\n          <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"Zip_Code\" type=\"s:int\" />\r\n          <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"Munic_Code\" type=\"s:int\" />\r\n
+        \       </s:sequence>\r\n      </s:complexType>\r\n      <s:element name=\"XYAddressZip\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"myAddress\" type=\"s:string\" />\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"myZipCode\"
+        type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"XYAddressZipResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"XYAddressZipResult\" type=\"tns:ArrXY\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"XYAddressMunic\">\r\n        <s:complexType>\r\n          <s:sequence>\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"myAddress\"
+        type=\"s:string\" />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"myMunicCode\" type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"XYAddressMunicResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"XYAddressMunicResult\" type=\"tns:ArrXY\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"XYAddressParsed\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"hNum\" type=\"s:string\" />\r\n            <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"preDir\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"stName\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"stType\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"stType2\" type=\"s:string\" />\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"sufDir\" type=\"s:string\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"XYAddressParsedResponse\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"1\" maxOccurs=\"1\"
+        name=\"XYAddressParsedResult\" type=\"tns:ArrXYD\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"XYAddressParsedZip\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"hNum\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"preDir\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"stName\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"stType\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"stType2\" type=\"s:string\" />\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"sufDir\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"myZipCode\"
+        type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"XYAddressParsedZipResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"XYAddressParsedZipResult\" type=\"tns:ArrXY\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"XYAddressParsedMunic\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"hNum\" type=\"s:string\" />\r\n            <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"preDir\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"stName\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"stType\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"stType2\" type=\"s:string\" />\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"sufDir\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"myMunicCode\"
+        type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"XYAddressParsedMunicResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"XYAddressParsedMunicResult\" type=\"tns:ArrXY\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"XYIntersection\">\r\n        <s:complexType>\r\n          <s:sequence>\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"myIntersection\"
+        type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"XYIntersectionResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"XYIntersectionResult\" type=\"tns:ArrXYD\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"XYIntersectionParsed\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"preDir\" type=\"s:string\" />\r\n            <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"stName\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"stType\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"stType2\" type=\"s:string\" />\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"sufDir\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"seperate\"
+        type=\"s:string\" />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"preDir_2\" type=\"s:string\" />\r\n            <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"stName_2\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"stType_2\" type=\"s:string\" />\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"stType2_2\"
+        type=\"s:string\" />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"sufDir_2\" type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"XYIntersectionParsedResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"XYIntersectionParsedResult\" type=\"tns:ArrXYD\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"XYStreetZip\">\r\n        <s:complexType>\r\n          <s:sequence>\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"myAddress\"
+        type=\"s:string\" />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"myZipCode\" type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"XYStreetZipResponse\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"1\" maxOccurs=\"1\"
+        name=\"XYStreetZipResult\" type=\"tns:ArrXYD\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"XYStreetParsedZip\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"hNum\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"preDir\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"stName\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"stType\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"stType2\" type=\"s:string\" />\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"sufDir\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"myZipCode\"
+        type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"XYStreetParsedZipResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"XYStreetParsedZipResult\" type=\"tns:ArrXYD\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"XYIntersectionStandardized\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"myIntersection\" type=\"s:string\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"XYIntersectionStandardizedResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"XYIntersectionStandardizedResult\"
+        type=\"tns:ArrXYD\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"XYIntersectionStandardizedParsed\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"preDir\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"stName\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"stType\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"stType2\" type=\"s:string\" />\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"sufDir\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"seperate\"
+        type=\"s:string\" />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"preDir_2\" type=\"s:string\" />\r\n            <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"stName_2\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"stType_2\" type=\"s:string\" />\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"stType2_2\"
+        type=\"s:string\" />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"sufDir_2\" type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"XYIntersectionStandardizedParsedResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"XYIntersectionStandardizedParsedResult\"
+        type=\"tns:ArrXYD\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"ArrXYD\" type=\"tns:ArrXYD\"
+        />\r\n      <s:element name=\"ArrXY\" type=\"tns:ArrXY\" />\r\n    </s:schema>\r\n
+        \ </wsdl:types>\r\n  <wsdl:message name=\"XYAddressSoapIn\">\r\n    <wsdl:part
+        name=\"parameters\" element=\"tns:XYAddress\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"XYAddressSoapOut\">\r\n    <wsdl:part name=\"parameters\"
+        element=\"tns:XYAddressResponse\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"XYAddressZipSoapIn\">\r\n    <wsdl:part name=\"parameters\" element=\"tns:XYAddressZip\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYAddressZipSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:XYAddressZipResponse\" />\r\n
+        \ </wsdl:message>\r\n  <wsdl:message name=\"XYAddressMunicSoapIn\">\r\n    <wsdl:part
+        name=\"parameters\" element=\"tns:XYAddressMunic\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"XYAddressMunicSoapOut\">\r\n    <wsdl:part name=\"parameters\"
+        element=\"tns:XYAddressMunicResponse\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"XYAddressParsedSoapIn\">\r\n    <wsdl:part name=\"parameters\" element=\"tns:XYAddressParsed\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYAddressParsedSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:XYAddressParsedResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYAddressParsedZipSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:XYAddressParsedZip\" />\r\n
+        \ </wsdl:message>\r\n  <wsdl:message name=\"XYAddressParsedZipSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:XYAddressParsedZipResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYAddressParsedMunicSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:XYAddressParsedMunic\" />\r\n
+        \ </wsdl:message>\r\n  <wsdl:message name=\"XYAddressParsedMunicSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:XYAddressParsedMunicResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYIntersectionSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:XYIntersection\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"XYIntersectionSoapOut\">\r\n    <wsdl:part name=\"parameters\"
+        element=\"tns:XYIntersectionResponse\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"XYIntersectionParsedSoapIn\">\r\n    <wsdl:part name=\"parameters\"
+        element=\"tns:XYIntersectionParsed\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"XYIntersectionParsedSoapOut\">\r\n    <wsdl:part name=\"parameters\"
+        element=\"tns:XYIntersectionParsedResponse\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"XYStreetZipSoapIn\">\r\n    <wsdl:part name=\"parameters\" element=\"tns:XYStreetZip\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYStreetZipSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:XYStreetZipResponse\" />\r\n
+        \ </wsdl:message>\r\n  <wsdl:message name=\"XYStreetParsedZipSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:XYStreetParsedZip\" />\r\n
+        \ </wsdl:message>\r\n  <wsdl:message name=\"XYStreetParsedZipSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:XYStreetParsedZipResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYIntersectionStandardizedSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:XYIntersectionStandardized\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYIntersectionStandardizedSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:XYIntersectionStandardizedResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYIntersectionStandardizedParsedSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:XYIntersectionStandardizedParsed\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYIntersectionStandardizedParsedSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:XYIntersectionStandardizedParsedResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYAddressHttpGetIn\">\r\n
+        \   <wsdl:part name=\"myAddress\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"XYAddressHttpGetOut\">\r\n    <wsdl:part name=\"Body\"
+        element=\"tns:ArrXYD\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYAddressZipHttpGetIn\">\r\n
+        \   <wsdl:part name=\"myAddress\" type=\"s:string\" />\r\n    <wsdl:part name=\"myZipCode\"
+        type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYAddressZipHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrXY\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"XYAddressMunicHttpGetIn\">\r\n    <wsdl:part name=\"myAddress\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"myMunicCode\" type=\"s:string\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYAddressMunicHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrXY\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"XYAddressParsedHttpGetIn\">\r\n    <wsdl:part name=\"hNum\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"preDir\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"stName\" type=\"s:string\" />\r\n    <wsdl:part name=\"stType\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"stType2\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"sufDir\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"XYAddressParsedHttpGetOut\">\r\n    <wsdl:part name=\"Body\"
+        element=\"tns:ArrXYD\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYAddressParsedZipHttpGetIn\">\r\n
+        \   <wsdl:part name=\"hNum\" type=\"s:string\" />\r\n    <wsdl:part name=\"preDir\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"stName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"stType\" type=\"s:string\" />\r\n    <wsdl:part name=\"stType2\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"sufDir\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"myZipCode\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"XYAddressParsedZipHttpGetOut\">\r\n    <wsdl:part name=\"Body\"
+        element=\"tns:ArrXY\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYAddressParsedMunicHttpGetIn\">\r\n
+        \   <wsdl:part name=\"hNum\" type=\"s:string\" />\r\n    <wsdl:part name=\"preDir\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"stName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"stType\" type=\"s:string\" />\r\n    <wsdl:part name=\"stType2\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"sufDir\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"myMunicCode\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"XYAddressParsedMunicHttpGetOut\">\r\n    <wsdl:part
+        name=\"Body\" element=\"tns:ArrXY\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"XYIntersectionHttpGetIn\">\r\n    <wsdl:part name=\"myIntersection\"
+        type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYIntersectionHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrXYD\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"XYIntersectionParsedHttpGetIn\">\r\n    <wsdl:part
+        name=\"preDir\" type=\"s:string\" />\r\n    <wsdl:part name=\"stName\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"stType\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"stType2\" type=\"s:string\" />\r\n    <wsdl:part name=\"sufDir\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"seperate\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"preDir_2\" type=\"s:string\" />\r\n    <wsdl:part name=\"stName_2\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"stType_2\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"stType2_2\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"sufDir_2\" type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"XYIntersectionParsedHttpGetOut\">\r\n    <wsdl:part name=\"Body\" element=\"tns:ArrXYD\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYStreetZipHttpGetIn\">\r\n
+        \   <wsdl:part name=\"myAddress\" type=\"s:string\" />\r\n    <wsdl:part name=\"myZipCode\"
+        type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYStreetZipHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrXYD\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"XYStreetParsedZipHttpGetIn\">\r\n    <wsdl:part name=\"hNum\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"preDir\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"stName\" type=\"s:string\" />\r\n    <wsdl:part name=\"stType\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"stType2\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"sufDir\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"myZipCode\" type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"XYStreetParsedZipHttpGetOut\">\r\n    <wsdl:part name=\"Body\" element=\"tns:ArrXYD\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYIntersectionStandardizedHttpGetIn\">\r\n
+        \   <wsdl:part name=\"myIntersection\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"XYIntersectionStandardizedHttpGetOut\">\r\n    <wsdl:part
+        name=\"Body\" element=\"tns:ArrXYD\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"XYIntersectionStandardizedParsedHttpGetIn\">\r\n    <wsdl:part name=\"preDir\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"stName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"stType\" type=\"s:string\" />\r\n    <wsdl:part name=\"stType2\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"sufDir\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"seperate\" type=\"s:string\" />\r\n    <wsdl:part name=\"preDir_2\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"stName_2\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"stType_2\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"stType2_2\" type=\"s:string\" />\r\n    <wsdl:part name=\"sufDir_2\"
+        type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYIntersectionStandardizedParsedHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrXYD\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"XYAddressHttpPostIn\">\r\n    <wsdl:part name=\"myAddress\"
+        type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYAddressHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrXYD\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"XYAddressZipHttpPostIn\">\r\n    <wsdl:part name=\"myAddress\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"myZipCode\" type=\"s:string\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYAddressZipHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrXY\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"XYAddressMunicHttpPostIn\">\r\n    <wsdl:part name=\"myAddress\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"myMunicCode\" type=\"s:string\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYAddressMunicHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrXY\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"XYAddressParsedHttpPostIn\">\r\n    <wsdl:part name=\"hNum\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"preDir\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"stName\" type=\"s:string\" />\r\n    <wsdl:part name=\"stType\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"stType2\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"sufDir\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"XYAddressParsedHttpPostOut\">\r\n    <wsdl:part name=\"Body\"
+        element=\"tns:ArrXYD\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYAddressParsedZipHttpPostIn\">\r\n
+        \   <wsdl:part name=\"hNum\" type=\"s:string\" />\r\n    <wsdl:part name=\"preDir\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"stName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"stType\" type=\"s:string\" />\r\n    <wsdl:part name=\"stType2\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"sufDir\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"myZipCode\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"XYAddressParsedZipHttpPostOut\">\r\n    <wsdl:part
+        name=\"Body\" element=\"tns:ArrXY\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"XYAddressParsedMunicHttpPostIn\">\r\n    <wsdl:part name=\"hNum\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"preDir\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"stName\" type=\"s:string\" />\r\n    <wsdl:part name=\"stType\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"stType2\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"sufDir\" type=\"s:string\" />\r\n    <wsdl:part name=\"myMunicCode\"
+        type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYAddressParsedMunicHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrXY\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"XYIntersectionHttpPostIn\">\r\n    <wsdl:part name=\"myIntersection\"
+        type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYIntersectionHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrXYD\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"XYIntersectionParsedHttpPostIn\">\r\n    <wsdl:part
+        name=\"preDir\" type=\"s:string\" />\r\n    <wsdl:part name=\"stName\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"stType\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"stType2\" type=\"s:string\" />\r\n    <wsdl:part name=\"sufDir\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"seperate\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"preDir_2\" type=\"s:string\" />\r\n    <wsdl:part name=\"stName_2\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"stType_2\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"stType2_2\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"sufDir_2\" type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"XYIntersectionParsedHttpPostOut\">\r\n    <wsdl:part name=\"Body\"
+        element=\"tns:ArrXYD\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYStreetZipHttpPostIn\">\r\n
+        \   <wsdl:part name=\"myAddress\" type=\"s:string\" />\r\n    <wsdl:part name=\"myZipCode\"
+        type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYStreetZipHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrXYD\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"XYStreetParsedZipHttpPostIn\">\r\n    <wsdl:part name=\"hNum\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"preDir\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"stName\" type=\"s:string\" />\r\n    <wsdl:part name=\"stType\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"stType2\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"sufDir\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"myZipCode\" type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"XYStreetParsedZipHttpPostOut\">\r\n    <wsdl:part name=\"Body\" element=\"tns:ArrXYD\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYIntersectionStandardizedHttpPostIn\">\r\n
+        \   <wsdl:part name=\"myIntersection\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"XYIntersectionStandardizedHttpPostOut\">\r\n    <wsdl:part
+        name=\"Body\" element=\"tns:ArrXYD\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"XYIntersectionStandardizedParsedHttpPostIn\">\r\n    <wsdl:part name=\"preDir\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"stName\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"stType\" type=\"s:string\" />\r\n    <wsdl:part name=\"stType2\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"sufDir\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"seperate\" type=\"s:string\" />\r\n    <wsdl:part name=\"preDir_2\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"stName_2\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"stType_2\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"stType2_2\" type=\"s:string\" />\r\n    <wsdl:part name=\"sufDir_2\"
+        type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"XYIntersectionStandardizedParsedHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrXYD\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:portType name=\"AddrXYSoap\">\r\n    <wsdl:operation name=\"XYAddress\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns X, Y Coordinate(s) for the input address.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:XYAddressSoapIn\" />\r\n      <wsdl:output
+        message=\"tns:XYAddressSoapOut\" />\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYAddressZip\">\r\n      <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns X, Y Coordinate for the input address and Zip
+        Code.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:XYAddressZipSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:XYAddressZipSoapOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"XYAddressMunic\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns X, Y Coordinate for the input address and Municipality Code.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:XYAddressMunicSoapIn\" />\r\n      <wsdl:output
+        message=\"tns:XYAddressMunicSoapOut\" />\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYAddressParsed\">\r\n      <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns X, Y Coordinate(s) for the parsed input address.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:XYAddressParsedSoapIn\" />\r\n      <wsdl:output
+        message=\"tns:XYAddressParsedSoapOut\" />\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYAddressParsedZip\">\r\n      <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns X, Y Coordinate for the parsed input address
+        and Zip Code.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:XYAddressParsedZipSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:XYAddressParsedZipSoapOut\" />\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"XYAddressParsedMunic\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns X, Y Coordinate for the parsed input address
+        and Municipality Code.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:XYAddressParsedMunicSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:XYAddressParsedMunicSoapOut\" />\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"XYIntersection\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns X, Y Coordinate(s) for the input intersection.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:XYIntersectionSoapIn\" />\r\n      <wsdl:output
+        message=\"tns:XYIntersectionSoapOut\" />\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYIntersectionParsed\">\r\n      <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns X, Y Coordinate(s) for the parsed input intersection.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:XYIntersectionParsedSoapIn\" />\r\n      <wsdl:output
+        message=\"tns:XYIntersectionParsedSoapOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"XYStreetZip\">\r\n      <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns X, Y Coordinate(s) for the input address and
+        Zip code geocoding against street.</wsdl:documentation>\r\n      <wsdl:input
+        message=\"tns:XYStreetZipSoapIn\" />\r\n      <wsdl:output message=\"tns:XYStreetZipSoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"XYStreetParsedZip\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns X, Y Coordinate(s) for the parsed input address
+        and Zip code geocoding against street.</wsdl:documentation>\r\n      <wsdl:input
+        message=\"tns:XYStreetParsedZipSoapIn\" />\r\n      <wsdl:output message=\"tns:XYStreetParsedZipSoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"XYIntersectionStandardized\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns X, Y Coordinate(s) for the input intersection.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:XYIntersectionStandardizedSoapIn\" />\r\n
+        \     <wsdl:output message=\"tns:XYIntersectionStandardizedSoapOut\" />\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"XYIntersectionStandardizedParsed\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns X, Y Coordinate(s) for the parsed input intersection.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:XYIntersectionStandardizedParsedSoapIn\" />\r\n
+        \     <wsdl:output message=\"tns:XYIntersectionStandardizedParsedSoapOut\"
+        />\r\n    </wsdl:operation>\r\n  </wsdl:portType>\r\n  <wsdl:portType name=\"AddrXYHttpGet\">\r\n
+        \   <wsdl:operation name=\"XYAddress\">\r\n      <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns X, Y Coordinate(s) for the input address.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:XYAddressHttpGetIn\" />\r\n      <wsdl:output
+        message=\"tns:XYAddressHttpGetOut\" />\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYAddressZip\">\r\n      <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns X, Y Coordinate for the input address and Zip
+        Code.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:XYAddressZipHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:XYAddressZipHttpGetOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"XYAddressMunic\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns X, Y Coordinate for the input address and Municipality Code.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:XYAddressMunicHttpGetIn\" />\r\n      <wsdl:output
+        message=\"tns:XYAddressMunicHttpGetOut\" />\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYAddressParsed\">\r\n      <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns X, Y Coordinate(s) for the parsed input address.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:XYAddressParsedHttpGetIn\" />\r\n      <wsdl:output
+        message=\"tns:XYAddressParsedHttpGetOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"XYAddressParsedZip\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns X, Y Coordinate for the parsed input address and Zip Code.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:XYAddressParsedZipHttpGetIn\" />\r\n      <wsdl:output
+        message=\"tns:XYAddressParsedZipHttpGetOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"XYAddressParsedMunic\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns X, Y Coordinate for the parsed input address and Municipality Code.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:XYAddressParsedMunicHttpGetIn\" />\r\n      <wsdl:output
+        message=\"tns:XYAddressParsedMunicHttpGetOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"XYIntersection\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns X, Y Coordinate(s) for the input intersection.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:XYIntersectionHttpGetIn\" />\r\n      <wsdl:output
+        message=\"tns:XYIntersectionHttpGetOut\" />\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYIntersectionParsed\">\r\n      <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns X, Y Coordinate(s) for the parsed input intersection.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:XYIntersectionParsedHttpGetIn\" />\r\n      <wsdl:output
+        message=\"tns:XYIntersectionParsedHttpGetOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"XYStreetZip\">\r\n      <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns X, Y Coordinate(s) for the input address and
+        Zip code geocoding against street.</wsdl:documentation>\r\n      <wsdl:input
+        message=\"tns:XYStreetZipHttpGetIn\" />\r\n      <wsdl:output message=\"tns:XYStreetZipHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"XYStreetParsedZip\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns X, Y Coordinate(s) for the parsed input address
+        and Zip code geocoding against street.</wsdl:documentation>\r\n      <wsdl:input
+        message=\"tns:XYStreetParsedZipHttpGetIn\" />\r\n      <wsdl:output message=\"tns:XYStreetParsedZipHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"XYIntersectionStandardized\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns X, Y Coordinate(s) for the input intersection.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:XYIntersectionStandardizedHttpGetIn\" />\r\n
+        \     <wsdl:output message=\"tns:XYIntersectionStandardizedHttpGetOut\" />\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"XYIntersectionStandardizedParsed\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns X, Y Coordinate(s) for the parsed input intersection.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:XYIntersectionStandardizedParsedHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:XYIntersectionStandardizedParsedHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n  </wsdl:portType>\r\n  <wsdl:portType name=\"AddrXYHttpPost\">\r\n
+        \   <wsdl:operation name=\"XYAddress\">\r\n      <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns X, Y Coordinate(s) for the input address.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:XYAddressHttpPostIn\" />\r\n      <wsdl:output
+        message=\"tns:XYAddressHttpPostOut\" />\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYAddressZip\">\r\n      <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns X, Y Coordinate for the input address and Zip
+        Code.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:XYAddressZipHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:XYAddressZipHttpPostOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"XYAddressMunic\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns X, Y Coordinate for the input address and Municipality Code.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:XYAddressMunicHttpPostIn\" />\r\n      <wsdl:output
+        message=\"tns:XYAddressMunicHttpPostOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"XYAddressParsed\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns X, Y Coordinate(s) for the parsed input address.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:XYAddressParsedHttpPostIn\" />\r\n      <wsdl:output
+        message=\"tns:XYAddressParsedHttpPostOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"XYAddressParsedZip\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns X, Y Coordinate for the parsed input address and Zip Code.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:XYAddressParsedZipHttpPostIn\" />\r\n      <wsdl:output
+        message=\"tns:XYAddressParsedZipHttpPostOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"XYAddressParsedMunic\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns X, Y Coordinate for the parsed input address and Municipality Code.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:XYAddressParsedMunicHttpPostIn\" />\r\n      <wsdl:output
+        message=\"tns:XYAddressParsedMunicHttpPostOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"XYIntersection\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns X, Y Coordinate(s) for the input intersection.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:XYIntersectionHttpPostIn\" />\r\n      <wsdl:output
+        message=\"tns:XYIntersectionHttpPostOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"XYIntersectionParsed\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns X, Y Coordinate(s) for the parsed input intersection.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:XYIntersectionParsedHttpPostIn\" />\r\n      <wsdl:output
+        message=\"tns:XYIntersectionParsedHttpPostOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"XYStreetZip\">\r\n      <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns X, Y Coordinate(s) for the input address and
+        Zip code geocoding against street.</wsdl:documentation>\r\n      <wsdl:input
+        message=\"tns:XYStreetZipHttpPostIn\" />\r\n      <wsdl:output message=\"tns:XYStreetZipHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"XYStreetParsedZip\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns X, Y Coordinate(s) for the parsed input address
+        and Zip code geocoding against street.</wsdl:documentation>\r\n      <wsdl:input
+        message=\"tns:XYStreetParsedZipHttpPostIn\" />\r\n      <wsdl:output message=\"tns:XYStreetParsedZipHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"XYIntersectionStandardized\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns X, Y Coordinate(s) for the input intersection.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:XYIntersectionStandardizedHttpPostIn\" />\r\n
+        \     <wsdl:output message=\"tns:XYIntersectionStandardizedHttpPostOut\" />\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"XYIntersectionStandardizedParsed\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns X, Y Coordinate(s) for the parsed input intersection.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:XYIntersectionStandardizedParsedHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:XYIntersectionStandardizedParsedHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n  </wsdl:portType>\r\n  <wsdl:binding name=\"AddrXYSoap\"
+        type=\"tns:AddrXYSoap\">\r\n    <soap:binding transport=\"http://schemas.xmlsoap.org/soap/http\"
+        />\r\n    <wsdl:operation name=\"XYAddress\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISAddress/XYAddress\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYAddressZip\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISAddress/XYAddressZip\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYAddressMunic\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISAddress/XYAddressMunic\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYAddressParsed\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISAddress/XYAddressParsed\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYAddressParsedZip\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISAddress/XYAddressParsedZip\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYAddressParsedMunic\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISAddress/XYAddressParsedMunic\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYIntersection\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISAddress/XYIntersection\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYIntersectionParsed\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISAddress/XYIntersectionParsed\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYStreetZip\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISAddress/XYStreetZip\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYStreetParsedZip\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISAddress/XYStreetParsedZip\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYIntersectionStandardized\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISAddress/XYIntersectionStandardized\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYIntersectionStandardizedParsed\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GISAddress/XYIntersectionStandardizedParsed\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n  </wsdl:binding>\r\n
+        \ <wsdl:binding name=\"AddrXYSoap12\" type=\"tns:AddrXYSoap\">\r\n    <soap12:binding
+        transport=\"http://schemas.xmlsoap.org/soap/http\" />\r\n    <wsdl:operation
+        name=\"XYAddress\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISAddress/XYAddress\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYAddressZip\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISAddress/XYAddressZip\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYAddressMunic\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISAddress/XYAddressMunic\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYAddressParsed\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISAddress/XYAddressParsed\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYAddressParsedZip\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISAddress/XYAddressParsedZip\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYAddressParsedMunic\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISAddress/XYAddressParsedMunic\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYIntersection\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISAddress/XYIntersection\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYIntersectionParsed\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISAddress/XYIntersectionParsed\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYStreetZip\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISAddress/XYStreetZip\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYStreetParsedZip\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISAddress/XYStreetParsedZip\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYIntersectionStandardized\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISAddress/XYIntersectionStandardized\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYIntersectionStandardizedParsed\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GISAddress/XYIntersectionStandardizedParsed\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n  </wsdl:binding>\r\n
+        \ <wsdl:binding name=\"AddrXYHttpGet\" type=\"tns:AddrXYHttpGet\">\r\n    <http:binding
+        verb=\"GET\" />\r\n    <wsdl:operation name=\"XYAddress\">\r\n      <http:operation
+        location=\"/XYAddress\" />\r\n      <wsdl:input>\r\n        <http:urlEncoded
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYAddressZip\">\r\n      <http:operation location=\"/XYAddressZip\"
+        />\r\n      <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"XYAddressMunic\">\r\n
+        \     <http:operation location=\"/XYAddressMunic\" />\r\n      <wsdl:input>\r\n
+        \       <http:urlEncoded />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n
+        \       <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"XYAddressParsed\">\r\n      <http:operation location=\"/XYAddressParsed\"
+        />\r\n      <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"XYAddressParsedZip\">\r\n
+        \     <http:operation location=\"/XYAddressParsedZip\" />\r\n      <wsdl:input>\r\n
+        \       <http:urlEncoded />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n
+        \       <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"XYAddressParsedMunic\">\r\n      <http:operation
+        location=\"/XYAddressParsedMunic\" />\r\n      <wsdl:input>\r\n        <http:urlEncoded
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYIntersection\">\r\n      <http:operation location=\"/XYIntersection\"
+        />\r\n      <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"XYIntersectionParsed\">\r\n
+        \     <http:operation location=\"/XYIntersectionParsed\" />\r\n      <wsdl:input>\r\n
+        \       <http:urlEncoded />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n
+        \       <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"XYStreetZip\">\r\n      <http:operation location=\"/XYStreetZip\"
+        />\r\n      <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"XYStreetParsedZip\">\r\n
+        \     <http:operation location=\"/XYStreetParsedZip\" />\r\n      <wsdl:input>\r\n
+        \       <http:urlEncoded />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n
+        \       <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"XYIntersectionStandardized\">\r\n      <http:operation
+        location=\"/XYIntersectionStandardized\" />\r\n      <wsdl:input>\r\n        <http:urlEncoded
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYIntersectionStandardizedParsed\">\r\n      <http:operation location=\"/XYIntersectionStandardizedParsed\"
+        />\r\n      <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n  </wsdl:binding>\r\n  <wsdl:binding name=\"AddrXYHttpPost\"
+        type=\"tns:AddrXYHttpPost\">\r\n    <http:binding verb=\"POST\" />\r\n    <wsdl:operation
+        name=\"XYAddress\">\r\n      <http:operation location=\"/XYAddress\" />\r\n
+        \     <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYAddressZip\">\r\n      <http:operation location=\"/XYAddressZip\"
+        />\r\n      <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYAddressMunic\">\r\n      <http:operation location=\"/XYAddressMunic\"
+        />\r\n      <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYAddressParsed\">\r\n      <http:operation location=\"/XYAddressParsed\"
+        />\r\n      <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYAddressParsedZip\">\r\n      <http:operation location=\"/XYAddressParsedZip\"
+        />\r\n      <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYAddressParsedMunic\">\r\n      <http:operation location=\"/XYAddressParsedMunic\"
+        />\r\n      <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYIntersection\">\r\n      <http:operation location=\"/XYIntersection\"
+        />\r\n      <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYIntersectionParsed\">\r\n      <http:operation location=\"/XYIntersectionParsed\"
+        />\r\n      <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYStreetZip\">\r\n      <http:operation location=\"/XYStreetZip\" />\r\n
+        \     <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYStreetParsedZip\">\r\n      <http:operation location=\"/XYStreetParsedZip\"
+        />\r\n      <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYIntersectionStandardized\">\r\n      <http:operation location=\"/XYIntersectionStandardized\"
+        />\r\n      <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"XYIntersectionStandardizedParsed\">\r\n      <http:operation location=\"/XYIntersectionStandardizedParsed\"
+        />\r\n      <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n  </wsdl:binding>\r\n
+        \ <wsdl:service name=\"AddrXY\">\r\n    <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service returns NAD 83 State Plane X and Y coordinate for Miami-Dade
+        County address.</wsdl:documentation>\r\n    <wsdl:port name=\"AddrXYSoap\"
+        binding=\"tns:AddrXYSoap\">\r\n      <soap:address location=\"http://gisws.miamidade.gov/gisaddress/addrxy.asmx\"
+        />\r\n    </wsdl:port>\r\n    <wsdl:port name=\"AddrXYSoap12\" binding=\"tns:AddrXYSoap12\">\r\n
+        \     <soap12:address location=\"http://gisws.miamidade.gov/gisaddress/addrxy.asmx\"
+        />\r\n    </wsdl:port>\r\n    <wsdl:port name=\"AddrXYHttpGet\" binding=\"tns:AddrXYHttpGet\">\r\n
+        \     <http:address location=\"http://gisws.miamidade.gov/gisaddress/addrxy.asmx\"
+        />\r\n    </wsdl:port>\r\n    <wsdl:port name=\"AddrXYHttpPost\" binding=\"tns:AddrXYHttpPost\">\r\n
+        \     <http:address location=\"http://gisws.miamidade.gov/gisaddress/addrxy.asmx\"
+        />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
+    http_version: 
+  recorded_at: Sat, 04 Jun 2016 17:15:15 GMT
+- request:
+    method: post
+    uri: http://gisws.miamidade.gov/gisaddress/addrxy.asmx
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://intra.miamidade.gov/GISAddress"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><tns:XYAddress><tns:myAddress>2390
+        NW 2nd Ave</tns:myAddress></tns:XYAddress></env:Body></env:Envelope>
+    headers:
+      Soapaction:
+      - '"http://intra.miamidade.gov/GISAddress/XYAddress"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '368'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Sat, 04 Jun 2016 17:14:43 GMT
+      Cteonnt-Length:
+      - '502'
+      Content-Length:
+      - '299'
+    body:
+      encoding: ASCII-8BIT
+      string: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><XYAddressResponse
+        xmlns="http://intra.miamidade.gov/GISAddress"><XYAddressResult><Count>1</Count><XY><ArrXY><X>919623.87509118</X><Y>533780.31245147</Y><Zip_Code>33127</Zip_Code><Munic_Code>1</Munic_Code></ArrXY></XY></XYAddressResult></XYAddressResponse></soap:Body></soap:Envelope>
+    http_version: 
+  recorded_at: Sat, 04 Jun 2016 17:15:16 GMT
+recorded_with: VCR 3.0.3
