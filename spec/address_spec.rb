@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'miami_dade_geo/address'
 
 describe MiamiDadeGeo::Address do
   let(:panther_address){ "2390 NW 2nd Ave" }
