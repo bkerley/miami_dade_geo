@@ -29,7 +29,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Sat, 04 Jun 2016 19:31:16 GMT
+      - Sat, 04 Jun 2016 19:38:28 GMT
       Cteonnt-Length:
       - '53323'
       Content-Length:
@@ -683,5 +683,69 @@ http_interactions:
         binding=\"tns:GetClosestFeatureHttpPost\">\r\n      <http:address location=\"http://gisws.miamidade.gov/gisxyservices/GetClosestFeature.asmx\"
         />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
     http_version: 
-  recorded_at: Sat, 04 Jun 2016 19:31:49 GMT
+  recorded_at: Sat, 04 Jun 2016 19:39:01 GMT
+- request:
+    method: post
+    uri: http://gisws.miamidade.gov/gisxyservices/GetClosestFeature.asmx
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://intra.miamidade.gov/GetClosestFeature"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><tns:GetClosestFeatureFromXYAllAtrbts><tns:X>919623.87509118</tns:X><tns:Y>533780.31245147</tns:Y><tns:Buffer>0</tns:Buffer><tns:NameOfFeatureClass>municipality_poly</tns:NameOfFeatureClass></tns:GetClosestFeatureFromXYAllAtrbts></env:Body></env:Envelope>
+    headers:
+      Soapaction:
+      - '"http://intra.miamidade.gov/GetClosestFeature/GetClosestFeatureFromXYAllAtrbts"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '527'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Sat, 04 Jun 2016 19:38:29 GMT
+      Cteonnt-Length:
+      - '2187'
+      Content-Length:
+      - '746'
+    body:
+      encoding: ASCII-8BIT
+      string: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><GetClosestFeatureFromXYAllAtrbtsResponse
+        xmlns="http://intra.miamidade.gov/GetClosestFeature"><GetClosestFeatureFromXYAllAtrbtsResult><xs:schema
+        id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"><xs:element
+        name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Results" msdata:Locale="en-US"><xs:complexType><xs:choice
+        minOccurs="0" maxOccurs="unbounded"><xs:element name="Results" msdata:CaseSensitive="False"
+        msdata:Locale="en-US"><xs:complexType><xs:sequence><xs:element name="OBJECTID"
+        type="xs:long" /><xs:element name="MUNICUID" type="xs:long" minOccurs="0"
+        /><xs:element name="MUNICID" type="xs:string" minOccurs="0" /><xs:element
+        name="NAME" type="xs:string" minOccurs="0" /><xs:element name="FIPSCODE" type="xs:long"
+        minOccurs="0" /><xs:element name="CREATEDBY" type="xs:string" minOccurs="0"
+        /><xs:element name="CREATEDDATE" type="xs:dateTime" minOccurs="0" /><xs:element
+        name="MODIFIEDBY" type="xs:string" minOccurs="0" /><xs:element name="MODIFIEDDATE"
+        type="xs:dateTime" minOccurs="0" /><xs:element name="SHAPE_Length" type="xs:double"
+        minOccurs="0" /><xs:element name="SHAPE.AREA" type="xs:double" minOccurs="0"
+        /><xs:element name="Dist" type="xs:double" minOccurs="0" /></xs:sequence></xs:complexType></xs:element></xs:choice></xs:complexType></xs:element></xs:schema><diffgr:diffgram
+        xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1"><DocumentElement
+        xmlns=""><Results diffgr:id="Results1" msdata:rowOrder="0" diffgr:hasChanges="inserted"><OBJECTID>76</OBJECTID><MUNICUID>34</MUNICUID><MUNICID>01</MUNICID><NAME>MIAMI</NAME><FIPSCODE>1245000</FIPSCODE><SHAPE_Length>263106.92713533522</SHAPE_Length><SHAPE.AREA>1562627622.18304</SHAPE.AREA><Dist>0</Dist></Results></DocumentElement></diffgr:diffgram></GetClosestFeatureFromXYAllAtrbtsResult></GetClosestFeatureFromXYAllAtrbtsResponse></soap:Body></soap:Envelope>
+    http_version: 
+  recorded_at: Sat, 04 Jun 2016 19:39:01 GMT
 recorded_with: VCR 3.0.3
