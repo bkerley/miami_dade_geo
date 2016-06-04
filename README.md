@@ -1,8 +1,9 @@
 # MiamiDadeGeo
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/miami_dade_geo`. To experiment with that code, run `bin/console` for an interactive prompt.
+This library wraps some of the Miami-Dade County geospatial services, including:
 
-TODO: Delete this and the text above, and describe your gem
+* Address to NAD 83 State Plane X and Y coordinate
+* NAD 83 State Plane X and Y coordinate to latitude and longitude
 
 ## Installation
 
@@ -38,4 +39,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
