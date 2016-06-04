@@ -6,17 +6,11 @@ http_interactions:
     body:
       encoding: US-ASCII
       string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
+    headers: {}
   response:
     status:
       code: 200
-      message: OK
+      message: ''
     headers:
       Cache-Control:
       - private, max-age=0
@@ -29,13 +23,11 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Sat, 04 Jun 2016 19:59:26 GMT
-      Cteonnt-Length:
-      - '57173'
+      - Sat, 04 Jun 2016 20:39:18 GMT
       Content-Length:
-      - '3336'
+      - '57173'
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<wsdl:definitions xmlns:tm=\"http://microsoft.com/wsdl/mime/textMatching/\"
         xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\"
         xmlns:tns=\"http://intra.miamidade.gov/GISAddress\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\"
@@ -756,7 +748,7 @@ http_interactions:
         \     <http:address location=\"http://gisws.miamidade.gov/gisaddress/addrxy.asmx\"
         />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
     http_version: 
-  recorded_at: Sat, 04 Jun 2016 19:59:59 GMT
+  recorded_at: Sat, 04 Jun 2016 20:39:51 GMT
 - request:
     method: post
     uri: http://gisws.miamidade.gov/gisaddress/addrxy.asmx
@@ -773,16 +765,10 @@ http_interactions:
       - text/xml;charset=UTF-8
       Content-Length:
       - '368'
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
   response:
     status:
       code: 200
-      message: OK
+      message: ''
     headers:
       Cache-Control:
       - private, max-age=0
@@ -795,35 +781,68 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Sat, 04 Jun 2016 19:59:26 GMT
-      Cteonnt-Length:
-      - '502'
+      - Sat, 04 Jun 2016 20:39:19 GMT
       Content-Length:
-      - '299'
+      - '502'
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><XYAddressResponse
         xmlns="http://intra.miamidade.gov/GISAddress"><XYAddressResult><Count>1</Count><XY><ArrXY><X>919623.87509118</X><Y>533780.31245147</Y><Zip_Code>33127</Zip_Code><Munic_Code>1</Munic_Code></ArrXY></XY></XYAddressResult></XYAddressResponse></soap:Body></soap:Envelope>
     http_version: 
-  recorded_at: Sat, 04 Jun 2016 20:00:00 GMT
+  recorded_at: Sat, 04 Jun 2016 20:39:52 GMT
+- request:
+    method: post
+    uri: http://gisws.miamidade.gov/gisxyservices/XYLatLongConversions.asmx
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://intra.miamidade.gov/GISwebSRVCS"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ins0="http://intra.miamidade.gov/GISwebSRVCS/AbstractTypes"><env:Body><tns:getLatLongDecFromXY><tns:X>919623.87509118</tns:X><tns:Y>533780.31245147</tns:Y></tns:getLatLongDecFromXY></env:Body></env:Envelope>
+    headers:
+      Soapaction:
+      - '"http://intra.miamidade.gov/GISwebSRVCS/getLatLongDecFromXY"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '469'
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Sat, 04 Jun 2016 20:39:19 GMT
+      Content-Length:
+      - '476'
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><getLatLongDecFromXYResponse
+        xmlns="http://intra.miamidade.gov/GISwebSRVCS"><getLatLongDecFromXYResult><double>-80.199245566240819</double><double>25.7999410593211</double></getLatLongDecFromXYResult></getLatLongDecFromXYResponse></soap:Body></soap:Envelope>
+    http_version: 
+  recorded_at: Sat, 04 Jun 2016 20:39:52 GMT
 - request:
     method: get
     uri: http://gisws.miamidade.gov/gisxyservices/XYLatLongConversions.asmx?wsdl
     body:
       encoding: US-ASCII
       string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
+    headers: {}
   response:
     status:
       code: 200
-      message: OK
+      message: ''
     headers:
       Cache-Control:
       - private, max-age=0
@@ -836,13 +855,11 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Sat, 04 Jun 2016 19:59:26 GMT
-      Cteonnt-Length:
+      - Sat, 04 Jun 2016 20:44:06 GMT
+      Content-Length:
       - '106909'
-      Transfer-Encoding:
-      - chunked
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<wsdl:definitions xmlns:tm=\"http://microsoft.com/wsdl/mime/textMatching/\"
         xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\"
         xmlns:tns=\"http://intra.miamidade.gov/GISwebSRVCS\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\"
@@ -2149,54 +2166,5 @@ http_interactions:
         location=\"http://gisws.miamidade.gov/gisxyservices/XYLatLongConversions.asmx\"
         />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
     http_version: 
-  recorded_at: Sat, 04 Jun 2016 20:00:00 GMT
-- request:
-    method: post
-    uri: http://gisws.miamidade.gov/gisxyservices/XYLatLongConversions.asmx
-    body:
-      encoding: UTF-8
-      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://intra.miamidade.gov/GISwebSRVCS"
-        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ins0="http://intra.miamidade.gov/GISwebSRVCS/AbstractTypes"><env:Body><tns:getLatLongDecFromXY><tns:X>919623.87509118</tns:X><tns:Y>533780.31245147</tns:Y></tns:getLatLongDecFromXY></env:Body></env:Envelope>
-    headers:
-      Soapaction:
-      - '"http://intra.miamidade.gov/GISwebSRVCS/getLatLongDecFromXY"'
-      Content-Type:
-      - text/xml;charset=UTF-8
-      Content-Length:
-      - '469'
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Cache-Control:
-      - private, max-age=0
-      Content-Type:
-      - text/xml; charset=utf-8
-      Server:
-      - Microsoft-IIS/8.5
-      X-Aspnet-Version:
-      - 4.0.30319
-      X-Powered-By:
-      - ASP.NET
-      Date:
-      - Sat, 04 Jun 2016 19:59:26 GMT
-      Cteonnt-Length:
-      - '476'
-      Content-Length:
-      - '275'
-    body:
-      encoding: ASCII-8BIT
-      string: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><getLatLongDecFromXYResponse
-        xmlns="http://intra.miamidade.gov/GISwebSRVCS"><getLatLongDecFromXYResult><double>-80.199245566240819</double><double>25.7999410593211</double></getLatLongDecFromXYResult></getLatLongDecFromXYResponse></soap:Body></soap:Envelope>
-    http_version: 
-  recorded_at: Sat, 04 Jun 2016 20:00:00 GMT
+  recorded_at: Sat, 04 Jun 2016 20:44:39 GMT
 recorded_with: VCR 3.0.3

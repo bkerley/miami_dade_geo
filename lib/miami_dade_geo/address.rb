@@ -53,8 +53,8 @@ module MiamiDadeGeo
       double = result[:double]
 
       @latlong = {
-        lat: double[0].to_f,
-        long: double[1].to_f
+        long: double[0].to_f,
+        lat: double[1].to_f
       }
     end
 
