@@ -27,6 +27,7 @@ describe MiamiDadeGeo::Address, :vcr do
 
   it 'has a municipality' do
     expect(subject.munic_code).to eq panther_munic_code
+    expect(subject.municipality.name).to match /^Miami$/i
   end
 
   it 'has a latitude and longitude' do

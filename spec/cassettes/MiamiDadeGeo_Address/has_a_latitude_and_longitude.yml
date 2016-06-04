@@ -38,7 +38,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Sat, 04 Jun 2016 17:14:44 GMT
+      - Sat, 04 Jun 2016 19:13:15 GMT
       Cteonnt-Length:
       - '502'
       Content-Length:
@@ -49,7 +49,7 @@ http_interactions:
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><XYAddressResponse
         xmlns="http://intra.miamidade.gov/GISAddress"><XYAddressResult><Count>1</Count><XY><ArrXY><X>919623.87509118</X><Y>533780.31245147</Y><Zip_Code>33127</Zip_Code><Munic_Code>1</Munic_Code></ArrXY></XY></XYAddressResult></XYAddressResponse></soap:Body></soap:Envelope>
     http_version: 
-  recorded_at: Sat, 04 Jun 2016 17:15:16 GMT
+  recorded_at: Sat, 04 Jun 2016 19:13:48 GMT
 - request:
     method: get
     uri: http://gisws.miamidade.gov/gisxyservices/XYLatLongConversions.asmx?wsdl
@@ -79,7 +79,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Sat, 04 Jun 2016 17:14:44 GMT
+      - Sat, 04 Jun 2016 19:13:15 GMT
       Cteonnt-Length:
       - '106909'
       Transfer-Encoding:
@@ -1392,7 +1392,7 @@ http_interactions:
         location=\"http://gisws.miamidade.gov/gisxyservices/XYLatLongConversions.asmx\"
         />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
     http_version: 
-  recorded_at: Sat, 04 Jun 2016 17:15:16 GMT
+  recorded_at: Sat, 04 Jun 2016 19:13:48 GMT
 - request:
     method: post
     uri: http://gisws.miamidade.gov/gisxyservices/XYLatLongConversions.asmx
@@ -1430,7 +1430,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Sat, 04 Jun 2016 17:14:44 GMT
+      - Sat, 04 Jun 2016 19:13:16 GMT
       Cteonnt-Length:
       - '476'
       Content-Length:
@@ -1441,5 +1441,5 @@ http_interactions:
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><getLatLongDecFromXYResponse
         xmlns="http://intra.miamidade.gov/GISwebSRVCS"><getLatLongDecFromXYResult><double>-80.199245566240819</double><double>25.7999410593211</double></getLatLongDecFromXYResult></getLatLongDecFromXYResponse></soap:Body></soap:Envelope>
     http_version: 
-  recorded_at: Sat, 04 Jun 2016 17:15:16 GMT
+  recorded_at: Sat, 04 Jun 2016 19:13:48 GMT
 recorded_with: VCR 3.0.3

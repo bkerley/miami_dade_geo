@@ -29,7 +29,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Sat, 04 Jun 2016 17:14:42 GMT
+      - Sat, 04 Jun 2016 19:13:14 GMT
       Cteonnt-Length:
       - '57173'
       Content-Length:
@@ -756,7 +756,7 @@ http_interactions:
         \     <http:address location=\"http://gisws.miamidade.gov/gisaddress/addrxy.asmx\"
         />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
     http_version: 
-  recorded_at: Sat, 04 Jun 2016 17:15:15 GMT
+  recorded_at: Sat, 04 Jun 2016 19:13:47 GMT
 - request:
     method: post
     uri: http://gisws.miamidade.gov/gisaddress/addrxy.asmx
@@ -795,7 +795,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Sat, 04 Jun 2016 17:14:43 GMT
+      - Sat, 04 Jun 2016 19:13:15 GMT
       Cteonnt-Length:
       - '502'
       Content-Length:
@@ -806,5 +806,5 @@ http_interactions:
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><XYAddressResponse
         xmlns="http://intra.miamidade.gov/GISAddress"><XYAddressResult><Count>1</Count><XY><ArrXY><X>919623.87509118</X><Y>533780.31245147</Y><Zip_Code>33127</Zip_Code><Munic_Code>1</Munic_Code></ArrXY></XY></XYAddressResult></XYAddressResponse></soap:Body></soap:Envelope>
     http_version: 
-  recorded_at: Sat, 04 Jun 2016 17:15:16 GMT
+  recorded_at: Sat, 04 Jun 2016 19:13:47 GMT
 recorded_with: VCR 3.0.3
