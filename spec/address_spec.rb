@@ -8,7 +8,7 @@ describe MiamiDadeGeo::Address, :vcr do
   let(:panther_zip){ 33127 }
   let(:panther_munic_code){ 1 }
 
-  let(:panther_latlong){ { lat: -80.199245566240819, long: 25.7999410593211 } }
+  let(:panther_latlong){ { long: -80.199245566240819, lat: 25.7999410593211 } }
 
   subject{ described_class.new panther_address }
 
@@ -33,5 +33,12 @@ describe MiamiDadeGeo::Address, :vcr do
   it 'has a latitude and longitude' do
     expect(subject.lat).to eq panther_latlong[:lat]
     expect(subject.long).to eq panther_latlong[:long]
+  end
+
+  it 'throws an error if the address is not valid' do
+    address = described_class.new 'foo'
+
+    expect { address.x }.to raise_error(MiamiDadeGeo::InvalidAddressError)
+    expect { address.lat }.to raise_error(MiamiDadeGeo::InvalidAddressError)
   end
 end
