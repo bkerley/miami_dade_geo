@@ -1,6 +1,7 @@
 require 'miami_dade_geo/addr_xy_client'
 require 'miami_dade_geo/latlong_client'
 require 'miami_dade_geo/municipality'
+require 'miami_dade_geo/errors/invalid_address_error'
 
 module MiamiDadeGeo
   class Address
@@ -39,6 +40,7 @@ module MiamiDadeGeo
     end
 
     private
+
     def latlong
       return @latlong if defined? @latlong
       body = latlong_client.
@@ -62,6 +64,10 @@ module MiamiDadeGeo
       body = addr_xy_client.
              call(:xy_address, message: { myAddress: address}).
              body
+
+      if body[:xy_address_response][:xy_address_result][:count] == '0'
+        raise MiamiDadeGeo::InvalidAddressError
+      end
 
       @xy_addr = body[:xy_address_response][:xy_address_result][:xy][:arr_xy]
     end

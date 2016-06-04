@@ -34,4 +34,11 @@ describe MiamiDadeGeo::Address, :vcr do
     expect(subject.lat).to eq panther_latlong[:lat]
     expect(subject.long).to eq panther_latlong[:long]
   end
+
+  it 'throws an error if the address is not valid' do
+    address = described_class.new 'foo'
+
+    expect { address.x }.to raise_error(MiamiDadeGeo::InvalidAddressError)
+    expect { address.lat }.to raise_error(MiamiDadeGeo::InvalidAddressError)
+  end
 end
