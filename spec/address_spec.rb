@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'miami_dade_geo/address'
 
-describe MiamiDadeGeo::Address do
+describe MiamiDadeGeo::Address, :vcr do
   let(:panther_address){ "2390 NW 2nd Ave" }
 
   let(:panther_xy){ { x: 919623.87509118, y: 533780.31245147 } }
