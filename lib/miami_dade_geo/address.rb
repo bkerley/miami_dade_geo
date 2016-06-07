@@ -4,9 +4,15 @@ require 'miami_dade_geo/municipality'
 require 'miami_dade_geo/errors/invalid_address_error'
 
 module MiamiDadeGeo
-  # A street address in Miami-Dade County. Can make up to two SOAP requests:
+  # A street address in Miami-Dade County.
+  # Lazily makes up to two SOAP requests:
   # one to get the X and Y coordinates, and one to convert them to standard
   # latitude and longitude.
+  #
+  # Can raise an [InvalidAddressError] when lazily making the initial SOAP
+  # request if the given address does not exist.
+  #
+  # @raise [InvalidAddressError]
   class Address
     # @!attribute [r] address
     # @return [String] the street address
