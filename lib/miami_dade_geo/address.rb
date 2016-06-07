@@ -4,37 +4,52 @@ require 'miami_dade_geo/municipality'
 require 'miami_dade_geo/errors/invalid_address_error'
 
 module MiamiDadeGeo
+  # A street address in Miami-Dade County. Can make up to two SOAP requests:
+  # one to get the X and Y coordinates, and one to convert them to standard
+  # latitude and longitude.
   class Address
+    # @!attribute [r] address
+    # @return [String] the street address
     attr_reader :address
 
+    # Construct the address object
+    # @param address [String] the street address
     def initialize(address)
       @address = address
     end
 
+    # @return [Float] the x-coordinate of the address
     def x
       @x ||= xy_addr[:x].to_f
     end
 
+    # @return [Float] the y-coordinate of the address
     def y
       @y ||= xy_addr[:y].to_f
     end
 
+    # @return [Integer] the ZIP code of the address
     def zip
       @zip ||= xy_addr[:zip_code].to_i
     end
 
+    # @return [Integer] the municipality code of the address
     def munic_code
       @munic_code ||= xy_addr[:munic_code].to_i
     end
 
+    # @return [Float] the latitude of the address
     def lat
       @lat ||= latlong[:lat]
     end
 
+    # @return [Float] the longitude of the address
     def long
       @long ||= latlong[:long]
     end
 
+    # Constructs and returns a {Municipality} object. Makes one SOAP request.
+    # @return [Municipality]
     def municipality
       @municipality ||= Municipality.new_with_code(munic_code)
     end
