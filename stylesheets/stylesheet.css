@@ -18,9 +18,9 @@ a {
 .btn {
   display: inline-block;
   margin-bottom: 1rem;
-  color: rgba(255, 255, 255, 0.7);
-  background-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.2);
   border-style: solid;
   border-width: 1px;
   border-radius: 0.3rem;
@@ -56,7 +56,7 @@ a {
 .page-header {
   color: black;
   text-align: center;
-  background-color: #159957;
+  background-color: #A6B3C3;
   background-image: url("../images/homestead-bayfront-sunrise_02.jpg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
