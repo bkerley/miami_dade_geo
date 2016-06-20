@@ -5,13 +5,13 @@ This library wraps some of the Miami-Dade County geospatial services, including:
 * Address to NAD 83 State Plane X and Y coordinate
 * NAD 83 State Plane X and Y coordinate to latitude and longitude
 
-## Installation
+# Installation #
 
 Add this line to your application's Gemfile:
 
-```ruby
+~~~ruby
 gem 'miami_dade_geo'
-```
+~~~
 
 And then execute:
 
@@ -25,23 +25,23 @@ Or install it yourself as:
 
 ### Address Geolocation
 
-```ruby
+~~~ruby
 addr = MiamiDadeGeo::Address.new '2390 NW 2nd Ave'
 addr.zip #=> 33127
 addr.lat #=> 25.7999410593211
 addr.long #=> -80.199245566240819
 addr.municipality.name #=> "MIAMI"
-```
+~~~
 
 ### Geolocation to Municipality
 
-```ruby
+~~~ruby
 muni = MiamiDadeGeo::Municipality.new_with_latlong(
   long: -80.199245566240819,
   lat: 25.7999410593211)
 
 muni.name #=> "MIAMI"
-```
+~~~
 
 ## Links
 
