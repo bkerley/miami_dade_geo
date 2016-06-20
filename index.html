@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>MiamiDadeGeo by bkerley</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">MiamiDadeGeo</h1>
+      <h2 class="project-tagline">Geospatial services for Miami-Dade county</h2>
+      <a href="https://github.com/bkerley/miami_dade_geo" class="btn">View on GitHub</a>
+      <a href="https://github.com/bkerley/miami_dade_geo/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/bkerley/miami_dade_geo/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="miamidadegeo" class="anchor" href="#miamidadegeo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>MiamiDadeGeo</h1>
+
+<p>This library wraps some of the Miami-Dade County geospatial services, including:</p>
+
+<ul>
+<li>Address to NAD 83 State Plane X and Y coordinate</li>
+<li>NAD 83 State Plane X and Y coordinate to latitude and longitude</li>
+</ul>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Add this line to your application's Gemfile:</p>
+
+<div class="highlight highlight-source-ruby"><pre><span class="pl-k">gem</span> <span class="pl-s"><span class="pl-pds">'</span>miami_dade_geo<span class="pl-pds">'</span></span></pre></div>
+
+<p>And then execute:</p>
+
+<pre><code>$ bundle
+</code></pre>
+
+<p>Or install it yourself as:</p>
+
+<pre><code>$ gem install miami_dade_geo
+</code></pre>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<h3>
+<a id="address-geolocation" class="anchor" href="#address-geolocation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Address Geolocation</h3>
+
+<div class="highlight highlight-source-ruby"><pre>addr <span class="pl-k">=</span> <span class="pl-c1">MiamiDadeGeo</span>::<span class="pl-c1">Address</span>.<span class="pl-k">new</span> <span class="pl-s"><span class="pl-pds">'</span>2390 NW 2nd Ave<span class="pl-pds">'</span></span>
+addr.zip <span class="pl-c">#=&gt; 33127</span>
+addr.lat <span class="pl-c">#=&gt; 25.7999410593211</span>
+addr.long <span class="pl-c">#=&gt; -80.199245566240819</span>
+addr.municipality.name <span class="pl-c">#=&gt; "MIAMI"</span></pre></div>
+
+<h3>
+<a id="geolocation-to-municipality" class="anchor" href="#geolocation-to-municipality" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Geolocation to Municipality</h3>
+
+<div class="highlight highlight-source-ruby"><pre>muni <span class="pl-k">=</span> <span class="pl-c1">MiamiDadeGeo</span>::<span class="pl-c1">Municipality</span>.new_with_latlong(
+  <span class="pl-c1">long:</span> <span class="pl-k">-</span><span class="pl-c1">80.199245566240819</span>,
+  <span class="pl-c1">lat:</span> <span class="pl-c1">25.7999410593211</span>)
+
+muni.name <span class="pl-c">#=&gt; "MIAMI"</span></pre></div>
+
+<h2>
+<a id="links" class="anchor" href="#links" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Links</h2>
+
+<ul>
+<li><p><a href="https://rubygems.org/gems/miami_dade_geo">https://rubygems.org/gems/miami_dade_geo</a></p></li>
+<li><p><a href="https://github.com/jdiago/miami_dade_geo_api">https://github.com/jdiago/miami_dade_geo_api</a></p></li>
+<li><p><a href="https://github.com/bkerley/what_municipality">https://github.com/bkerley/what_municipality</a></p></li>
+<li><p><a href="https://radiant-taiga-73968.herokuapp.com/address-meta?address=2390%20NW%202nd%20Ave">https://radiant-taiga-73968.herokuapp.com/address-meta?address=2390%20NW%202nd%20Ave</a></p></li>
+<li><p><a href="https://what-mdc-muni.herokuapp.com">https://what-mdc-muni.herokuapp.com</a></p></li>
+</ul>
+
+<h2>
+<a id="development" class="anchor" href="#development" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Development</h2>
+
+<p>After checking out the repo, run <code>bin/setup</code> to install dependencies. Then, run <code>rake spec</code> to run the tests. You can also run <code>bin/console</code> for an interactive prompt that will allow you to experiment.</p>
+
+<p>To install this gem onto your local machine, run <code>bundle exec rake install</code>. To release a new version, update the version number in <code>version.rb</code>, and then run <code>bundle exec rake release</code>, which will create a git tag for the version, push git commits and tags, and push the <code>.gem</code> file to <a href="https://rubygems.org">rubygems.org</a>.</p>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h2>
+
+<p>Bug reports and pull requests are welcome on GitHub at <a href="https://github.com/%5BUSERNAME%5D/miami_dade_geo">https://github.com/[USERNAME]/miami_dade_geo</a>. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the <a href="http://contributor-covenant.org">Contributor Covenant</a> code of conduct.</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>The gem is available as open source under the terms of the <a href="http://opensource.org/licenses/MIT">MIT License</a>.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/bkerley/miami_dade_geo">MiamiDadeGeo</a> is maintained by <a href="https://github.com/bkerley">bkerley</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
