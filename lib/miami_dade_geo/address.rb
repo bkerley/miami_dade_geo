@@ -1,5 +1,5 @@
 require 'miami_dade_geo/addr_xy_client'
-require 'miami_dade_geo/latlong_client'
+require 'miami_dade_geo/coordinate'
 require 'miami_dade_geo/municipality'
 require 'miami_dade_geo/errors/invalid_address_error'
 
@@ -11,12 +11,16 @@ module MiamiDadeGeo
       @address = address
     end
 
+    def coordinate
+      @coordinate ||= Coordinate.new xy_addr
+    end
+
     def x
-      @x ||= xy_addr[:x].to_f
+      coordinate.x
     end
 
     def y
-      @y ||= xy_addr[:y].to_f
+      coordinate.y
     end
 
     def zip
@@ -28,11 +32,11 @@ module MiamiDadeGeo
     end
 
     def lat
-      @lat ||= latlong[:lat]
+      coordinate.lat
     end
 
     def long
-      @long ||= latlong[:long]
+      coordinate.long
     end
 
     def municipality
@@ -40,23 +44,6 @@ module MiamiDadeGeo
     end
 
     private
-
-    def latlong
-      return @latlong if defined? @latlong
-      body = latlong_client.
-             call(:get_lat_long_dec_from_xy,
-                  message: { 'X' => x.to_s, 'Y' => y.to_s} ).
-             body
-
-      resp = body[:get_lat_long_dec_from_xy_response]
-      result = resp[:get_lat_long_dec_from_xy_result]
-      double = result[:double]
-
-      @latlong = {
-        long: double[0].to_f,
-        lat: double[1].to_f
-      }
-    end
 
     def xy_addr
       return @xy_addr if defined? @xy_addr
@@ -74,10 +61,6 @@ module MiamiDadeGeo
 
     def addr_xy_client
       AddrXyClient.instance.savon
-    end
-
-    def latlong_client
-      LatlongClient.instance.savon
     end
   end
 end

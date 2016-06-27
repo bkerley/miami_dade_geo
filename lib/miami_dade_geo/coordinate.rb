@@ -14,13 +14,13 @@ module MiamiDadeGeo
     end
 
     def initialize_from_xy(opts)
-      @x = opts[:x]
-      @y = opts[:y]
+      @x = opts[:x].to_f
+      @y = opts[:y].to_f
     end
 
     def initialize_from_latlong(opts)
-      @lat = opts[:lat]
-      @long = opts[:long]
+      @lat = opts[:lat].to_f
+      @long = opts[:long].to_f
     end
 
     def x
