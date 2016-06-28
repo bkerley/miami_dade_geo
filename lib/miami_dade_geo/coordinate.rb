@@ -1,4 +1,5 @@
 require 'miami_dade_geo/latlong_client'
+require 'miami_dade_geo/get_closest_feature_client'
 
 module MiamiDadeGeo
   class Coordinate
@@ -55,6 +56,10 @@ module MiamiDadeGeo
       {  lat: lat, long: long }
     end
 
+    def address
+      get_closest_feature_client.find_feature(xy, 'GeoAddress')
+    end
+
     private
     def load_xy_from_latlong
       body = latlong_client.
@@ -80,6 +85,10 @@ module MiamiDadeGeo
 
       @lat = result[:double][1].to_f
       @long = result[:double][0].to_f
+    end
+
+    def get_closest_feature_client
+      GetClosestFeatureClient.instance
     end
 
     def latlong_client

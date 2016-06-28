@@ -29,20 +29,11 @@ module MiamiDadeGeo
     end
 
     def self.new_with_xy(xy_hash)
-      body = GetClosestFeatureClient.instance.savon.
-             call(:get_closest_feature_from_xy_all_atrbts,
-                  message: {
-                    'X' => xy_hash[:x],
-                    'Y' => xy_hash[:y],
-                    'Buffer' => 0,
-                    'NameOfFeatureClass' => 'municipality_poly'
-                  }).
-             body
-      resp = body[:get_closest_feature_from_xy_all_atrbts_response]
-      rslt = resp[:get_closest_feature_from_xy_all_atrbts_result]
-      poly = rslt[:diffgram][:document_element][:results]
-
-      new poly
+      new GetClosestFeatureClient.instance.
+           get_closest_feature('municipality_poly',
+                               xy_hash[:x],
+                               xy_hash[:y],
+                               0)
     end
 
     def self.new_with_latlong(latlong_hash)

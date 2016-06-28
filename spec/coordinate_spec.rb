@@ -17,4 +17,9 @@ describe MiamiDadeGeo::Coordinate, :vcr do
     expect(coord.x).to be_within(0.001).of(panther_xy[:x])
     expect(coord.y).to be_within(0.001).of(panther_xy[:y])
   end
+
+  it 'turns coordinates into an address' do
+    coord = described_class.new panther_latlong
+    expect(coord.address).to be
+  end
 end
