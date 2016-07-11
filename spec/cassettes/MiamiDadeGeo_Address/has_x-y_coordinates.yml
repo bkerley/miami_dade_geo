@@ -1,48 +1,6 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: http://gisws.miamidade.gov/gisaddress/addrxy.asmx
-    body:
-      encoding: UTF-8
-      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://intra.miamidade.gov/GISAddress"
-        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><tns:XYAddress><tns:myAddress>2390
-        NW 2nd Ave</tns:myAddress></tns:XYAddress></env:Body></env:Envelope>
-    headers:
-      Soapaction:
-      - '"http://intra.miamidade.gov/GISAddress/XYAddress"'
-      Content-Type:
-      - text/xml;charset=UTF-8
-      Content-Length:
-      - '368'
-  response:
-    status:
-      code: 200
-      message: ''
-    headers:
-      Cache-Control:
-      - private, max-age=0
-      Content-Type:
-      - text/xml; charset=utf-8
-      Server:
-      - Microsoft-IIS/8.5
-      X-Aspnet-Version:
-      - 4.0.30319
-      X-Powered-By:
-      - ASP.NET
-      Date:
-      - Sat, 04 Jun 2016 20:39:19 GMT
-      Content-Length:
-      - '502'
-    body:
-      encoding: UTF-8
-      string: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><XYAddressResponse
-        xmlns="http://intra.miamidade.gov/GISAddress"><XYAddressResult><Count>1</Count><XY><ArrXY><X>919623.87509118</X><Y>533780.31245147</Y><Zip_Code>33127</Zip_Code><Munic_Code>1</Munic_Code></ArrXY></XY></XYAddressResult></XYAddressResponse></soap:Body></soap:Envelope>
-    http_version: 
-  recorded_at: Sat, 04 Jun 2016 20:39:52 GMT
-- request:
     method: get
     uri: http://gisws.miamidade.gov/gisaddress/addrxy.asmx?wsdl
     body:
@@ -71,7 +29,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Tue, 28 Jun 2016 00:53:25 GMT
+      - Mon, 11 Jul 2016 23:50:21 GMT
       Cteonnt-Length:
       - '57173'
       Content-Length:
@@ -798,5 +756,55 @@ http_interactions:
         \     <http:address location=\"http://gisws.miamidade.gov/gisaddress/addrxy.asmx\"
         />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
     http_version: 
-  recorded_at: Tue, 28 Jun 2016 00:53:26 GMT
+  recorded_at: Mon, 11 Jul 2016 23:50:21 GMT
+- request:
+    method: post
+    uri: http://gisws.miamidade.gov/gisaddress/addrxy.asmx
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://intra.miamidade.gov/GISAddress"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><tns:XYAddress><tns:myAddress>2390
+        NW 2nd Ave</tns:myAddress></tns:XYAddress></env:Body></env:Envelope>
+    headers:
+      Soapaction:
+      - '"http://intra.miamidade.gov/GISAddress/XYAddress"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '368'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 11 Jul 2016 23:50:21 GMT
+      Cteonnt-Length:
+      - '502'
+      Content-Length:
+      - '299'
+    body:
+      encoding: ASCII-8BIT
+      string: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><XYAddressResponse
+        xmlns="http://intra.miamidade.gov/GISAddress"><XYAddressResult><Count>1</Count><XY><ArrXY><X>919623.87509118</X><Y>533780.31245147</Y><Zip_Code>33127</Zip_Code><Munic_Code>1</Munic_Code></ArrXY></XY></XYAddressResult></XYAddressResponse></soap:Body></soap:Envelope>
+    http_version: 
+  recorded_at: Mon, 11 Jul 2016 23:50:22 GMT
 recorded_with: VCR 3.0.3
