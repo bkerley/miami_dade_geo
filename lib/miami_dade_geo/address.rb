@@ -1,5 +1,5 @@
 require 'miami_dade_geo/addr_xy_client'
-require 'miami_dade_geo/latlong_client'
+require 'miami_dade_geo/coordinate'
 require 'miami_dade_geo/municipality'
 require 'miami_dade_geo/errors/invalid_address_error'
 
@@ -24,14 +24,20 @@ module MiamiDadeGeo
       @address = address
     end
 
+    # @return [Coordinate] a coordinate object representing where this address
+    # even is
+    def coordinate
+      @coordinate ||= Coordinate.new xy_addr
+    end
+
     # @return [Float] the x-coordinate of the address
     def x
-      @x ||= xy_addr[:x].to_f
+      coordinate.x
     end
 
     # @return [Float] the y-coordinate of the address
     def y
-      @y ||= xy_addr[:y].to_f
+      coordinate.y
     end
 
     # @return [Integer] the ZIP code of the address
@@ -46,12 +52,12 @@ module MiamiDadeGeo
 
     # @return [Float] the latitude of the address
     def lat
-      @lat ||= latlong[:lat]
+      coordinate.lat
     end
 
     # @return [Float] the longitude of the address
     def long
-      @long ||= latlong[:long]
+      coordinate.long
     end
 
     # Constructs and returns a {Municipality} object. Makes one SOAP request.
@@ -61,23 +67,6 @@ module MiamiDadeGeo
     end
 
     private
-
-    def latlong
-      return @latlong if defined? @latlong
-      body = latlong_client.
-             call(:get_lat_long_dec_from_xy,
-                  message: { 'X' => x.to_s, 'Y' => y.to_s} ).
-             body
-
-      resp = body[:get_lat_long_dec_from_xy_response]
-      result = resp[:get_lat_long_dec_from_xy_result]
-      double = result[:double]
-
-      @latlong = {
-        long: double[0].to_f,
-        lat: double[1].to_f
-      }
-    end
 
     def xy_addr
       return @xy_addr if defined? @xy_addr
@@ -95,10 +84,6 @@ module MiamiDadeGeo
 
     def addr_xy_client
       AddrXyClient.instance.savon
-    end
-
-    def latlong_client
-      LatlongClient.instance.savon
     end
   end
 end
