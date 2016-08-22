@@ -15,16 +15,10 @@ http_interactions:
       - text/xml;charset=UTF-8
       Content-Length:
       - '481'
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
   response:
     status:
       code: 200
-      message: OK
+      message: ''
     headers:
       Cache-Control:
       - private, max-age=0
@@ -37,18 +31,16 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Tue, 28 Jun 2016 00:29:50 GMT
-      Cteonnt-Length:
-      - '477'
+      - Mon, 15 Aug 2016 23:51:58 GMT
       Content-Length:
-      - '277'
+      - '477'
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><getXYfromLatLongDecResponse
         xmlns="http://intra.miamidade.gov/GISwebSRVCS"><getXYfromLatLongDecResult><double>919623.87509007147</double><double>533780.31245372584</double></getXYfromLatLongDecResult></getXYfromLatLongDecResponse></soap:Body></soap:Envelope>
     http_version: 
-  recorded_at: Tue, 28 Jun 2016 00:29:50 GMT
+  recorded_at: Mon, 15 Aug 2016 23:51:58 GMT
 - request:
     method: post
     uri: http://gisws.miamidade.gov/gisxyservices/GetClosestFeature.asmx
@@ -64,16 +56,10 @@ http_interactions:
       - text/xml;charset=UTF-8
       Content-Length:
       - '524'
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
   response:
     status:
       code: 200
-      message: OK
+      message: ''
     headers:
       Cache-Control:
       - private, max-age=0
@@ -86,35 +72,87 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Tue, 28 Jun 2016 00:29:50 GMT
-      Cteonnt-Length:
-      - '343'
+      - Mon, 15 Aug 2016 23:51:59 GMT
       Content-Length:
-      - '224'
+      - '343'
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><GetClosestFeatureFromXYAllAtrbtsResponse
         xmlns="http://intra.miamidade.gov/GetClosestFeature" /></soap:Body></soap:Envelope>
     http_version: 
-  recorded_at: Tue, 28 Jun 2016 00:29:51 GMT
+  recorded_at: Mon, 15 Aug 2016 23:51:59 GMT
+- request:
+    method: post
+    uri: http://gisws.miamidade.gov/gisxyservices/GetClosestFeature.asmx
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://intra.miamidade.gov/GetClosestFeature"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><tns:GetClosestFeatureFromXYAllAtrbts><tns:X>919623.8750900715</tns:X><tns:Y>533780.3124537258</tns:Y><tns:Buffer>10</tns:Buffer><tns:NameOfFeatureClass>GeoAddress</tns:NameOfFeatureClass></tns:GetClosestFeatureFromXYAllAtrbts></env:Body></env:Envelope>
+    headers:
+      Soapaction:
+      - '"http://intra.miamidade.gov/GetClosestFeature/GetClosestFeatureFromXYAllAtrbts"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '525'
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 15 Aug 2016 23:51:59 GMT
+      Content-Length:
+      - '2629'
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><GetClosestFeatureFromXYAllAtrbtsResponse
+        xmlns="http://intra.miamidade.gov/GetClosestFeature"><GetClosestFeatureFromXYAllAtrbtsResult><xs:schema
+        id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"><xs:element
+        name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Results" msdata:Locale="en-US"><xs:complexType><xs:choice
+        minOccurs="0" maxOccurs="unbounded"><xs:element name="Results" msdata:CaseSensitive="False"
+        msdata:Locale="en-US"><xs:complexType><xs:sequence><xs:element name="OBJECTID"
+        type="xs:long" /><xs:element name="LPROP_ID" type="xs:long" minOccurs="0"
+        /><xs:element name="ADDRESSID" type="xs:long" minOccurs="0" /><xs:element
+        name="FOLIO" type="xs:string" minOccurs="0" /><xs:element name="POINT_X" type="xs:double"
+        minOccurs="0" /><xs:element name="POINT_Y" type="xs:double" minOccurs="0"
+        /><xs:element name="MAILING_MUNIC" type="xs:string" minOccurs="0" /><xs:element
+        name="HSE_NUM" type="xs:long" minOccurs="0" /><xs:element name="PRE_DIR" type="xs:string"
+        minOccurs="0" /><xs:element name="ST_NAME" type="xs:string" minOccurs="0"
+        /><xs:element name="ST_TYPE" type="xs:string" minOccurs="0" /><xs:element
+        name="SUF_DIR" type="xs:string" minOccurs="0" /><xs:element name="ZIP" type="xs:long"
+        minOccurs="0" /><xs:element name="PLUS4" type="xs:int" minOccurs="0" /><xs:element
+        name="MUNIC" type="xs:int" minOccurs="0" /><xs:element name="SNAME" type="xs:string"
+        minOccurs="0" /><xs:element name="Dist" type="xs:double" minOccurs="0" /></xs:sequence></xs:complexType></xs:element></xs:choice></xs:complexType></xs:element></xs:schema><diffgr:diffgram
+        xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1"><DocumentElement
+        xmlns=""><Results diffgr:id="Results1" msdata:rowOrder="0" diffgr:hasChanges="inserted"><OBJECTID>381408</OBJECTID><LPROP_ID>31251440</LPROP_ID><ADDRESSID>200449</ADDRESSID><FOLIO>0131250340480</FOLIO><POINT_X>919623.87509118</POINT_X><POINT_Y>533780.31245147</POINT_Y><MAILING_MUNIC>MIAMI</MAILING_MUNIC><HSE_NUM>2390</HSE_NUM><PRE_DIR>NW</PRE_DIR><ST_NAME>2ND</ST_NAME><ST_TYPE>AVE</ST_TYPE><ZIP>33127</ZIP><PLUS4>4302</PLUS4><MUNIC>1</MUNIC><SNAME>NW
+        2ND AVE</SNAME><Dist>0</Dist></Results></DocumentElement></diffgr:diffgram></GetClosestFeatureFromXYAllAtrbtsResult></GetClosestFeatureFromXYAllAtrbtsResponse></soap:Body></soap:Envelope>
+    http_version: 
+  recorded_at: Mon, 15 Aug 2016 23:51:59 GMT
 - request:
     method: get
     uri: http://gisws.miamidade.gov/gisxyservices/XYLatLongConversions.asmx?wsdl
     body:
       encoding: US-ASCII
       string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
+    headers: {}
   response:
     status:
       code: 200
-      message: OK
+      message: ''
     headers:
       Cache-Control:
       - private, max-age=0
@@ -127,13 +165,11 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Tue, 28 Jun 2016 00:30:18 GMT
-      Cteonnt-Length:
+      - Tue, 16 Aug 2016 00:08:23 GMT
+      Content-Length:
       - '106909'
-      Transfer-Encoding:
-      - chunked
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<wsdl:definitions xmlns:tm=\"http://microsoft.com/wsdl/mime/textMatching/\"
         xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\"
         xmlns:tns=\"http://intra.miamidade.gov/GISwebSRVCS\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\"
@@ -1440,24 +1476,18 @@ http_interactions:
         location=\"http://gisws.miamidade.gov/gisxyservices/XYLatLongConversions.asmx\"
         />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
     http_version: 
-  recorded_at: Tue, 28 Jun 2016 00:30:18 GMT
+  recorded_at: Tue, 16 Aug 2016 00:08:24 GMT
 - request:
     method: get
     uri: http://gisws.miamidade.gov/gisxyservices/GetClosestFeature.asmx?wsdl
     body:
       encoding: US-ASCII
       string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
+    headers: {}
   response:
     status:
       code: 200
-      message: OK
+      message: ''
     headers:
       Cache-Control:
       - private, max-age=0
@@ -1470,13 +1500,11 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Tue, 28 Jun 2016 00:30:18 GMT
-      Cteonnt-Length:
-      - '53323'
+      - Tue, 16 Aug 2016 00:08:23 GMT
       Content-Length:
-      - '3131'
+      - '53323'
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<wsdl:definitions xmlns:tm=\"http://microsoft.com/wsdl/mime/textMatching/\"
         xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\"
         xmlns:tns=\"http://intra.miamidade.gov/GetClosestFeature\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\"
@@ -2124,5 +2152,5 @@ http_interactions:
         binding=\"tns:GetClosestFeatureHttpPost\">\r\n      <http:address location=\"http://gisws.miamidade.gov/gisxyservices/GetClosestFeature.asmx\"
         />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
     http_version: 
-  recorded_at: Tue, 28 Jun 2016 00:30:18 GMT
+  recorded_at: Tue, 16 Aug 2016 00:08:24 GMT
 recorded_with: VCR 3.0.3

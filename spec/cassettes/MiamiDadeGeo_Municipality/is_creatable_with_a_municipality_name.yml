@@ -31,7 +31,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Sat, 04 Jun 2016 20:39:18 GMT
+      - Mon, 15 Aug 2016 23:51:56 GMT
       Content-Length:
       - '1941'
     body:
@@ -54,7 +54,7 @@ http_interactions:
         xmlns=""><municipality_poly diffgr:id="municipality_poly1" msdata:rowOrder="0"
         diffgr:hasChanges="inserted"><OBJECTID>76</OBJECTID><MUNICUID>34</MUNICUID><MUNICID>01</MUNICID><NAME>MIAMI</NAME><FIPSCODE>1245000</FIPSCODE></municipality_poly></DocumentElement></diffgr:diffgram></GetAllFieldsRecordsGivenAFieldNameAndValueResult></GetAllFieldsRecordsGivenAFieldNameAndValueResponse></soap:Body></soap:Envelope>
     http_version: 
-  recorded_at: Sat, 04 Jun 2016 20:39:51 GMT
+  recorded_at: Mon, 15 Aug 2016 23:51:56 GMT
 - request:
     method: get
     uri: http://gisws.miamidade.gov/gisdata/GeoAttribute.asmx?wsdl
@@ -78,7 +78,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Sat, 04 Jun 2016 20:42:34 GMT
+      - Tue, 16 Aug 2016 00:28:01 GMT
       Content-Length:
       - '111577'
     body:
@@ -1402,5 +1402,5 @@ http_interactions:
         \     <http:address location=\"http://gisws.miamidade.gov/gisdata/GeoAttribute.asmx\"
         />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
     http_version: 
-  recorded_at: Sat, 04 Jun 2016 20:43:07 GMT
+  recorded_at: Tue, 16 Aug 2016 00:28:01 GMT
 recorded_with: VCR 3.0.3

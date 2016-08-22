@@ -15,16 +15,10 @@ http_interactions:
       - text/xml;charset=UTF-8
       Content-Length:
       - '469'
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
   response:
     status:
       code: 200
-      message: OK
+      message: ''
     headers:
       Cache-Control:
       - private, max-age=0
@@ -37,35 +31,27 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Mon, 27 Jun 2016 23:28:43 GMT
-      Cteonnt-Length:
-      - '476'
+      - Mon, 15 Aug 2016 23:51:59 GMT
       Content-Length:
-      - '275'
+      - '476'
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><getLatLongDecFromXYResponse
         xmlns="http://intra.miamidade.gov/GISwebSRVCS"><getLatLongDecFromXYResult><double>-80.199245566240819</double><double>25.7999410593211</double></getLatLongDecFromXYResult></getLatLongDecFromXYResponse></soap:Body></soap:Envelope>
     http_version: 
-  recorded_at: Mon, 27 Jun 2016 23:28:44 GMT
+  recorded_at: Mon, 15 Aug 2016 23:52:00 GMT
 - request:
     method: get
     uri: http://gisws.miamidade.gov/gisxyservices/XYLatLongConversions.asmx?wsdl
     body:
       encoding: US-ASCII
       string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
+    headers: {}
   response:
     status:
       code: 200
-      message: OK
+      message: ''
     headers:
       Cache-Control:
       - private, max-age=0
@@ -78,13 +64,11 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Mon, 27 Jun 2016 23:29:05 GMT
-      Cteonnt-Length:
+      - Tue, 16 Aug 2016 00:28:00 GMT
+      Content-Length:
       - '106909'
-      Transfer-Encoding:
-      - chunked
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<wsdl:definitions xmlns:tm=\"http://microsoft.com/wsdl/mime/textMatching/\"
         xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\"
         xmlns:tns=\"http://intra.miamidade.gov/GISwebSRVCS\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\"
@@ -1391,5 +1375,5 @@ http_interactions:
         location=\"http://gisws.miamidade.gov/gisxyservices/XYLatLongConversions.asmx\"
         />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
     http_version: 
-  recorded_at: Mon, 27 Jun 2016 23:29:06 GMT
+  recorded_at: Tue, 16 Aug 2016 00:28:01 GMT
 recorded_with: VCR 3.0.3
