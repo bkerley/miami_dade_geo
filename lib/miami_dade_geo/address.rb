@@ -27,7 +27,9 @@ module MiamiDadeGeo
     # Construct the address object
     # @param address [String] the street address
     def self.new_from_address(address)
-      new sname: address
+      xy = AddrXyClient.instance.xy_for_address(address)
+
+      Coordinate.new(xy).address
     end
 
     def self.new_from_feature(feature)
@@ -89,19 +91,11 @@ module MiamiDadeGeo
     def xy_addr
       return @xy_addr if defined? @xy_addr
 
-      body = addr_xy_client.
-             call(:xy_address, message: { myAddress: address}).
-             body
-
-      if body[:xy_address_response][:xy_address_result][:count] == '0'
-        raise MiamiDadeGeo::InvalidAddressError
-      end
-
-      @xy_addr = body[:xy_address_response][:xy_address_result][:xy][:arr_xy]
+      @xy_addr = addr_xy_client.xy_for_address(address)
     end
 
     def addr_xy_client
-      AddrXyClient.instance.savon
+      AddrXyClient.instance
     end
   end
 end

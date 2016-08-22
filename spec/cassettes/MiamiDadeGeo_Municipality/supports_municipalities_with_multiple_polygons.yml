@@ -31,7 +31,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Mon, 15 Aug 2016 23:51:57 GMT
+      - Mon, 22 Aug 2016 23:55:38 GMT
       Content-Length:
       - '8011'
     body:
@@ -52,62 +52,62 @@ http_interactions:
         /></xs:sequence></xs:complexType></xs:element></xs:choice></xs:complexType></xs:element></xs:schema><diffgr:diffgram
         xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1"><DocumentElement
         xmlns=""><municipality_poly diffgr:id="municipality_poly1" msdata:rowOrder="0"
-        diffgr:hasChanges="inserted"><OBJECTID>2</OBJECTID><MUNICUID>4</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
+        diffgr:hasChanges="inserted"><OBJECTID>6</OBJECTID><MUNICUID>52</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
         MIAMI-DADE</NAME></municipality_poly><municipality_poly diffgr:id="municipality_poly2"
-        msdata:rowOrder="1" diffgr:hasChanges="inserted"><OBJECTID>4</OBJECTID><MUNICUID>21</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
+        msdata:rowOrder="1" diffgr:hasChanges="inserted"><OBJECTID>10</OBJECTID><MUNICUID>56</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
         MIAMI-DADE</NAME></municipality_poly><municipality_poly diffgr:id="municipality_poly3"
-        msdata:rowOrder="2" diffgr:hasChanges="inserted"><OBJECTID>6</OBJECTID><MUNICUID>52</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
+        msdata:rowOrder="2" diffgr:hasChanges="inserted"><OBJECTID>11</OBJECTID><MUNICUID>30</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
         MIAMI-DADE</NAME></municipality_poly><municipality_poly diffgr:id="municipality_poly4"
-        msdata:rowOrder="3" diffgr:hasChanges="inserted"><OBJECTID>10</OBJECTID><MUNICUID>56</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
+        msdata:rowOrder="3" diffgr:hasChanges="inserted"><OBJECTID>13</OBJECTID><MUNICUID>38</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
         MIAMI-DADE</NAME></municipality_poly><municipality_poly diffgr:id="municipality_poly5"
-        msdata:rowOrder="4" diffgr:hasChanges="inserted"><OBJECTID>11</OBJECTID><MUNICUID>30</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
+        msdata:rowOrder="4" diffgr:hasChanges="inserted"><OBJECTID>14</OBJECTID><MUNICUID>46</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
         MIAMI-DADE</NAME></municipality_poly><municipality_poly diffgr:id="municipality_poly6"
-        msdata:rowOrder="5" diffgr:hasChanges="inserted"><OBJECTID>13</OBJECTID><MUNICUID>38</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
+        msdata:rowOrder="5" diffgr:hasChanges="inserted"><OBJECTID>17</OBJECTID><MUNICUID>63</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
         MIAMI-DADE</NAME></municipality_poly><municipality_poly diffgr:id="municipality_poly7"
-        msdata:rowOrder="6" diffgr:hasChanges="inserted"><OBJECTID>14</OBJECTID><MUNICUID>46</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
+        msdata:rowOrder="6" diffgr:hasChanges="inserted"><OBJECTID>18</OBJECTID><MUNICUID>28</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
         MIAMI-DADE</NAME></municipality_poly><municipality_poly diffgr:id="municipality_poly8"
-        msdata:rowOrder="7" diffgr:hasChanges="inserted"><OBJECTID>17</OBJECTID><MUNICUID>63</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
+        msdata:rowOrder="7" diffgr:hasChanges="inserted"><OBJECTID>20</OBJECTID><MUNICUID>50</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
         MIAMI-DADE</NAME></municipality_poly><municipality_poly diffgr:id="municipality_poly9"
-        msdata:rowOrder="8" diffgr:hasChanges="inserted"><OBJECTID>18</OBJECTID><MUNICUID>28</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
+        msdata:rowOrder="8" diffgr:hasChanges="inserted"><OBJECTID>22</OBJECTID><MUNICUID>59</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
         MIAMI-DADE</NAME></municipality_poly><municipality_poly diffgr:id="municipality_poly10"
-        msdata:rowOrder="9" diffgr:hasChanges="inserted"><OBJECTID>20</OBJECTID><MUNICUID>50</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
+        msdata:rowOrder="9" diffgr:hasChanges="inserted"><OBJECTID>23</OBJECTID><MUNICUID>78</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
         MIAMI-DADE</NAME></municipality_poly><municipality_poly diffgr:id="municipality_poly11"
-        msdata:rowOrder="10" diffgr:hasChanges="inserted"><OBJECTID>22</OBJECTID><MUNICUID>59</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
+        msdata:rowOrder="10" diffgr:hasChanges="inserted"><OBJECTID>28</OBJECTID><MUNICUID>8</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
         MIAMI-DADE</NAME></municipality_poly><municipality_poly diffgr:id="municipality_poly12"
-        msdata:rowOrder="11" diffgr:hasChanges="inserted"><OBJECTID>23</OBJECTID><MUNICUID>78</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
+        msdata:rowOrder="11" diffgr:hasChanges="inserted"><OBJECTID>34</OBJECTID><MUNICUID>44</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
         MIAMI-DADE</NAME></municipality_poly><municipality_poly diffgr:id="municipality_poly13"
-        msdata:rowOrder="12" diffgr:hasChanges="inserted"><OBJECTID>28</OBJECTID><MUNICUID>8</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
+        msdata:rowOrder="12" diffgr:hasChanges="inserted"><OBJECTID>35</OBJECTID><MUNICUID>49</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
         MIAMI-DADE</NAME></municipality_poly><municipality_poly diffgr:id="municipality_poly14"
-        msdata:rowOrder="13" diffgr:hasChanges="inserted"><OBJECTID>34</OBJECTID><MUNICUID>44</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
+        msdata:rowOrder="13" diffgr:hasChanges="inserted"><OBJECTID>38</OBJECTID><MUNICUID>51</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
         MIAMI-DADE</NAME></municipality_poly><municipality_poly diffgr:id="municipality_poly15"
-        msdata:rowOrder="14" diffgr:hasChanges="inserted"><OBJECTID>35</OBJECTID><MUNICUID>49</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
+        msdata:rowOrder="14" diffgr:hasChanges="inserted"><OBJECTID>39</OBJECTID><MUNICUID>57</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
         MIAMI-DADE</NAME></municipality_poly><municipality_poly diffgr:id="municipality_poly16"
-        msdata:rowOrder="15" diffgr:hasChanges="inserted"><OBJECTID>38</OBJECTID><MUNICUID>51</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
+        msdata:rowOrder="15" diffgr:hasChanges="inserted"><OBJECTID>44</OBJECTID><MUNICUID>58</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
         MIAMI-DADE</NAME></municipality_poly><municipality_poly diffgr:id="municipality_poly17"
-        msdata:rowOrder="16" diffgr:hasChanges="inserted"><OBJECTID>39</OBJECTID><MUNICUID>57</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
+        msdata:rowOrder="16" diffgr:hasChanges="inserted"><OBJECTID>2</OBJECTID><MUNICUID>4</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
         MIAMI-DADE</NAME></municipality_poly><municipality_poly diffgr:id="municipality_poly18"
-        msdata:rowOrder="17" diffgr:hasChanges="inserted"><OBJECTID>44</OBJECTID><MUNICUID>58</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
+        msdata:rowOrder="17" diffgr:hasChanges="inserted"><OBJECTID>4</OBJECTID><MUNICUID>21</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
         MIAMI-DADE</NAME></municipality_poly><municipality_poly diffgr:id="municipality_poly19"
-        msdata:rowOrder="18" diffgr:hasChanges="inserted"><OBJECTID>52</OBJECTID><MUNICUID>16</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
+        msdata:rowOrder="18" diffgr:hasChanges="inserted"><OBJECTID>77</OBJECTID><MUNICUID>1</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
         MIAMI-DADE</NAME></municipality_poly><municipality_poly diffgr:id="municipality_poly20"
-        msdata:rowOrder="19" diffgr:hasChanges="inserted"><OBJECTID>53</OBJECTID><MUNICUID>48</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
+        msdata:rowOrder="19" diffgr:hasChanges="inserted"><OBJECTID>64</OBJECTID><MUNICUID>22</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
         MIAMI-DADE</NAME></municipality_poly><municipality_poly diffgr:id="municipality_poly21"
-        msdata:rowOrder="20" diffgr:hasChanges="inserted"><OBJECTID>56</OBJECTID><MUNICUID>53</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
+        msdata:rowOrder="20" diffgr:hasChanges="inserted"><OBJECTID>65</OBJECTID><MUNICUID>54</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
         MIAMI-DADE</NAME></municipality_poly><municipality_poly diffgr:id="municipality_poly22"
-        msdata:rowOrder="21" diffgr:hasChanges="inserted"><OBJECTID>59</OBJECTID><MUNICUID>73</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
+        msdata:rowOrder="21" diffgr:hasChanges="inserted"><OBJECTID>66</OBJECTID><MUNICUID>9</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
         MIAMI-DADE</NAME></municipality_poly><municipality_poly diffgr:id="municipality_poly23"
-        msdata:rowOrder="22" diffgr:hasChanges="inserted"><OBJECTID>64</OBJECTID><MUNICUID>22</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
+        msdata:rowOrder="22" diffgr:hasChanges="inserted"><OBJECTID>68</OBJECTID><MUNICUID>11</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
         MIAMI-DADE</NAME></municipality_poly><municipality_poly diffgr:id="municipality_poly24"
-        msdata:rowOrder="23" diffgr:hasChanges="inserted"><OBJECTID>65</OBJECTID><MUNICUID>54</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
+        msdata:rowOrder="23" diffgr:hasChanges="inserted"><OBJECTID>70</OBJECTID><MUNICUID>55</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
         MIAMI-DADE</NAME></municipality_poly><municipality_poly diffgr:id="municipality_poly25"
-        msdata:rowOrder="24" diffgr:hasChanges="inserted"><OBJECTID>66</OBJECTID><MUNICUID>9</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
+        msdata:rowOrder="24" diffgr:hasChanges="inserted"><OBJECTID>52</OBJECTID><MUNICUID>16</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
         MIAMI-DADE</NAME></municipality_poly><municipality_poly diffgr:id="municipality_poly26"
-        msdata:rowOrder="25" diffgr:hasChanges="inserted"><OBJECTID>68</OBJECTID><MUNICUID>11</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
+        msdata:rowOrder="25" diffgr:hasChanges="inserted"><OBJECTID>53</OBJECTID><MUNICUID>48</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
         MIAMI-DADE</NAME></municipality_poly><municipality_poly diffgr:id="municipality_poly27"
-        msdata:rowOrder="26" diffgr:hasChanges="inserted"><OBJECTID>70</OBJECTID><MUNICUID>55</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
+        msdata:rowOrder="26" diffgr:hasChanges="inserted"><OBJECTID>56</OBJECTID><MUNICUID>53</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
         MIAMI-DADE</NAME></municipality_poly><municipality_poly diffgr:id="municipality_poly28"
-        msdata:rowOrder="27" diffgr:hasChanges="inserted"><OBJECTID>77</OBJECTID><MUNICUID>1</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
+        msdata:rowOrder="27" diffgr:hasChanges="inserted"><OBJECTID>59</OBJECTID><MUNICUID>73</MUNICUID><MUNICID>30</MUNICID><NAME>UNINCORPORATED
         MIAMI-DADE</NAME></municipality_poly></DocumentElement></diffgr:diffgram></GetAllFieldsRecordsGivenAFieldNameAndValueResult></GetAllFieldsRecordsGivenAFieldNameAndValueResponse></soap:Body></soap:Envelope>
     http_version: 
-  recorded_at: Mon, 15 Aug 2016 23:51:57 GMT
+  recorded_at: Mon, 22 Aug 2016 23:55:32 GMT
 recorded_with: VCR 3.0.3

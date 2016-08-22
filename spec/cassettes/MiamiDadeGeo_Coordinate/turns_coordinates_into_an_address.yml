@@ -31,7 +31,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Mon, 15 Aug 2016 23:51:58 GMT
+      - Mon, 22 Aug 2016 23:55:38 GMT
       Content-Length:
       - '477'
     body:
@@ -40,7 +40,7 @@ http_interactions:
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><getXYfromLatLongDecResponse
         xmlns="http://intra.miamidade.gov/GISwebSRVCS"><getXYfromLatLongDecResult><double>919623.87509007147</double><double>533780.31245372584</double></getXYfromLatLongDecResult></getXYfromLatLongDecResponse></soap:Body></soap:Envelope>
     http_version: 
-  recorded_at: Mon, 15 Aug 2016 23:51:58 GMT
+  recorded_at: Mon, 22 Aug 2016 23:55:33 GMT
 - request:
     method: post
     uri: http://gisws.miamidade.gov/gisxyservices/GetClosestFeature.asmx
@@ -72,7 +72,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Mon, 15 Aug 2016 23:51:59 GMT
+      - Mon, 22 Aug 2016 23:55:39 GMT
       Content-Length:
       - '343'
     body:
@@ -81,7 +81,7 @@ http_interactions:
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><GetClosestFeatureFromXYAllAtrbtsResponse
         xmlns="http://intra.miamidade.gov/GetClosestFeature" /></soap:Body></soap:Envelope>
     http_version: 
-  recorded_at: Mon, 15 Aug 2016 23:51:59 GMT
+  recorded_at: Mon, 22 Aug 2016 23:55:33 GMT
 - request:
     method: post
     uri: http://gisws.miamidade.gov/gisxyservices/GetClosestFeature.asmx
@@ -113,7 +113,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Mon, 15 Aug 2016 23:51:59 GMT
+      - Mon, 22 Aug 2016 23:55:39 GMT
       Content-Length:
       - '2629'
     body:
@@ -138,10 +138,10 @@ http_interactions:
         name="MUNIC" type="xs:int" minOccurs="0" /><xs:element name="SNAME" type="xs:string"
         minOccurs="0" /><xs:element name="Dist" type="xs:double" minOccurs="0" /></xs:sequence></xs:complexType></xs:element></xs:choice></xs:complexType></xs:element></xs:schema><diffgr:diffgram
         xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1"><DocumentElement
-        xmlns=""><Results diffgr:id="Results1" msdata:rowOrder="0" diffgr:hasChanges="inserted"><OBJECTID>381408</OBJECTID><LPROP_ID>31251440</LPROP_ID><ADDRESSID>200449</ADDRESSID><FOLIO>0131250340480</FOLIO><POINT_X>919623.87509118</POINT_X><POINT_Y>533780.31245147</POINT_Y><MAILING_MUNIC>MIAMI</MAILING_MUNIC><HSE_NUM>2390</HSE_NUM><PRE_DIR>NW</PRE_DIR><ST_NAME>2ND</ST_NAME><ST_TYPE>AVE</ST_TYPE><ZIP>33127</ZIP><PLUS4>4302</PLUS4><MUNIC>1</MUNIC><SNAME>NW
+        xmlns=""><Results diffgr:id="Results1" msdata:rowOrder="0" diffgr:hasChanges="inserted"><OBJECTID>361929</OBJECTID><LPROP_ID>31251440</LPROP_ID><ADDRESSID>200449</ADDRESSID><FOLIO>0131250340480</FOLIO><POINT_X>919623.87509118</POINT_X><POINT_Y>533780.31245147</POINT_Y><MAILING_MUNIC>MIAMI</MAILING_MUNIC><HSE_NUM>2390</HSE_NUM><PRE_DIR>NW</PRE_DIR><ST_NAME>2ND</ST_NAME><ST_TYPE>AVE</ST_TYPE><ZIP>33127</ZIP><PLUS4>4302</PLUS4><MUNIC>1</MUNIC><SNAME>NW
         2ND AVE</SNAME><Dist>0</Dist></Results></DocumentElement></diffgr:diffgram></GetClosestFeatureFromXYAllAtrbtsResult></GetClosestFeatureFromXYAllAtrbtsResponse></soap:Body></soap:Envelope>
     http_version: 
-  recorded_at: Mon, 15 Aug 2016 23:51:59 GMT
+  recorded_at: Mon, 22 Aug 2016 23:55:34 GMT
 - request:
     method: get
     uri: http://gisws.miamidade.gov/gisxyservices/XYLatLongConversions.asmx?wsdl
@@ -165,7 +165,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Tue, 16 Aug 2016 00:08:23 GMT
+      - Mon, 22 Aug 2016 23:56:43 GMT
       Content-Length:
       - '106909'
     body:
@@ -1476,7 +1476,7 @@ http_interactions:
         location=\"http://gisws.miamidade.gov/gisxyservices/XYLatLongConversions.asmx\"
         />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
     http_version: 
-  recorded_at: Tue, 16 Aug 2016 00:08:24 GMT
+  recorded_at: Mon, 22 Aug 2016 23:56:38 GMT
 - request:
     method: get
     uri: http://gisws.miamidade.gov/gisxyservices/GetClosestFeature.asmx?wsdl
@@ -1500,7 +1500,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Tue, 16 Aug 2016 00:08:23 GMT
+      - Mon, 22 Aug 2016 23:56:43 GMT
       Content-Length:
       - '53323'
     body:
@@ -2152,5 +2152,5 @@ http_interactions:
         binding=\"tns:GetClosestFeatureHttpPost\">\r\n      <http:address location=\"http://gisws.miamidade.gov/gisxyservices/GetClosestFeature.asmx\"
         />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
     http_version: 
-  recorded_at: Tue, 16 Aug 2016 00:08:24 GMT
+  recorded_at: Mon, 22 Aug 2016 23:56:38 GMT
 recorded_with: VCR 3.0.3

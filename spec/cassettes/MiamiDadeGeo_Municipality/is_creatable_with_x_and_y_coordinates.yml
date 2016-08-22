@@ -31,7 +31,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Mon, 15 Aug 2016 23:51:58 GMT
+      - Mon, 22 Aug 2016 23:55:37 GMT
       Content-Length:
       - '2187'
     body:
@@ -55,7 +55,7 @@ http_interactions:
         xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1"><DocumentElement
         xmlns=""><Results diffgr:id="Results1" msdata:rowOrder="0" diffgr:hasChanges="inserted"><OBJECTID>76</OBJECTID><MUNICUID>34</MUNICUID><MUNICID>01</MUNICID><NAME>MIAMI</NAME><FIPSCODE>1245000</FIPSCODE><SHAPE_Length>263106.92713533522</SHAPE_Length><SHAPE.AREA>1562627622.18304</SHAPE.AREA><Dist>0</Dist></Results></DocumentElement></diffgr:diffgram></GetClosestFeatureFromXYAllAtrbtsResult></GetClosestFeatureFromXYAllAtrbtsResponse></soap:Body></soap:Envelope>
     http_version: 
-  recorded_at: Mon, 15 Aug 2016 23:51:58 GMT
+  recorded_at: Mon, 22 Aug 2016 23:55:32 GMT
 - request:
     method: get
     uri: http://gisws.miamidade.gov/gisxyservices/GetClosestFeature.asmx?wsdl
@@ -79,7 +79,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Tue, 16 Aug 2016 00:26:38 GMT
+      - Mon, 22 Aug 2016 23:56:52 GMT
       Content-Length:
       - '53323'
     body:
@@ -731,5 +731,5 @@ http_interactions:
         binding=\"tns:GetClosestFeatureHttpPost\">\r\n      <http:address location=\"http://gisws.miamidade.gov/gisxyservices/GetClosestFeature.asmx\"
         />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
     http_version: 
-  recorded_at: Tue, 16 Aug 2016 00:26:39 GMT
+  recorded_at: Mon, 22 Aug 2016 23:56:47 GMT
 recorded_with: VCR 3.0.3

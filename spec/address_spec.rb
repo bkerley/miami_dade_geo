@@ -38,9 +38,8 @@ describe MiamiDadeGeo::Address, :vcr do
   end
 
   it 'throws an error if the address is not valid' do
-    address = described_class.new_from_address 'foo'
-
-    expect { address.x }.to raise_error(MiamiDadeGeo::InvalidAddressError)
-    expect { address.lat }.to raise_error(MiamiDadeGeo::InvalidAddressError)
+    expect do
+      described_class.new_from_address 'foo'
+    end.to raise_error(MiamiDadeGeo::InvalidAddressError)
   end
 end
