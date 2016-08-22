@@ -14,14 +14,24 @@ module MiamiDadeGeo
   #
   # @raise [InvalidAddressError]
   class Address
+    attr_reader :feature
+
     # @!attribute [r] address
     # @return [String] the street address
     attr_reader :address
 
+    # @!attribute [rw] zip
+    # @return [String] the ZIP code
+    attr_accessor :zip
+
     # Construct the address object
     # @param address [String] the street address
-    def initialize(address)
-      @address = address
+    def self.new_from_address(address)
+      new sname: address
+    end
+
+    def self.new_from_feature(feature)
+      new feature
     end
 
     # @return [Coordinate] a coordinate object representing where this address
@@ -66,7 +76,15 @@ module MiamiDadeGeo
       @municipality ||= Municipality.new_with_code(munic_code)
     end
 
+    def address
+      @address ||= [feature[:hse_num], feature[:sname]].join ' '
+    end
+
     private
+
+    def initialize(feature)
+      @feature = feature
+    end
 
     def xy_addr
       return @xy_addr if defined? @xy_addr

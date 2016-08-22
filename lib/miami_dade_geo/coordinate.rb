@@ -57,7 +57,10 @@ module MiamiDadeGeo
     end
 
     def address
-      get_closest_feature_client.find_feature(xy, 'GeoAddress')
+      return @address if defined? @address
+      feature = get_closest_feature_client.find_feature(xy, 'GeoAddress')
+
+      @address = Address.new_from_feature feature
     end
 
     private
