@@ -10,10 +10,12 @@ describe MiamiDadeGeo::Address, :vcr do
 
   let(:panther_latlong){ { long: -80.199245566240819, lat: 25.7999410593211 } }
 
-  subject{ described_class.new panther_address }
+  subject{ described_class.new_from_address panther_address }
 
   it 'is creatable with a Miami-Dade County street address' do
-    expect{ address = described_class.new panther_address }.to_not raise_error
+    expect do
+      address = described_class.new_from_address panther_address
+    end.to_not raise_error
   end
 
   it 'has x-y coordinates' do
@@ -36,9 +38,8 @@ describe MiamiDadeGeo::Address, :vcr do
   end
 
   it 'throws an error if the address is not valid' do
-    address = described_class.new 'foo'
-
-    expect { address.x }.to raise_error(MiamiDadeGeo::InvalidAddressError)
-    expect { address.lat }.to raise_error(MiamiDadeGeo::InvalidAddressError)
+    expect do
+      described_class.new_from_address 'foo'
+    end.to raise_error(MiamiDadeGeo::InvalidAddressError)
   end
 end

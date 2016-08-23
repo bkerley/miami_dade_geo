@@ -23,7 +23,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Sat, 04 Jun 2016 20:39:18 GMT
+      - Mon, 22 Aug 2016 23:55:31 GMT
       Content-Length:
       - '57173'
     body:
@@ -748,7 +748,7 @@ http_interactions:
         \     <http:address location=\"http://gisws.miamidade.gov/gisaddress/addrxy.asmx\"
         />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
     http_version: 
-  recorded_at: Sat, 04 Jun 2016 20:39:51 GMT
+  recorded_at: Mon, 22 Aug 2016 23:55:25 GMT
 - request:
     method: post
     uri: http://gisws.miamidade.gov/gisaddress/addrxy.asmx
@@ -781,7 +781,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Sat, 04 Jun 2016 20:39:19 GMT
+      - Mon, 22 Aug 2016 23:55:31 GMT
       Content-Length:
       - '502'
     body:
@@ -790,22 +790,14 @@ http_interactions:
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><XYAddressResponse
         xmlns="http://intra.miamidade.gov/GISAddress"><XYAddressResult><Count>1</Count><XY><ArrXY><X>919623.87509118</X><Y>533780.31245147</Y><Zip_Code>33127</Zip_Code><Munic_Code>1</Munic_Code></ArrXY></XY></XYAddressResult></XYAddressResponse></soap:Body></soap:Envelope>
     http_version: 
-  recorded_at: Sat, 04 Jun 2016 20:39:52 GMT
+  recorded_at: Mon, 22 Aug 2016 23:55:25 GMT
 - request:
-    method: post
-    uri: http://gisws.miamidade.gov/gisxyservices/XYLatLongConversions.asmx
+    method: get
+    uri: http://gisws.miamidade.gov/gisxyservices/GetClosestFeature.asmx?wsdl
     body:
-      encoding: UTF-8
-      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://intra.miamidade.gov/GISwebSRVCS"
-        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ins0="http://intra.miamidade.gov/GISwebSRVCS/AbstractTypes"><env:Body><tns:getLatLongDecFromXY><tns:X>919623.87509118</tns:X><tns:Y>533780.31245147</tns:Y></tns:getLatLongDecFromXY></env:Body></env:Envelope>
-    headers:
-      Soapaction:
-      - '"http://intra.miamidade.gov/GISwebSRVCS/getLatLongDecFromXY"'
-      Content-Type:
-      - text/xml;charset=UTF-8
-      Content-Length:
-      - '469'
+      encoding: US-ASCII
+      string: ''
+    headers: {}
   response:
     status:
       code: 200
@@ -822,16 +814,761 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Sat, 04 Jun 2016 20:39:19 GMT
+      - Mon, 22 Aug 2016 23:55:31 GMT
       Content-Length:
-      - '476'
+      - '53323'
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<wsdl:definitions xmlns:tm=\"http://microsoft.com/wsdl/mime/textMatching/\"
+        xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\"
+        xmlns:tns=\"http://intra.miamidade.gov/GetClosestFeature\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\"
+        xmlns:s=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\"
+        xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\" targetNamespace=\"http://intra.miamidade.gov/GetClosestFeature\"
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">\r\n  <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service has methods
+        for returning attributes of the closest feautres to X/Y inputs.</wsdl:documentation>\r\n
+        \ <wsdl:types>\r\n    <s:schema elementFormDefault=\"qualified\" targetNamespace=\"http://intra.miamidade.gov/GetClosestFeature\">\r\n
+        \     <s:element name=\"getFolioFromXY\">\r\n        <s:complexType>\r\n          <s:sequence>\r\n
+        \           <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"X\" type=\"s:double\"
+        />\r\n            <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"Y\" type=\"s:double\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"getFolioFromXYResponse\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"getFolioFromXYResult\" type=\"tns:ArrayOfString\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:complexType name=\"ArrayOfString\">\r\n
+        \       <s:sequence>\r\n          <s:element minOccurs=\"0\" maxOccurs=\"unbounded\"
+        name=\"string\" nillable=\"true\" type=\"s:string\" />\r\n        </s:sequence>\r\n
+        \     </s:complexType>\r\n      <s:element name=\"getStreetIDFromXY\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"X\" type=\"s:double\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"Y\" type=\"s:double\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"getStreetIDFromXYResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"getStreetIDFromXYResult\" type=\"tns:ArrayOfString\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"GetClosestFeatureFromXYAllAtrbts\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"1\" maxOccurs=\"1\"
+        name=\"X\" type=\"s:double\" />\r\n            <s:element minOccurs=\"1\"
+        maxOccurs=\"1\" name=\"Y\" type=\"s:double\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"Buffer\" type=\"s:int\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"NameOfFeatureClass\" type=\"s:string\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"GetClosestFeatureFromXYAllAtrbtsResponse\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"GetClosestFeatureFromXYAllAtrbtsResult\">\r\n              <s:complexType>\r\n
+        \               <s:sequence>\r\n                  <s:any minOccurs=\"0\" maxOccurs=\"unbounded\"
+        namespace=\"http://www.w3.org/2001/XMLSchema\" processContents=\"lax\" />\r\n
+        \                 <s:any minOccurs=\"1\" namespace=\"urn:schemas-microsoft-com:xml-diffgram-v1\"
+        processContents=\"lax\" />\r\n                </s:sequence>\r\n              </s:complexType>\r\n
+        \           </s:element>\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetClosestFeatureFromXYAllAtrbts_LocalData\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"X\" type=\"s:double\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"Y\" type=\"s:double\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"Buffer\" type=\"s:int\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"NameOfFileGeoDatabase\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"NameOfFeatureClass\"
+        type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetClosestFeatureFromXYAllAtrbts_LocalDataResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetClosestFeatureFromXYAllAtrbts_LocalDataResult\">\r\n
+        \             <s:complexType>\r\n                <s:sequence>\r\n                  <s:any
+        minOccurs=\"0\" maxOccurs=\"unbounded\" namespace=\"http://www.w3.org/2001/XMLSchema\"
+        processContents=\"lax\" />\r\n                  <s:any minOccurs=\"1\" namespace=\"urn:schemas-microsoft-com:xml-diffgram-v1\"
+        processContents=\"lax\" />\r\n                </s:sequence>\r\n              </s:complexType>\r\n
+        \           </s:element>\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetClosestFeatureFromXYAllAtrbts_XML\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"X\" type=\"s:double\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"Y\" type=\"s:double\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"Buffer\" type=\"s:int\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"NameOfFeatureClass\" type=\"s:string\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"GetClosestFeatureFromXYAllAtrbts_XMLResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetClosestFeatureFromXYAllAtrbts_XMLResult\">\r\n
+        \             <s:complexType mixed=\"true\">\r\n                <s:sequence>\r\n
+        \                 <s:any />\r\n                </s:sequence>\r\n              </s:complexType>\r\n
+        \           </s:element>\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetClosestFeatureFromXYAllAtrbts_XML_LocalData\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"X\" type=\"s:double\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"Y\" type=\"s:double\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"Buffer\" type=\"s:int\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"NameOfFileGeoDatabase\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"NameOfFeatureClass\"
+        type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetClosestFeatureFromXYAllAtrbts_XML_LocalDataResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetClosestFeatureFromXYAllAtrbts_XML_LocalDataResult\">\r\n
+        \             <s:complexType mixed=\"true\">\r\n                <s:sequence>\r\n
+        \                 <s:any />\r\n                </s:sequence>\r\n              </s:complexType>\r\n
+        \           </s:element>\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetClosestFeatureFromXY\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"X\" type=\"s:double\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"Y\" type=\"s:double\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"Buffer\" type=\"s:int\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"NameOfFeatureClass\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"ListOfAttrbtsDelimitSemi\"
+        type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetClosestFeatureFromXYResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetClosestFeatureFromXYResult\">\r\n
+        \             <s:complexType mixed=\"true\">\r\n                <s:sequence>\r\n
+        \                 <s:any />\r\n                </s:sequence>\r\n              </s:complexType>\r\n
+        \           </s:element>\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetClosestFeatureFromXY_LocalData\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"X\" type=\"s:double\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"Y\" type=\"s:double\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"Buffer\" type=\"s:int\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"NameOfFileGeoDatabase\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"NameOfFeatureClass\"
+        type=\"s:string\" />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"ListOfAttrbtsDelimitSemi\" type=\"s:string\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"GetClosestFeatureFromXY_LocalDataResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetClosestFeatureFromXY_LocalDataResult\">\r\n
+        \             <s:complexType mixed=\"true\">\r\n                <s:sequence>\r\n
+        \                 <s:any />\r\n                </s:sequence>\r\n              </s:complexType>\r\n
+        \           </s:element>\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetClosestFeatureFromXYandWhereClauseAllAtrbts_XML\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"X\" type=\"s:double\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"Y\" type=\"s:double\" />\r\n            <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"Buffer\" type=\"s:int\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"NameOfFeatureClass\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"WhereClause\"
+        type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetClosestFeatureFromXYandWhereClauseAllAtrbts_XMLResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetClosestFeatureFromXYandWhereClauseAllAtrbts_XMLResult\">\r\n
+        \             <s:complexType mixed=\"true\">\r\n                <s:sequence>\r\n
+        \                 <s:any />\r\n                </s:sequence>\r\n              </s:complexType>\r\n
+        \           </s:element>\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"ArrayOfString\" nillable=\"true\"
+        type=\"tns:ArrayOfString\" />\r\n      <s:element name=\"DataTable\" nillable=\"true\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:any minOccurs=\"0\"
+        maxOccurs=\"unbounded\" namespace=\"http://www.w3.org/2001/XMLSchema\" processContents=\"lax\"
+        />\r\n            <s:any minOccurs=\"1\" namespace=\"urn:schemas-microsoft-com:xml-diffgram-v1\"
+        processContents=\"lax\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n    </s:schema>\r\n  </wsdl:types>\r\n  <wsdl:message
+        name=\"getFolioFromXYSoapIn\">\r\n    <wsdl:part name=\"parameters\" element=\"tns:getFolioFromXY\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getFolioFromXYSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getFolioFromXYResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getStreetIDFromXYSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getStreetIDFromXY\" />\r\n
+        \ </wsdl:message>\r\n  <wsdl:message name=\"getStreetIDFromXYSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:getStreetIDFromXYResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetClosestFeatureFromXYAllAtrbtsSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetClosestFeatureFromXYAllAtrbts\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetClosestFeatureFromXYAllAtrbtsSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetClosestFeatureFromXYAllAtrbtsResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetClosestFeatureFromXYAllAtrbts_LocalDataSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetClosestFeatureFromXYAllAtrbts_LocalData\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetClosestFeatureFromXYAllAtrbts_LocalDataSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetClosestFeatureFromXYAllAtrbts_LocalDataResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetClosestFeatureFromXYAllAtrbts_XMLSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetClosestFeatureFromXYAllAtrbts_XML\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetClosestFeatureFromXYAllAtrbts_XMLSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetClosestFeatureFromXYAllAtrbts_XMLResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetClosestFeatureFromXYAllAtrbts_XML_LocalDataSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetClosestFeatureFromXYAllAtrbts_XML_LocalData\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetClosestFeatureFromXYAllAtrbts_XML_LocalDataSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetClosestFeatureFromXYAllAtrbts_XML_LocalDataResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetClosestFeatureFromXYSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetClosestFeatureFromXY\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetClosestFeatureFromXYSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetClosestFeatureFromXYResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetClosestFeatureFromXY_LocalDataSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetClosestFeatureFromXY_LocalData\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetClosestFeatureFromXY_LocalDataSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetClosestFeatureFromXY_LocalDataResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetClosestFeatureFromXYandWhereClauseAllAtrbts_XMLSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetClosestFeatureFromXYandWhereClauseAllAtrbts_XML\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetClosestFeatureFromXYandWhereClauseAllAtrbts_XMLSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetClosestFeatureFromXYandWhereClauseAllAtrbts_XMLResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getFolioFromXYHttpGetIn\">\r\n
+        \   <wsdl:part name=\"X\" type=\"s:string\" />\r\n    <wsdl:part name=\"Y\"
+        type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getFolioFromXYHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfString\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getStreetIDFromXYHttpGetIn\">\r\n    <wsdl:part name=\"X\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"Y\" type=\"s:string\" />\r\n
+        \ </wsdl:message>\r\n  <wsdl:message name=\"getStreetIDFromXYHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfString\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetClosestFeatureFromXYAllAtrbtsHttpGetIn\">\r\n    <wsdl:part
+        name=\"X\" type=\"s:string\" />\r\n    <wsdl:part name=\"Y\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"Buffer\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"NameOfFeatureClass\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetClosestFeatureFromXYAllAtrbtsHttpGetOut\">\r\n    <wsdl:part
+        name=\"Body\" element=\"tns:DataTable\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"GetClosestFeatureFromXYAllAtrbts_LocalDataHttpGetIn\">\r\n    <wsdl:part
+        name=\"X\" type=\"s:string\" />\r\n    <wsdl:part name=\"Y\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"Buffer\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"NameOfFileGeoDatabase\" type=\"s:string\" />\r\n    <wsdl:part name=\"NameOfFeatureClass\"
+        type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetClosestFeatureFromXYAllAtrbts_LocalDataHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:DataTable\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetClosestFeatureFromXYAllAtrbts_XMLHttpGetIn\">\r\n
+        \   <wsdl:part name=\"X\" type=\"s:string\" />\r\n    <wsdl:part name=\"Y\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"Buffer\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"NameOfFeatureClass\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetClosestFeatureFromXYAllAtrbts_XMLHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetClosestFeatureFromXYAllAtrbts_XML_LocalDataHttpGetIn\">\r\n
+        \   <wsdl:part name=\"X\" type=\"s:string\" />\r\n    <wsdl:part name=\"Y\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"Buffer\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"NameOfFileGeoDatabase\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"NameOfFeatureClass\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetClosestFeatureFromXYAllAtrbts_XML_LocalDataHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetClosestFeatureFromXYHttpGetIn\">\r\n
+        \   <wsdl:part name=\"X\" type=\"s:string\" />\r\n    <wsdl:part name=\"Y\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"Buffer\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"NameOfFeatureClass\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"ListOfAttrbtsDelimitSemi\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetClosestFeatureFromXYHttpGetOut\">\r\n    <wsdl:part
+        name=\"Body\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetClosestFeatureFromXY_LocalDataHttpGetIn\">\r\n
+        \   <wsdl:part name=\"X\" type=\"s:string\" />\r\n    <wsdl:part name=\"Y\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"Buffer\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"NameOfFileGeoDatabase\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"NameOfFeatureClass\" type=\"s:string\" />\r\n    <wsdl:part name=\"ListOfAttrbtsDelimitSemi\"
+        type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetClosestFeatureFromXY_LocalDataHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetClosestFeatureFromXYandWhereClauseAllAtrbts_XMLHttpGetIn\">\r\n
+        \   <wsdl:part name=\"X\" type=\"s:string\" />\r\n    <wsdl:part name=\"Y\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"Buffer\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"NameOfFeatureClass\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"WhereClause\" type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"GetClosestFeatureFromXYandWhereClauseAllAtrbts_XMLHttpGetOut\">\r\n
+        \   <wsdl:part name=\"Body\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getFolioFromXYHttpPostIn\">\r\n
+        \   <wsdl:part name=\"X\" type=\"s:string\" />\r\n    <wsdl:part name=\"Y\"
+        type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"getFolioFromXYHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfString\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"getStreetIDFromXYHttpPostIn\">\r\n    <wsdl:part name=\"X\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"Y\" type=\"s:string\" />\r\n
+        \ </wsdl:message>\r\n  <wsdl:message name=\"getStreetIDFromXYHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:ArrayOfString\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetClosestFeatureFromXYAllAtrbtsHttpPostIn\">\r\n    <wsdl:part
+        name=\"X\" type=\"s:string\" />\r\n    <wsdl:part name=\"Y\" type=\"s:string\"
+        />\r\n    <wsdl:part name=\"Buffer\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"NameOfFeatureClass\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetClosestFeatureFromXYAllAtrbtsHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:DataTable\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetClosestFeatureFromXYAllAtrbts_LocalDataHttpPostIn\">\r\n
+        \   <wsdl:part name=\"X\" type=\"s:string\" />\r\n    <wsdl:part name=\"Y\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"Buffer\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"NameOfFileGeoDatabase\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"NameOfFeatureClass\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetClosestFeatureFromXYAllAtrbts_LocalDataHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" element=\"tns:DataTable\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetClosestFeatureFromXYAllAtrbts_XMLHttpPostIn\">\r\n
+        \   <wsdl:part name=\"X\" type=\"s:string\" />\r\n    <wsdl:part name=\"Y\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"Buffer\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"NameOfFeatureClass\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetClosestFeatureFromXYAllAtrbts_XMLHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetClosestFeatureFromXYAllAtrbts_XML_LocalDataHttpPostIn\">\r\n
+        \   <wsdl:part name=\"X\" type=\"s:string\" />\r\n    <wsdl:part name=\"Y\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"Buffer\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"NameOfFileGeoDatabase\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"NameOfFeatureClass\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetClosestFeatureFromXYAllAtrbts_XML_LocalDataHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetClosestFeatureFromXYHttpPostIn\">\r\n
+        \   <wsdl:part name=\"X\" type=\"s:string\" />\r\n    <wsdl:part name=\"Y\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"Buffer\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"NameOfFeatureClass\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"ListOfAttrbtsDelimitSemi\" type=\"s:string\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetClosestFeatureFromXYHttpPostOut\">\r\n    <wsdl:part
+        name=\"Body\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetClosestFeatureFromXY_LocalDataHttpPostIn\">\r\n
+        \   <wsdl:part name=\"X\" type=\"s:string\" />\r\n    <wsdl:part name=\"Y\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"Buffer\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"NameOfFileGeoDatabase\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"NameOfFeatureClass\" type=\"s:string\" />\r\n    <wsdl:part name=\"ListOfAttrbtsDelimitSemi\"
+        type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetClosestFeatureFromXY_LocalDataHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetClosestFeatureFromXYandWhereClauseAllAtrbts_XMLHttpPostIn\">\r\n
+        \   <wsdl:part name=\"X\" type=\"s:string\" />\r\n    <wsdl:part name=\"Y\"
+        type=\"s:string\" />\r\n    <wsdl:part name=\"Buffer\" type=\"s:string\" />\r\n
+        \   <wsdl:part name=\"NameOfFeatureClass\" type=\"s:string\" />\r\n    <wsdl:part
+        name=\"WhereClause\" type=\"s:string\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"GetClosestFeatureFromXYandWhereClauseAllAtrbts_XMLHttpPostOut\">\r\n
+        \   <wsdl:part name=\"Body\" />\r\n  </wsdl:message>\r\n  <wsdl:portType name=\"GetClosestFeatureSoap\">\r\n
+        \   <wsdl:operation name=\"getFolioFromXY\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns top Folio Numbers for a given X/Y coordinate and a 500 feet buffer
+        created around the coordinate.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:getFolioFromXYSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:getFolioFromXYSoapOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getStreetIDFromXY\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns top Street IDs for a given X/Y coordinate and a 500 feet buffer created
+        around the coordinate.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:getStreetIDFromXYSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:getStreetIDFromXYSoapOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"GetClosestFeatureFromXYAllAtrbts\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns a DataTable with the closest Features (ordered by distance) for a
+        given X/Y coordinate, an X integer in feet for buffer to create around coordinate,
+        and Feature Class name to query.***All attributes returned</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:GetClosestFeatureFromXYAllAtrbtsSoapIn\" />\r\n
+        \     <wsdl:output message=\"tns:GetClosestFeatureFromXYAllAtrbtsSoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetClosestFeatureFromXYAllAtrbts_LocalData\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a DataTable with the closest Features (ordered
+        by distance) from a given X/Y coordinate, an X integer in feet for buffer
+        to create around coordinate, and Feature Class name to query.***All attributes
+        returned. NOTE: This method searches a database stored locally in the same
+        server as this WebService; Not all the data currently in SDE is available
+        locally.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetClosestFeatureFromXYAllAtrbts_LocalDataSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:GetClosestFeatureFromXYAllAtrbts_LocalDataSoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetClosestFeatureFromXYAllAtrbts_XML\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns an XMLDataDocument with the closest Features
+        (ordered by distance) for a given X/Y coordinate, an X integer in feet for
+        buffer to create around coordinate, and Feature Class name to query.***All
+        attributes returned</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetClosestFeatureFromXYAllAtrbts_XMLSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:GetClosestFeatureFromXYAllAtrbts_XMLSoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetClosestFeatureFromXYAllAtrbts_XML_LocalData\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns an XML document with the closest Features (ordered
+        by distance) from a given X/Y coordinate, an X integer in feet for buffer
+        to create around coordinate, and Feature Class name to query.***All attributes
+        returned. NOTE: This method searches a database stored locally in the same
+        server as this WebService; Not all the data currently in SDE is available
+        locally.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetClosestFeatureFromXYAllAtrbts_XML_LocalDataSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:GetClosestFeatureFromXYAllAtrbts_XML_LocalDataSoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetClosestFeatureFromXY\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns an XML document with the closest Features (ordered
+        by distance) for a given X/Y coordinate, an X integer in feet for buffer to
+        create around coordinate, and Feature Class name to query.***Specify named
+        attributes by semi-colon delimited list</wsdl:documentation>\r\n      <wsdl:input
+        message=\"tns:GetClosestFeatureFromXYSoapIn\" />\r\n      <wsdl:output message=\"tns:GetClosestFeatureFromXYSoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetClosestFeatureFromXY_LocalData\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns an XML document with the closest Features(ordered
+        by distance) for a given X/Y coordinate, an X integer in feet for buffer to
+        create around coordinate, and Feature Class name to query.***Specify named
+        attributes by semi-colon delimited list. NOTE: This method searches a database
+        stored locally in the same server as this WebService; Not all the data currently
+        in SDE is available locally.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetClosestFeatureFromXY_LocalDataSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:GetClosestFeatureFromXY_LocalDataSoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetClosestFeatureFromXYandWhereClauseAllAtrbts_XML\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns an XMLDataDocument with the closest Features
+        (ordered by distance) for a given X/Y coordinate, an X integer in feet for
+        buffer to create around coordinate, and Feature Class name to query.***All
+        attributes returned</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetClosestFeatureFromXYandWhereClauseAllAtrbts_XMLSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:GetClosestFeatureFromXYandWhereClauseAllAtrbts_XMLSoapOut\"
+        />\r\n    </wsdl:operation>\r\n  </wsdl:portType>\r\n  <wsdl:portType name=\"GetClosestFeatureHttpGet\">\r\n
+        \   <wsdl:operation name=\"getFolioFromXY\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns top Folio Numbers for a given X/Y coordinate and a 500 feet buffer
+        created around the coordinate.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:getFolioFromXYHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:getFolioFromXYHttpGetOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getStreetIDFromXY\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns top Street IDs for a given X/Y coordinate and a 500 feet buffer created
+        around the coordinate.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:getStreetIDFromXYHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:getStreetIDFromXYHttpGetOut\" />\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"GetClosestFeatureFromXYAllAtrbts\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a DataTable with the closest Features (ordered
+        by distance) for a given X/Y coordinate, an X integer in feet for buffer to
+        create around coordinate, and Feature Class name to query.***All attributes
+        returned</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetClosestFeatureFromXYAllAtrbtsHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:GetClosestFeatureFromXYAllAtrbtsHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetClosestFeatureFromXYAllAtrbts_LocalData\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a DataTable with the closest Features (ordered
+        by distance) from a given X/Y coordinate, an X integer in feet for buffer
+        to create around coordinate, and Feature Class name to query.***All attributes
+        returned. NOTE: This method searches a database stored locally in the same
+        server as this WebService; Not all the data currently in SDE is available
+        locally.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetClosestFeatureFromXYAllAtrbts_LocalDataHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:GetClosestFeatureFromXYAllAtrbts_LocalDataHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetClosestFeatureFromXYAllAtrbts_XML\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns an XMLDataDocument with the closest Features
+        (ordered by distance) for a given X/Y coordinate, an X integer in feet for
+        buffer to create around coordinate, and Feature Class name to query.***All
+        attributes returned</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetClosestFeatureFromXYAllAtrbts_XMLHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:GetClosestFeatureFromXYAllAtrbts_XMLHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetClosestFeatureFromXYAllAtrbts_XML_LocalData\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns an XML document with the closest Features (ordered
+        by distance) from a given X/Y coordinate, an X integer in feet for buffer
+        to create around coordinate, and Feature Class name to query.***All attributes
+        returned. NOTE: This method searches a database stored locally in the same
+        server as this WebService; Not all the data currently in SDE is available
+        locally.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetClosestFeatureFromXYAllAtrbts_XML_LocalDataHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:GetClosestFeatureFromXYAllAtrbts_XML_LocalDataHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetClosestFeatureFromXY\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns an XML document with the closest Features (ordered
+        by distance) for a given X/Y coordinate, an X integer in feet for buffer to
+        create around coordinate, and Feature Class name to query.***Specify named
+        attributes by semi-colon delimited list</wsdl:documentation>\r\n      <wsdl:input
+        message=\"tns:GetClosestFeatureFromXYHttpGetIn\" />\r\n      <wsdl:output
+        message=\"tns:GetClosestFeatureFromXYHttpGetOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"GetClosestFeatureFromXY_LocalData\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns an XML document with the closest Features(ordered by distance) for
+        a given X/Y coordinate, an X integer in feet for buffer to create around coordinate,
+        and Feature Class name to query.***Specify named attributes by semi-colon
+        delimited list. NOTE: This method searches a database stored locally in the
+        same server as this WebService; Not all the data currently in SDE is available
+        locally.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetClosestFeatureFromXY_LocalDataHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:GetClosestFeatureFromXY_LocalDataHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetClosestFeatureFromXYandWhereClauseAllAtrbts_XML\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns an XMLDataDocument with the closest Features
+        (ordered by distance) for a given X/Y coordinate, an X integer in feet for
+        buffer to create around coordinate, and Feature Class name to query.***All
+        attributes returned</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetClosestFeatureFromXYandWhereClauseAllAtrbts_XMLHttpGetIn\"
+        />\r\n      <wsdl:output message=\"tns:GetClosestFeatureFromXYandWhereClauseAllAtrbts_XMLHttpGetOut\"
+        />\r\n    </wsdl:operation>\r\n  </wsdl:portType>\r\n  <wsdl:portType name=\"GetClosestFeatureHttpPost\">\r\n
+        \   <wsdl:operation name=\"getFolioFromXY\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns top Folio Numbers for a given X/Y coordinate and a 500 feet buffer
+        created around the coordinate.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:getFolioFromXYHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:getFolioFromXYHttpPostOut\" />\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"getStreetIDFromXY\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns top Street IDs for a given X/Y coordinate and
+        a 500 feet buffer created around the coordinate.</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:getStreetIDFromXYHttpPostIn\" />\r\n      <wsdl:output
+        message=\"tns:getStreetIDFromXYHttpPostOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"GetClosestFeatureFromXYAllAtrbts\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns a DataTable with the closest Features (ordered by distance) for a
+        given X/Y coordinate, an X integer in feet for buffer to create around coordinate,
+        and Feature Class name to query.***All attributes returned</wsdl:documentation>\r\n
+        \     <wsdl:input message=\"tns:GetClosestFeatureFromXYAllAtrbtsHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:GetClosestFeatureFromXYAllAtrbtsHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetClosestFeatureFromXYAllAtrbts_LocalData\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns a DataTable with the closest Features (ordered
+        by distance) from a given X/Y coordinate, an X integer in feet for buffer
+        to create around coordinate, and Feature Class name to query.***All attributes
+        returned. NOTE: This method searches a database stored locally in the same
+        server as this WebService; Not all the data currently in SDE is available
+        locally.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetClosestFeatureFromXYAllAtrbts_LocalDataHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:GetClosestFeatureFromXYAllAtrbts_LocalDataHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetClosestFeatureFromXYAllAtrbts_XML\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns an XMLDataDocument with the closest Features
+        (ordered by distance) for a given X/Y coordinate, an X integer in feet for
+        buffer to create around coordinate, and Feature Class name to query.***All
+        attributes returned</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetClosestFeatureFromXYAllAtrbts_XMLHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:GetClosestFeatureFromXYAllAtrbts_XMLHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetClosestFeatureFromXYAllAtrbts_XML_LocalData\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns an XML document with the closest Features (ordered
+        by distance) from a given X/Y coordinate, an X integer in feet for buffer
+        to create around coordinate, and Feature Class name to query.***All attributes
+        returned. NOTE: This method searches a database stored locally in the same
+        server as this WebService; Not all the data currently in SDE is available
+        locally.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetClosestFeatureFromXYAllAtrbts_XML_LocalDataHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:GetClosestFeatureFromXYAllAtrbts_XML_LocalDataHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetClosestFeatureFromXY\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns an XML document with the closest Features (ordered
+        by distance) for a given X/Y coordinate, an X integer in feet for buffer to
+        create around coordinate, and Feature Class name to query.***Specify named
+        attributes by semi-colon delimited list</wsdl:documentation>\r\n      <wsdl:input
+        message=\"tns:GetClosestFeatureFromXYHttpPostIn\" />\r\n      <wsdl:output
+        message=\"tns:GetClosestFeatureFromXYHttpPostOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"GetClosestFeatureFromXY_LocalData\">\r\n      <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service method
+        returns an XML document with the closest Features(ordered by distance) for
+        a given X/Y coordinate, an X integer in feet for buffer to create around coordinate,
+        and Feature Class name to query.***Specify named attributes by semi-colon
+        delimited list. NOTE: This method searches a database stored locally in the
+        same server as this WebService; Not all the data currently in SDE is available
+        locally.</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetClosestFeatureFromXY_LocalDataHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:GetClosestFeatureFromXY_LocalDataHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetClosestFeatureFromXYandWhereClauseAllAtrbts_XML\">\r\n
+        \     <wsdl:documentation xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This
+        XML Web service method returns an XMLDataDocument with the closest Features
+        (ordered by distance) for a given X/Y coordinate, an X integer in feet for
+        buffer to create around coordinate, and Feature Class name to query.***All
+        attributes returned</wsdl:documentation>\r\n      <wsdl:input message=\"tns:GetClosestFeatureFromXYandWhereClauseAllAtrbts_XMLHttpPostIn\"
+        />\r\n      <wsdl:output message=\"tns:GetClosestFeatureFromXYandWhereClauseAllAtrbts_XMLHttpPostOut\"
+        />\r\n    </wsdl:operation>\r\n  </wsdl:portType>\r\n  <wsdl:binding name=\"GetClosestFeatureSoap\"
+        type=\"tns:GetClosestFeatureSoap\">\r\n    <soap:binding transport=\"http://schemas.xmlsoap.org/soap/http\"
+        />\r\n    <wsdl:operation name=\"getFolioFromXY\">\r\n      <soap:operation
+        soapAction=\"http://intra.miamidade.gov/GetClosestFeature/getFolioFromXY\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getStreetIDFromXY\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GetClosestFeature/getStreetIDFromXY\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetClosestFeatureFromXYAllAtrbts\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GetClosestFeature/GetClosestFeatureFromXYAllAtrbts\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetClosestFeatureFromXYAllAtrbts_LocalData\">\r\n      <soap:operation
+        soapAction=\"http://intra.miamidade.gov/GetClosestFeature/GetClosestFeatureFromXYAllAtrbts_LocalData\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetClosestFeatureFromXYAllAtrbts_XML\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GetClosestFeature/GetClosestFeatureFromXYAllAtrbts_XML\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetClosestFeatureFromXYAllAtrbts_XML_LocalData\">\r\n      <soap:operation
+        soapAction=\"http://intra.miamidade.gov/GetClosestFeature/GetClosestFeatureFromXYAllAtrbts_XML_LocalData\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetClosestFeatureFromXY\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GetClosestFeature/GetClosestFeatureFromXY\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetClosestFeatureFromXY_LocalData\">\r\n      <soap:operation soapAction=\"http://intra.miamidade.gov/GetClosestFeature/GetClosestFeatureFromXY_LocalData\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetClosestFeatureFromXYandWhereClauseAllAtrbts_XML\">\r\n      <soap:operation
+        soapAction=\"http://intra.miamidade.gov/GetClosestFeature/GetClosestFeatureFromXYandWhereClauseAllAtrbts_XML\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n  </wsdl:binding>\r\n
+        \ <wsdl:binding name=\"GetClosestFeatureSoap12\" type=\"tns:GetClosestFeatureSoap\">\r\n
+        \   <soap12:binding transport=\"http://schemas.xmlsoap.org/soap/http\" />\r\n
+        \   <wsdl:operation name=\"getFolioFromXY\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GetClosestFeature/getFolioFromXY\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"getStreetIDFromXY\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GetClosestFeature/getStreetIDFromXY\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetClosestFeatureFromXYAllAtrbts\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GetClosestFeature/GetClosestFeatureFromXYAllAtrbts\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetClosestFeatureFromXYAllAtrbts_LocalData\">\r\n      <soap12:operation
+        soapAction=\"http://intra.miamidade.gov/GetClosestFeature/GetClosestFeatureFromXYAllAtrbts_LocalData\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetClosestFeatureFromXYAllAtrbts_XML\">\r\n      <soap12:operation
+        soapAction=\"http://intra.miamidade.gov/GetClosestFeature/GetClosestFeatureFromXYAllAtrbts_XML\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetClosestFeatureFromXYAllAtrbts_XML_LocalData\">\r\n      <soap12:operation
+        soapAction=\"http://intra.miamidade.gov/GetClosestFeature/GetClosestFeatureFromXYAllAtrbts_XML_LocalData\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetClosestFeatureFromXY\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GetClosestFeature/GetClosestFeatureFromXY\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetClosestFeatureFromXY_LocalData\">\r\n      <soap12:operation soapAction=\"http://intra.miamidade.gov/GetClosestFeature/GetClosestFeatureFromXY_LocalData\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetClosestFeatureFromXYandWhereClauseAllAtrbts_XML\">\r\n      <soap12:operation
+        soapAction=\"http://intra.miamidade.gov/GetClosestFeature/GetClosestFeatureFromXYandWhereClauseAllAtrbts_XML\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n  </wsdl:binding>\r\n
+        \ <wsdl:binding name=\"GetClosestFeatureHttpGet\" type=\"tns:GetClosestFeatureHttpGet\">\r\n
+        \   <http:binding verb=\"GET\" />\r\n    <wsdl:operation name=\"getFolioFromXY\">\r\n
+        \     <http:operation location=\"/getFolioFromXY\" />\r\n      <wsdl:input>\r\n
+        \       <http:urlEncoded />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n
+        \       <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getStreetIDFromXY\">\r\n      <http:operation location=\"/getStreetIDFromXY\"
+        />\r\n      <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"GetClosestFeatureFromXYAllAtrbts\">\r\n
+        \     <http:operation location=\"/GetClosestFeatureFromXYAllAtrbts\" />\r\n
+        \     <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"GetClosestFeatureFromXYAllAtrbts_LocalData\">\r\n
+        \     <http:operation location=\"/GetClosestFeatureFromXYAllAtrbts_LocalData\"
+        />\r\n      <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"GetClosestFeatureFromXYAllAtrbts_XML\">\r\n
+        \     <http:operation location=\"/GetClosestFeatureFromXYAllAtrbts_XML\" />\r\n
+        \     <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:content part=\"Body\" type=\"text/xml\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetClosestFeatureFromXYAllAtrbts_XML_LocalData\">\r\n      <http:operation
+        location=\"/GetClosestFeatureFromXYAllAtrbts_XML_LocalData\" />\r\n      <wsdl:input>\r\n
+        \       <http:urlEncoded />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n
+        \       <mime:content part=\"Body\" type=\"text/xml\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"GetClosestFeatureFromXY\">\r\n
+        \     <http:operation location=\"/GetClosestFeatureFromXY\" />\r\n      <wsdl:input>\r\n
+        \       <http:urlEncoded />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n
+        \       <mime:content part=\"Body\" type=\"text/xml\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"GetClosestFeatureFromXY_LocalData\">\r\n
+        \     <http:operation location=\"/GetClosestFeatureFromXY_LocalData\" />\r\n
+        \     <wsdl:input>\r\n        <http:urlEncoded />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:content part=\"Body\" type=\"text/xml\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetClosestFeatureFromXYandWhereClauseAllAtrbts_XML\">\r\n      <http:operation
+        location=\"/GetClosestFeatureFromXYandWhereClauseAllAtrbts_XML\" />\r\n      <wsdl:input>\r\n
+        \       <http:urlEncoded />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n
+        \       <mime:content part=\"Body\" type=\"text/xml\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n  </wsdl:binding>\r\n  <wsdl:binding name=\"GetClosestFeatureHttpPost\"
+        type=\"tns:GetClosestFeatureHttpPost\">\r\n    <http:binding verb=\"POST\"
+        />\r\n    <wsdl:operation name=\"getFolioFromXY\">\r\n      <http:operation
+        location=\"/getFolioFromXY\" />\r\n      <wsdl:input>\r\n        <mime:content
+        type=\"application/x-www-form-urlencoded\" />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n
+        \       <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"getStreetIDFromXY\">\r\n      <http:operation location=\"/getStreetIDFromXY\"
+        />\r\n      <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetClosestFeatureFromXYAllAtrbts\">\r\n      <http:operation location=\"/GetClosestFeatureFromXYAllAtrbts\"
+        />\r\n      <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:mimeXml
+        part=\"Body\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetClosestFeatureFromXYAllAtrbts_LocalData\">\r\n      <http:operation
+        location=\"/GetClosestFeatureFromXYAllAtrbts_LocalData\" />\r\n      <wsdl:input>\r\n
+        \       <mime:content type=\"application/x-www-form-urlencoded\" />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <mime:mimeXml part=\"Body\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"GetClosestFeatureFromXYAllAtrbts_XML\">\r\n
+        \     <http:operation location=\"/GetClosestFeatureFromXYAllAtrbts_XML\" />\r\n
+        \     <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:content
+        part=\"Body\" type=\"text/xml\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"GetClosestFeatureFromXYAllAtrbts_XML_LocalData\">\r\n
+        \     <http:operation location=\"/GetClosestFeatureFromXYAllAtrbts_XML_LocalData\"
+        />\r\n      <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:content
+        part=\"Body\" type=\"text/xml\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"GetClosestFeatureFromXY\">\r\n      <http:operation
+        location=\"/GetClosestFeatureFromXY\" />\r\n      <wsdl:input>\r\n        <mime:content
+        type=\"application/x-www-form-urlencoded\" />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n
+        \       <mime:content part=\"Body\" type=\"text/xml\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"GetClosestFeatureFromXY_LocalData\">\r\n
+        \     <http:operation location=\"/GetClosestFeatureFromXY_LocalData\" />\r\n
+        \     <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:content
+        part=\"Body\" type=\"text/xml\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"GetClosestFeatureFromXYandWhereClauseAllAtrbts_XML\">\r\n
+        \     <http:operation location=\"/GetClosestFeatureFromXYandWhereClauseAllAtrbts_XML\"
+        />\r\n      <wsdl:input>\r\n        <mime:content type=\"application/x-www-form-urlencoded\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <mime:content
+        part=\"Body\" type=\"text/xml\" />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n
+        \ </wsdl:binding>\r\n  <wsdl:service name=\"GetClosestFeature\">\r\n    <wsdl:documentation
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">This XML Web service has methods
+        for returning attributes of the closest feautres to X/Y inputs.</wsdl:documentation>\r\n
+        \   <wsdl:port name=\"GetClosestFeatureSoap\" binding=\"tns:GetClosestFeatureSoap\">\r\n
+        \     <soap:address location=\"http://gisws.miamidade.gov/gisxyservices/GetClosestFeature.asmx\"
+        />\r\n    </wsdl:port>\r\n    <wsdl:port name=\"GetClosestFeatureSoap12\"
+        binding=\"tns:GetClosestFeatureSoap12\">\r\n      <soap12:address location=\"http://gisws.miamidade.gov/gisxyservices/GetClosestFeature.asmx\"
+        />\r\n    </wsdl:port>\r\n    <wsdl:port name=\"GetClosestFeatureHttpGet\"
+        binding=\"tns:GetClosestFeatureHttpGet\">\r\n      <http:address location=\"http://gisws.miamidade.gov/gisxyservices/GetClosestFeature.asmx\"
+        />\r\n    </wsdl:port>\r\n    <wsdl:port name=\"GetClosestFeatureHttpPost\"
+        binding=\"tns:GetClosestFeatureHttpPost\">\r\n      <http:address location=\"http://gisws.miamidade.gov/gisxyservices/GetClosestFeature.asmx\"
+        />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
+    http_version: 
+  recorded_at: Mon, 22 Aug 2016 23:55:25 GMT
+- request:
+    method: post
+    uri: http://gisws.miamidade.gov/gisxyservices/GetClosestFeature.asmx
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://intra.miamidade.gov/GetClosestFeature"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><tns:GetClosestFeatureFromXYAllAtrbts><tns:X>919623.87509118</tns:X><tns:Y>533780.31245147</tns:Y><tns:Buffer>0</tns:Buffer><tns:NameOfFeatureClass>GeoAddress</tns:NameOfFeatureClass></tns:GetClosestFeatureFromXYAllAtrbts></env:Body></env:Envelope>
+    headers:
+      Soapaction:
+      - '"http://intra.miamidade.gov/GetClosestFeature/GetClosestFeatureFromXYAllAtrbts"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '520'
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 22 Aug 2016 23:55:31 GMT
+      Content-Length:
+      - '2629'
     body:
       encoding: UTF-8
       string: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><getLatLongDecFromXYResponse
-        xmlns="http://intra.miamidade.gov/GISwebSRVCS"><getLatLongDecFromXYResult><double>-80.199245566240819</double><double>25.7999410593211</double></getLatLongDecFromXYResult></getLatLongDecFromXYResponse></soap:Body></soap:Envelope>
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><GetClosestFeatureFromXYAllAtrbtsResponse
+        xmlns="http://intra.miamidade.gov/GetClosestFeature"><GetClosestFeatureFromXYAllAtrbtsResult><xs:schema
+        id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"><xs:element
+        name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Results" msdata:Locale="en-US"><xs:complexType><xs:choice
+        minOccurs="0" maxOccurs="unbounded"><xs:element name="Results" msdata:CaseSensitive="False"
+        msdata:Locale="en-US"><xs:complexType><xs:sequence><xs:element name="OBJECTID"
+        type="xs:long" /><xs:element name="LPROP_ID" type="xs:long" minOccurs="0"
+        /><xs:element name="ADDRESSID" type="xs:long" minOccurs="0" /><xs:element
+        name="FOLIO" type="xs:string" minOccurs="0" /><xs:element name="POINT_X" type="xs:double"
+        minOccurs="0" /><xs:element name="POINT_Y" type="xs:double" minOccurs="0"
+        /><xs:element name="MAILING_MUNIC" type="xs:string" minOccurs="0" /><xs:element
+        name="HSE_NUM" type="xs:long" minOccurs="0" /><xs:element name="PRE_DIR" type="xs:string"
+        minOccurs="0" /><xs:element name="ST_NAME" type="xs:string" minOccurs="0"
+        /><xs:element name="ST_TYPE" type="xs:string" minOccurs="0" /><xs:element
+        name="SUF_DIR" type="xs:string" minOccurs="0" /><xs:element name="ZIP" type="xs:long"
+        minOccurs="0" /><xs:element name="PLUS4" type="xs:int" minOccurs="0" /><xs:element
+        name="MUNIC" type="xs:int" minOccurs="0" /><xs:element name="SNAME" type="xs:string"
+        minOccurs="0" /><xs:element name="Dist" type="xs:double" minOccurs="0" /></xs:sequence></xs:complexType></xs:element></xs:choice></xs:complexType></xs:element></xs:schema><diffgr:diffgram
+        xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1"><DocumentElement
+        xmlns=""><Results diffgr:id="Results1" msdata:rowOrder="0" diffgr:hasChanges="inserted"><OBJECTID>361929</OBJECTID><LPROP_ID>31251440</LPROP_ID><ADDRESSID>200449</ADDRESSID><FOLIO>0131250340480</FOLIO><POINT_X>919623.87509118</POINT_X><POINT_Y>533780.31245147</POINT_Y><MAILING_MUNIC>MIAMI</MAILING_MUNIC><HSE_NUM>2390</HSE_NUM><PRE_DIR>NW</PRE_DIR><ST_NAME>2ND</ST_NAME><ST_TYPE>AVE</ST_TYPE><ZIP>33127</ZIP><PLUS4>4302</PLUS4><MUNIC>1</MUNIC><SNAME>NW
+        2ND AVE</SNAME><Dist>0</Dist></Results></DocumentElement></diffgr:diffgram></GetClosestFeatureFromXYAllAtrbtsResult></GetClosestFeatureFromXYAllAtrbtsResponse></soap:Body></soap:Envelope>
     http_version: 
-  recorded_at: Sat, 04 Jun 2016 20:39:52 GMT
+  recorded_at: Mon, 22 Aug 2016 23:55:26 GMT
+- request:
+    method: post
+    uri: http://gisws.miamidade.gov/gisaddress/addrxy.asmx
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://intra.miamidade.gov/GISAddress"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><tns:XYAddress><tns:myAddress>2390
+        NW 2ND AVE</tns:myAddress></tns:XYAddress></env:Body></env:Envelope>
+    headers:
+      Soapaction:
+      - '"http://intra.miamidade.gov/GISAddress/XYAddress"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '368'
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 22 Aug 2016 23:55:32 GMT
+      Content-Length:
+      - '502'
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><XYAddressResponse
+        xmlns="http://intra.miamidade.gov/GISAddress"><XYAddressResult><Count>1</Count><XY><ArrXY><X>919623.87509118</X><Y>533780.31245147</Y><Zip_Code>33127</Zip_Code><Munic_Code>1</Munic_Code></ArrXY></XY></XYAddressResult></XYAddressResponse></soap:Body></soap:Envelope>
+    http_version: 
+  recorded_at: Mon, 22 Aug 2016 23:55:26 GMT
 - request:
     method: get
     uri: http://gisws.miamidade.gov/gisxyservices/XYLatLongConversions.asmx?wsdl
@@ -855,7 +1592,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Sat, 04 Jun 2016 20:44:06 GMT
+      - Mon, 22 Aug 2016 23:55:32 GMT
       Content-Length:
       - '106909'
     body:
@@ -2166,5 +2903,46 @@ http_interactions:
         location=\"http://gisws.miamidade.gov/gisxyservices/XYLatLongConversions.asmx\"
         />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
     http_version: 
-  recorded_at: Sat, 04 Jun 2016 20:44:39 GMT
+  recorded_at: Mon, 22 Aug 2016 23:55:26 GMT
+- request:
+    method: post
+    uri: http://gisws.miamidade.gov/gisxyservices/XYLatLongConversions.asmx
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://intra.miamidade.gov/GISwebSRVCS"
+        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ins0="http://intra.miamidade.gov/GISwebSRVCS/AbstractTypes"><env:Body><tns:getLatLongDecFromXY><tns:X>919623.87509118</tns:X><tns:Y>533780.31245147</tns:Y></tns:getLatLongDecFromXY></env:Body></env:Envelope>
+    headers:
+      Soapaction:
+      - '"http://intra.miamidade.gov/GISwebSRVCS/getLatLongDecFromXY"'
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Content-Length:
+      - '469'
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/8.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 22 Aug 2016 23:55:32 GMT
+      Content-Length:
+      - '476'
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><getLatLongDecFromXYResponse
+        xmlns="http://intra.miamidade.gov/GISwebSRVCS"><getLatLongDecFromXYResult><double>-80.199245566240819</double><double>25.7999410593211</double></getLatLongDecFromXYResult></getLatLongDecFromXYResponse></soap:Body></soap:Envelope>
+    http_version: 
+  recorded_at: Mon, 22 Aug 2016 23:55:26 GMT
 recorded_with: VCR 3.0.3

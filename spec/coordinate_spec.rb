@@ -2,6 +2,7 @@ require 'spec_helper'
 require 'miami_dade_geo/coordinate'
 
 describe MiamiDadeGeo::Coordinate, :vcr do
+  let(:panther_address){ "2390 NW 2nd Ave" }
 
   let(:panther_xy){ { x: 919623.87509118, y: 533780.31245147 } }
   let(:panther_latlong){ { long: -80.199245566240819, lat: 25.7999410593211 } }
@@ -20,6 +21,6 @@ describe MiamiDadeGeo::Coordinate, :vcr do
 
   it 'turns coordinates into an address' do
     coord = described_class.new panther_latlong
-    expect(coord.address).to be
+    expect(coord.address.address.downcase).to eq panther_address.downcase
   end
 end

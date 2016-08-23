@@ -16,13 +16,16 @@ module MiamiDadeGeo
     FIND_RADIUSES = [0, 10, 100, 1000, 5280, (20 * 5280)]
 
     def find_feature(xy_hash, feature_class)
-      feature = nil
       FIND_RADIUSES.each do |radius|
-        found = get_closest_feature(feature_class,
-                                    xy_hash[:x].to_s,
-                                    xy_hash[:y].to_s,
-                                    radius.to_s)
+        result = get_closest_feature(feature_class,
+                                     xy_hash[:x].to_s,
+                                     xy_hash[:y].to_s,
+                                     radius.to_s)
+
+        return result unless result.nil?
       end
+
+      nil
     end
 
     def get_closest_feature(feature_class, x, y, buffer)

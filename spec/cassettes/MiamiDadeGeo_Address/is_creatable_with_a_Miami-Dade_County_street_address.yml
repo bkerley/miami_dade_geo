@@ -32,7 +32,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Mon, 22 Aug 2016 23:55:35 GMT
+      - Mon, 22 Aug 2016 23:55:34 GMT
       Content-Length:
       - '502'
     body:
@@ -41,7 +41,7 @@ http_interactions:
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><XYAddressResponse
         xmlns="http://intra.miamidade.gov/GISAddress"><XYAddressResult><Count>1</Count><XY><ArrXY><X>919623.87509118</X><Y>533780.31245147</Y><Zip_Code>33127</Zip_Code><Munic_Code>1</Munic_Code></ArrXY></XY></XYAddressResult></XYAddressResponse></soap:Body></soap:Envelope>
     http_version: 
-  recorded_at: Mon, 22 Aug 2016 23:55:29 GMT
+  recorded_at: Mon, 22 Aug 2016 23:55:28 GMT
 - request:
     method: post
     uri: http://gisws.miamidade.gov/gisxyservices/GetClosestFeature.asmx
@@ -73,7 +73,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Mon, 22 Aug 2016 23:55:35 GMT
+      - Mon, 22 Aug 2016 23:55:34 GMT
       Content-Length:
       - '2629'
     body:
@@ -101,47 +101,5 @@ http_interactions:
         xmlns=""><Results diffgr:id="Results1" msdata:rowOrder="0" diffgr:hasChanges="inserted"><OBJECTID>361929</OBJECTID><LPROP_ID>31251440</LPROP_ID><ADDRESSID>200449</ADDRESSID><FOLIO>0131250340480</FOLIO><POINT_X>919623.87509118</POINT_X><POINT_Y>533780.31245147</POINT_Y><MAILING_MUNIC>MIAMI</MAILING_MUNIC><HSE_NUM>2390</HSE_NUM><PRE_DIR>NW</PRE_DIR><ST_NAME>2ND</ST_NAME><ST_TYPE>AVE</ST_TYPE><ZIP>33127</ZIP><PLUS4>4302</PLUS4><MUNIC>1</MUNIC><SNAME>NW
         2ND AVE</SNAME><Dist>0</Dist></Results></DocumentElement></diffgr:diffgram></GetClosestFeatureFromXYAllAtrbtsResult></GetClosestFeatureFromXYAllAtrbtsResponse></soap:Body></soap:Envelope>
     http_version: 
-  recorded_at: Mon, 22 Aug 2016 23:55:30 GMT
-- request:
-    method: post
-    uri: http://gisws.miamidade.gov/gisaddress/addrxy.asmx
-    body:
-      encoding: UTF-8
-      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://intra.miamidade.gov/GISAddress"
-        xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"><env:Body><tns:XYAddress><tns:myAddress>2390
-        NW 2ND AVE</tns:myAddress></tns:XYAddress></env:Body></env:Envelope>
-    headers:
-      Soapaction:
-      - '"http://intra.miamidade.gov/GISAddress/XYAddress"'
-      Content-Type:
-      - text/xml;charset=UTF-8
-      Content-Length:
-      - '368'
-  response:
-    status:
-      code: 200
-      message: ''
-    headers:
-      Cache-Control:
-      - private, max-age=0
-      Content-Type:
-      - text/xml; charset=utf-8
-      Server:
-      - Microsoft-IIS/8.5
-      X-Aspnet-Version:
-      - 4.0.30319
-      X-Powered-By:
-      - ASP.NET
-      Date:
-      - Mon, 22 Aug 2016 23:55:36 GMT
-      Content-Length:
-      - '502'
-    body:
-      encoding: UTF-8
-      string: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><XYAddressResponse
-        xmlns="http://intra.miamidade.gov/GISAddress"><XYAddressResult><Count>1</Count><XY><ArrXY><X>919623.87509118</X><Y>533780.31245147</Y><Zip_Code>33127</Zip_Code><Munic_Code>1</Munic_Code></ArrXY></XY></XYAddressResult></XYAddressResponse></soap:Body></soap:Envelope>
-    http_version: 
-  recorded_at: Mon, 22 Aug 2016 23:55:30 GMT
+  recorded_at: Mon, 22 Aug 2016 23:55:29 GMT
 recorded_with: VCR 3.0.3
