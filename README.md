@@ -23,7 +23,17 @@ Or install it yourself as:
 
 ## Usage
 
-### Address Geolocation
+### Coordinate to Address
+
+~~~ruby
+coordinate = MiamiDadeGeo::Coordinate.new(long: -80.199245566240819,
+                                          lat: 25.7999410593211)
+addr = coordinate.address
+addr.address #=> "2390 NW 2ND AVE"
+addr.zip #=> 33127
+~~~
+
+### Address to Coordinate
 
 ~~~ruby
 addr = MiamiDadeGeo::Address.new '2390 NW 2nd Ave'
@@ -33,7 +43,7 @@ addr.long #=> -80.199245566240819
 addr.municipality.name #=> "MIAMI"
 ~~~
 
-### Geolocation to Municipality
+### Coordinate to Municipality
 
 ~~~ruby
 muni = MiamiDadeGeo::Municipality.new_with_latlong(
