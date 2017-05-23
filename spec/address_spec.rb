@@ -18,6 +18,12 @@ describe MiamiDadeGeo::Address, :vcr do
     end.to_not raise_error
   end
 
+  it "isn't creatable with #new" do
+    expect do
+      address = described_class.new panther_address
+    end.to raise_error(NoMethodError)
+  end
+
   it 'has x-y coordinates' do
     expect(subject.x).to eq panther_xy[:x]
     expect(subject.y).to eq panther_xy[:y]
