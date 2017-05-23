@@ -36,7 +36,7 @@ addr.zip #=> 33127
 ### Address to Coordinate
 
 ~~~ruby
-addr = MiamiDadeGeo::Address.new '2390 NW 2nd Ave'
+addr = MiamiDadeGeo::Address.new_from_address '2390 NW 2nd Ave'
 addr.zip #=> 33127
 addr.lat #=> 25.7999410593211
 addr.long #=> -80.199245566240819
