@@ -14,6 +14,9 @@ module MiamiDadeGeo
   #
   # @raise [InvalidAddressError]
   class Address
+
+    private_class_method :new
+
     attr_reader :feature
 
     # @!attribute [r] address
